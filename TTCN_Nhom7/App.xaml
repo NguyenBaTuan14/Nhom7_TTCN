@@ -4,6 +4,28 @@
              xmlns:local="clr-namespace:TTCN_Nhom7"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+        <ControlTemplate x:Key="buttonTemplate" TargetType="Button">
+            <Grid>
+                <Border Background="#2196F3" CornerRadius="5"/>
+                <ContentPresenter HorizontalAlignment="Center"
+                                  VerticalAlignment="Center"/>
+               
+            </Grid>
+        </ControlTemplate>
+        <Style x:Key="columnheaderStyle" TargetType="DataGridColumnHeader">
+            <Setter Property="HorizontalContentAlignment" Value="Left"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+        </Style>
+        <Style x:Key="cellStyle" TargetType="TextBlock">
+            <Setter Property="HorizontalAlignment" Value="Left"/>
+            <Setter Property="FontWeight" Value="Normal"/> 
+        </Style>
+
+        <Style x:Key="dateCell" TargetType="TextBlock">
+            <Setter Property="HorizontalAlignment" Value="Left"/>
+            <Setter Property="FontWeight" Value="Normal"/>
+            <Setter Property="Text" Value="{Binding NgaySinh, StringFormat={}{0:dd/MM/yyyy}}"/>
+        </Style>
+
     </Application.Resources>
 </Application>

@@ -54,7 +54,6 @@ Create table [NhanKhau] (
 	[DiaChiThuongChu] nvarChar(100) NULL,
 	[TinhTrangHonNhan] nvarChar(50) NULL,
 	[DanToc] nvarChar(50) NULL,
-	
 	[MaHoKhau] nvarChar(50) NOT NULL,
 Primary Key  ([MaNhanKhau])
 ) 

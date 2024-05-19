@@ -13,16 +13,19 @@
     <Compile Update="PhanAnh.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="themNhanKhau.xaml.cs">
+    <Compile Update="suanhankhau.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="them.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="ThongKe.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="Window1.xaml.cs">
+    <Compile Update="menu.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="Window2.xaml.cs">
+    <Compile Update="nhankhau.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
@@ -36,16 +39,19 @@
     <Page Update="PhanAnh.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="themNhanKhau.xaml">
+    <Page Update="suanhankhau.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="them.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="ThongKe.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Window1.xaml">
+    <Page Update="menu.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Window2.xaml">
+    <Page Update="nhankhau.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>
