@@ -12,7 +12,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
-using TTCN_Nhom7.MoHinhQuanLyDanCu;
+using TTCN_Nhom7.MoHinhDuLieuDanCu;
 
 namespace TTCN_Nhom7
 {

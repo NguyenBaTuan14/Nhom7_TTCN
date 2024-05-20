@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace TTCN_Nhom7.MoHinhQuanLyDanCu;
+namespace TTCN_Nhom7.MoHinhDuLieuDanCu;
 
 public partial class TaiKhoan
 {
@@ -18,4 +18,6 @@ public partial class TaiKhoan
     public byte[]? AnhChanDung { get; set; }
 
     public string? MatKhau { get; set; }
+
+    public string? Role { get; set; }
 }

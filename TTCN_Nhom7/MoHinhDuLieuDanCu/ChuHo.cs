@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace TTCN_Nhom7.MoHinhQuanLyDanCu;
+namespace TTCN_Nhom7.MoHinhDuLieuDanCu;
 
 public partial class ChuHo
 {

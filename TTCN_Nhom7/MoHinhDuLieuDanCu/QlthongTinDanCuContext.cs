@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
 
-namespace TTCN_Nhom7.MoHinhQuanLyDanCu;
+namespace TTCN_Nhom7.MoHinhDuLieuDanCu;
 
 public partial class QlthongTinDanCuContext : DbContext
 {
@@ -31,13 +31,13 @@ public partial class QlthongTinDanCuContext : DbContext
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
-        => optionsBuilder.UseSqlServer("Data Source=Admin\\MAY1;Initial Catalog=QLThongTinDanCu;Integrated Security=True;Trust Server Certificate=True");
+        => optionsBuilder.UseSqlServer("Data Source=DESKTOP-HDT67J9;Initial Catalog=QLThongTinDanCu;Integrated Security=True;Trust Server Certificate=True");
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder.Entity<ChuHo>(entity =>
         {
-            entity.HasKey(e => e.MaChuHo).HasName("PK__ChuHo__35856282E7157FF4");
+            entity.HasKey(e => e.MaChuHo).HasName("PK__ChuHo__358562824BF360C9");
 
             entity.ToTable("ChuHo");
 
@@ -59,7 +59,7 @@ public partial class QlthongTinDanCuContext : DbContext
 
         modelBuilder.Entity<DiaChi>(entity =>
         {
-            entity.HasKey(e => e.MaVung).HasName("PK__DiaChi__BF118FFB41E75E7F");
+            entity.HasKey(e => e.MaVung).HasName("PK__DiaChi__BF118FFBD03A7DE8");
 
             entity.ToTable("DiaChi");
 
@@ -81,7 +81,7 @@ public partial class QlthongTinDanCuContext : DbContext
 
         modelBuilder.Entity<HoKhau>(entity =>
         {
-            entity.HasKey(e => e.MaHoKhau).HasName("PK__HoKhau__C8B08692B9145D74");
+            entity.HasKey(e => e.MaHoKhau).HasName("PK__HoKhau__C8B08692BD222ECA");
 
             entity.ToTable("HoKhau");
 
@@ -95,7 +95,7 @@ public partial class QlthongTinDanCuContext : DbContext
 
         modelBuilder.Entity<HoiDap>(entity =>
         {
-            entity.HasKey(e => e.MaCauHoi).HasName("PK__HoiDap__1937D77BD55EC9B1");
+            entity.HasKey(e => e.MaCauHoi).HasName("PK__HoiDap__1937D77B48EC88E8");
 
             entity.ToTable("HoiDap");
 
@@ -107,7 +107,7 @@ public partial class QlthongTinDanCuContext : DbContext
 
         modelBuilder.Entity<NhanKhau>(entity =>
         {
-            entity.HasKey(e => e.MaNhanKhau).HasName("PK__NhanKhau__7EE1008788A9785F");
+            entity.HasKey(e => e.MaNhanKhau).HasName("PK__NhanKhau__7EE100871DC3D559");
 
             entity.ToTable("NhanKhau");
 
@@ -129,7 +129,7 @@ public partial class QlthongTinDanCuContext : DbContext
 
         modelBuilder.Entity<TaiKhoan>(entity =>
         {
-            entity.HasKey(e => e.MaTaiKhoan).HasName("PK__TaiKhoan__AD7C6529BA6DDD38");
+            entity.HasKey(e => e.MaTaiKhoan).HasName("PK__TaiKhoan__AD7C6529F9593020");
 
             entity.ToTable("TaiKhoan");
 
@@ -138,13 +138,14 @@ public partial class QlthongTinDanCuContext : DbContext
             entity.Property(e => e.Email).HasMaxLength(225);
             entity.Property(e => e.Ho).HasMaxLength(35);
             entity.Property(e => e.MatKhau).HasMaxLength(50);
+            entity.Property(e => e.Role).HasMaxLength(50);
             entity.Property(e => e.SoDienThoai).HasMaxLength(10);
             entity.Property(e => e.Ten).HasMaxLength(15);
         });
 
         modelBuilder.Entity<ThongBaoXaGui>(entity =>
         {
-            entity.HasKey(e => e.MaThongBao).HasName("PK__ThongBao__04DEB54E781AB6DC");
+            entity.HasKey(e => e.MaThongBao).HasName("PK__ThongBao__04DEB54E340A85F1");
 
             entity.ToTable("ThongBaoXaGui");
 

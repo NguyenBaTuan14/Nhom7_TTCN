@@ -15,7 +15,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using System.Xml.Linq;
-using TTCN_Nhom7.MoHinhQuanLyDanCu;
+using TTCN_Nhom7.MoHinhDuLieuDanCu;
 
 namespace TTCN_Nhom7
 {
@@ -44,7 +44,9 @@ namespace TTCN_Nhom7
 
         private void HienThiDuLieu()
         {
-            var query = from nk in db.NhanKhaus 
+            try
+            {
+                var query = from nk in db.NhanKhaus 
                         orderby nk.MaNhanKhau ascending
                         select new
                         {
@@ -58,6 +60,13 @@ namespace TTCN_Nhom7
                             nk.DiaChiThuongChu,
                         };
             dtgdanhsach.ItemsSource = query.ToList();
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi kết nối với cơ sở dữ liệu: " + ex.Message, "Lỗi", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+            
         }
 
         private void btntim_onclick(object sender, RoutedEventArgs e)
