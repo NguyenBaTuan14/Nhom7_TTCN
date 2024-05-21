@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Security.RightsManagement;
 
 namespace TTCN_Nhom7.MoHinhDuLieuDanCu;
 
@@ -20,4 +21,5 @@ public partial class TaiKhoan
     public string? MatKhau { get; set; }
 
     public string? Role { get; set; }
+ 
 }

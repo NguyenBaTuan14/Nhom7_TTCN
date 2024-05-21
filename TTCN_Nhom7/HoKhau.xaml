@@ -7,22 +7,68 @@
         mc:Ignorable="d"
         Title="HoKhau" Height="450" Width="800">
     <Grid>
-        <Button Content="Quay về" HorizontalAlignment="Left" Height="23" Margin="10,10,0,0" VerticalAlignment="Top" Width="83" FontSize="13" FontWeight="Bold" Click="Button_Click"/>
-        <Label Content="Mã hộ khẩu" HorizontalAlignment="Left" Height="28" Margin="44,53,0,0" VerticalAlignment="Top" Width="93" FontWeight="Bold" FontSize="14"/>
-        <TextBox HorizontalAlignment="Left" Height="28" Margin="183,53,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="366"/>
-        <Button Content="Tìm" HorizontalAlignment="Left" Height="34" Margin="619,53,0,0" VerticalAlignment="Top" Width="115" FontSize="13" FontWeight="Bold"/>
-        <DataGrid HorizontalAlignment="Left" Height="155" Margin="10,128,0,0" VerticalAlignment="Top" Width="773" FontWeight="Bold">
+        <Button Name="quayve" Content="&#x2190;" HorizontalAlignment="Left" Padding="-20" 
+            VerticalAlignment="Top" Width="40" 
+            Margin="10,0,0,0"
+            Height="50" Click="Quay_Ve" FontSize="37" FontWeight="Bold"
+            Foreground="#2196F3"
+            BorderBrush="White"
+            Background="White"/>
+        <DataGrid HorizontalAlignment="Left" Height="192" Margin="10,110,10,0"
+          VerticalAlignment="Top" 
+          FontWeight="Bold" FontSize="13"
+          x:Name="dtgdanhsach1"
+          BorderBrush="#2196F3"
+          Background="White"
+          AutoGenerateColumns="False"
+          ScrollViewer.CanContentScroll="True"
+          ColumnHeaderStyle="{StaticResource columnheaderStyle}">
             <DataGrid.Columns>
-                <DataGridTextColumn Header="ID" Binding="{Binding}" Width="220"/>
+                <DataGridTextColumn Header="  Mã hộ khẩu " Binding="{Binding Mahokhau}" Width="100"
+                ElementStyle="{StaticResource cellStyle}"/>
+                <DataGridTextColumn Header="      Họ tên chủ hộ " Binding="{Binding HoTenChuHo}" Width="200"
+                ElementStyle="{StaticResource cellStyle}"/>
 
-                <DataGridTextColumn Header="Họ tên chủ hộ" Binding="{Binding}" Width="250"/>
+                <DataGridTextColumn Header="      Tổng thành viên" Binding="{Binding tongTV}" Width="150"
+                ElementStyle="{StaticResource cellStyle}"/>
 
-                <DataGridTextColumn Header="Số thành viên" Binding="{Binding}" Width="150"/>
-                <DataGridTextColumn Header="Địa chỉ" Binding="{Binding}" Width="160"/>
+                <DataGridTextColumn Header="Địa chỉ" Binding="{Binding DiaChi}" Width="400"
+                ElementStyle="{StaticResource cellStyle}"/>
+
+
+
             </DataGrid.Columns>
         </DataGrid>
-        <Button Content="Thêm" HorizontalAlignment="Left" Height="36" Margin="91,338,0,0" VerticalAlignment="Top" Width="127" FontSize="20" FontWeight="Bold"/>
-        <Button Content="Tách" HorizontalAlignment="Left" Height="36" Margin="339,338,0,0" VerticalAlignment="Top" Width="127" FontSize="20" FontWeight="Bold"/>
-        <Button Content="Xóa" HorizontalAlignment="Left" Height="36" Margin="607,338,0,0" VerticalAlignment="Top" Width="127" FontSize="20" FontWeight="Bold"/>
+        <Button Name ="btnthem"  Content="Thêm&#xD;&#xA;" FontSize="20" Click="btnthem_onclick"
+            Background="#2196F3"
+            Foreground="White"          
+            Template="{StaticResource buttonTemplate}"
+            Margin="100,332,576,50"/>
+        <Button Name ="btnsua" Content="Sửa&#xD;&#xA;" FontSize="20"
+            Click="btnsua_onclick"
+            Background="#2196F3"
+            Foreground="White"
+            Margin="356,332,330,50"
+            Template="{StaticResource buttonTemplate}"/>
+        <Button Name ="btnxoa" Content="Xóa&#xD;&#xA;" FontSize="20" 
+            Background="#2196F3"
+            Foreground="White"
+            Margin="635,332,50,50"
+            Template="{StaticResource buttonTemplate}" RenderTransformOrigin="1.846,0.288"/>
+        <GroupBox Header="Nhâp thông tin cần tìm "
+          BorderBrush="#2196F3"
+          HorizontalAlignment="Left" 
+          Height="70" Margin="213,22,0,0" 
+          VerticalAlignment="Top"
+          FontSize="15"
+          Width="400">
+            <TextBox Name ="txttim"  
+                  Margin="5"/>
+        </GroupBox>
+        <Button Content="Tìm" HorizontalAlignment="Left" Margin="676,44,0,0"
+            VerticalAlignment="Top" Width="100" Height="40"  FontSize="20" 
+            Background="#2196F3"
+            Foreground="White"
+            Template="{StaticResource buttonTemplate}" RenderTransformOrigin="1.56,0.501" />
     </Grid>
 </Window>

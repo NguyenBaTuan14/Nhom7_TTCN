@@ -30,4 +30,12 @@ public partial class NhanKhau
     public string? DanToc { get; set; }
 
     public string MaHoKhau { get; set; } = null!;
+
+    public int Tuoi
+    {
+        get
+        {
+            return DateTime.Now.Year - NgaySinh.Value.Year;
+        }
+    }
 }

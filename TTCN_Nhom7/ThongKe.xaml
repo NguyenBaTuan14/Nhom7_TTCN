@@ -7,53 +7,63 @@
         mc:Ignorable="d"
         Title="ThongKe" Height="450" Width="800">
     <Grid>
-        <Label Content="Họ tên" HorizontalAlignment="Left" Height="42" Margin="27,42,0,0" VerticalAlignment="Top" Width="124" FontSize="13" FontWeight="Bold"/>
-        <Label Content="Dộ tuôi" HorizontalAlignment="Left" Height="42" Margin="27,105,0,0" VerticalAlignment="Top" Width="124" FontSize="13" FontWeight="Bold"/>
-        <Label Content="Giới tính" HorizontalAlignment="Left" Height="42" Margin="325,41,0,0" VerticalAlignment="Top" Width="124" FontSize="13" FontWeight="Bold"/>
-        <Label Content="Địa chỉ" HorizontalAlignment="Left" Height="42" Margin="325,105,0,0" VerticalAlignment="Top" Width="124" FontSize="13" FontWeight="Bold"/>
-        <Button Content="Quay về" HorizontalAlignment="Left" Height="27" Margin="10,10,0,0" VerticalAlignment="Top" Width="86" FontWeight="Bold" Click="QuayVe"/>
-        <Button Content="Tìm" HorizontalAlignment="Left" Height="40" Margin="638,58,0,0" VerticalAlignment="Top" Width="117" FontWeight="Bold" FontSize="16"/>
-        <TextBox HorizontalAlignment="Left" Height="29" Margin="96,42,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="183"/>
-        <TextBox HorizontalAlignment="Left" Height="31" Margin="96,105,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" RenderTransformOrigin="0.5,0.5">
-            <TextBox.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform/>
-                    <RotateTransform Angle="-0.655"/>
-                    <TranslateTransform/>
-                </TransformGroup>
-            </TextBox.RenderTransform>
-        </TextBox>
-        <RadioButton Content="Nam" HorizontalAlignment="Left" Height="25" Margin="408,46,0,0" VerticalAlignment="Top" Width="59"/>
-        <RadioButton Content="Nữ" HorizontalAlignment="Left" Height="25" Margin="472,46,0,0" VerticalAlignment="Top" Width="59"/>
-        <TextBox HorizontalAlignment="Left" Height="31" Margin="403,104,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="145" RenderTransformOrigin="0.5,0.5">
-            <TextBox.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform/>
-                    <RotateTransform Angle="-0.655"/>
-                    <TranslateTransform/>
-                </TransformGroup>
-            </TextBox.RenderTransform>
-        </TextBox>
-        <DataGrid HorizontalAlignment="Left" Height="180" Margin="0,172,0,0" VerticalAlignment="Top" Width="793"  FontWeight="Bold" FontSize="13">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="400"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <Button Content="&#x2190;" Click="QuayVe" Grid.Column="0"  Margin="10,0,0,0" Width="40"  HorizontalAlignment="Left" Height="40" FontSize="37" FontWeight="Bold"
+                 Foreground="#2196F3"
+                 BorderBrush="White"
+                 Background="White" Padding="-30"/>
+        <Grid Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Margin="10">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            <TextBlock Text="Họ tên" VerticalAlignment="Center" Margin="0,0,5,0" Grid.Column="0"/>
+            <TextBox Name="txtHoTen" Width="200" Margin="0,0,10,0" Grid.Column="1"/>
+
+        </Grid>
+        <Grid Grid.Row="1" Grid.Column="1">
+            <TextBlock Text="Giới tính"  Margin="0,0,5,0" />
+            <StackPanel Orientation="Horizontal" >
+                <RadioButton Name="rdoNam" Content="Nam" GroupName="Gender" Margin="60,0,10,0"/>
+                <RadioButton Name="rdoNu" Content="Nữ" GroupName="Gender" Margin="0,0,10,0"/>
+            </StackPanel>
+            <Button Content="Tìm" VerticalAlignment="Top" Margin="210,0,125,0" Background="#2196F3"
+                    Foreground="White"          
+                    Template="{StaticResource buttonTemplate}" Height="28"/>
+        </Grid>
+        <StackPanel Orientation="Horizontal" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" Margin="10">
+            <TextBlock Text="Độ tuổi" VerticalAlignment="Center" Margin="0,0,5,0"/>
+            <TextBox Name="txtTuoi" Width="100" Margin="0,0,10,0"/>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" Grid.Row="2" Grid.Column="1" Margin="10">
+            <TextBlock Text="Địa chỉ" VerticalAlignment="Center" Margin="0,0,5,0"/>
+            <TextBox Name="txtDiaChi"  Width="200" Margin="20,0,5,0"/>
+        </StackPanel>
+        <DataGrid x:Name="dataGridThongKe" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" AutoGenerateColumns="False" Margin="10" FontWeight="Bold"
+                  >
             <DataGrid.Columns>
-                <DataGridTextColumn Header="ID" Binding="{Binding}" Width="100"/>
-
-                <DataGridTextColumn Header="Họ tên" Binding="{Binding}" Width="150"/>
-
-                <DataGridTextColumn Header="GT" Binding="{Binding}" Width="50"/>
-
-                <DataGridTextColumn Header="Ngày sinh" Binding="{Binding}" Width="100"/>
-
-                <DataGridTextColumn Header="Hộ Khẩu" Binding="{Binding}" Width="70"/>
-
-                <DataGridTextColumn Header="Địa chỉ" Binding="{Binding}" Width="80"/>
-
-                <DataGridTextColumn Header="SDT" Binding="{Binding}" Width="90"/>
-
-                <DataGridTextColumn Header="email" Binding="{Binding}" Width="200"/>
-
+                <DataGridTextColumn Header="CCCD/CMND" Binding="{Binding cccd}" Width="100"/>
+                <DataGridTextColumn Header="Họ tên" Binding="{Binding HoTen}" Width="150"/>
+                <DataGridTextColumn Header="Địa chỉ" Binding="{Binding Diachi}" Width="100"/>
+                <DataGridTextColumn Header="GT" Binding="{Binding GioiTinh}" Width="50"/>
+                <DataGridTextColumn Header="Ngày sinh" Binding="{Binding NgaySinh}" Width="80"/>
+                <DataGridTextColumn Header="Hộ Khẩu" Binding="{Binding HoKhau}" Width="60"/>
+                <DataGridTextColumn Header="SDT" Binding="{Binding SDT}" Width="80"/>
+                <DataGridTextColumn Header="Email" Binding="{Binding Email}" Width="160"/>
             </DataGrid.Columns>
         </DataGrid>
     </Grid>

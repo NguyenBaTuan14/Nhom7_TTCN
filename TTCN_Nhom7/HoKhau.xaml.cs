@@ -22,11 +22,28 @@ namespace TTCN_Nhom7
         public HoKhau()
         {
             InitializeComponent();
+            this.Left = 200;
+            this.Top = 100;
         }
-        private void Button_Click(object sender, RoutedEventArgs e)
+
+        private void Quay_Ve(object sender, RoutedEventArgs e)
         {
             Window1 wd = new Window1();
             wd.Show();
+            Close();
+        }
+
+        private void btnthem_onclick(object sender, RoutedEventArgs e)
+        {
+            ThemHoKhau them = new ThemHoKhau();
+            them.Show();
+            Close();
+        }
+
+        private void btnsua_onclick(object sender, RoutedEventArgs e)
+        {
+            SuaHoKhau suaHoKhau = new SuaHoKhau();
+            suaHoKhau.Show();
             Close();
         }
     }

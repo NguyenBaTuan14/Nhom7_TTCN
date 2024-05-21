@@ -7,11 +7,27 @@
         mc:Ignorable="d"
         Title="Window1" Height="450" Width="800">
     <Grid>
-        <Button Content="Nhân Khẩu" HorizontalAlignment="Left" Height="55" Margin="38,176,0,0" VerticalAlignment="Top" Width="128" FontWeight="Bold" FontSize="20" Click="Nhan_Khau"/>
-        <Button Content="Hộ Khẩu" HorizontalAlignment="Left" Height="55" Margin="234,176,0,0" VerticalAlignment="Top" Width="128" FontWeight="Bold" FontSize="20" Click="Ho_Khau"/>
-        <Button Content="Thống Kê" HorizontalAlignment="Left" Height="55" Margin="443,176,0,0" VerticalAlignment="Top" Width="128" FontSize="20" FontWeight="Bold" Click="Thong_Ke"/>
-        <Button Content="Phản Ánh" HorizontalAlignment="Left" Height="55" Margin="636,176,0,0" VerticalAlignment="Top" Width="128" FontWeight="Bold" FontSize="20" Click="Phan_Anh"/>
-        <Label Content="Quản Lý Dân Cư" HorizontalAlignment="Center" Height="68" Margin="214,49,0,0" VerticalAlignment="Top" Width="466" FontSize="40" Background="Transparent" Foreground="#FFDC0B0B"/>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition />
 
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <Border Grid.Column="0" Grid.Row="0" Grid.RowSpan="3" Grid.ColumnSpan="2" BorderBrush="green" BorderThickness="1" Background="AliceBlue" />
+        <Label Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Content="TRANG CHỦ" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Margin="5"
+FontSize="30" BorderBrush="green" Foreground="green" FontWeight="Bold"/>
+
+        <StackPanel Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Orientation="Horizontal"  Height="100" HorizontalAlignment="Center">
+            <Button Content="Nhân Khẩu" Width="150" Height="50" Background="#2196F3" BorderBrush="AntiqueWhite" FontSize="20" Click="Nhan_Khau" FontWeight="Bold" Foreground="White"/>
+            <Button Content="Hộ Khẩu" Width="150" Height="50" Background="#2196F3" BorderBrush="AntiqueWhite" FontSize="20" Click="Ho_Khau" FontWeight="Bold" Foreground="White"/>
+            <Button Content="Thống Kê"  Width="150" Height="50" Background="#2196F3" BorderBrush="AntiqueWhite" FontSize="20" Click="Thong_Ke" FontWeight="Bold" Foreground="White"/>
+            <Button Content="Phản Ánh" Width="150" Height="50" Background="#2196F3" BorderBrush="AntiqueWhite" FontSize="20" Click="Phan_Anh" FontWeight="Bold" Foreground="White"/>
+            <Button Content="Quản lý Tài khoản" Width="200" Height="50" Background="#2196F3" BorderBrush="AntiqueWhite" FontSize="20" Click="QLTK" FontWeight="Bold" Foreground="White"/>
+
+        </StackPanel>
     </Grid>
 </Window>

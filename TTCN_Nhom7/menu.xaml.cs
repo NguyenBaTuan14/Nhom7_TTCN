@@ -22,6 +22,8 @@ namespace TTCN_Nhom7
         public Window1()
         {
             InitializeComponent();
+            this.Left = 200;
+            this.Top = 100;
         }
         private void Nhan_Khau(object sender, RoutedEventArgs e)
         {
@@ -48,6 +50,13 @@ namespace TTCN_Nhom7
         {
             PhanAnh pa = new PhanAnh();
             pa.Show();
+            Close();
+        }
+
+        private void QLTK(object sender, RoutedEventArgs e)
+        {
+            QuanLyTaiKhoan_admin QLTK = new QuanLyTaiKhoan_admin();
+            QLTK.Show();
             Close();
         }
     }

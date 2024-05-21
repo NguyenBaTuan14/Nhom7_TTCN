@@ -1,0 +1,88 @@
+﻿<Window x:Class="TTCN_Nhom7.SuaTK_admin"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TTCN_Nhom7"
+        mc:Ignorable="d"
+        Title="SuaTK_admin" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="400"/>
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+
+        <Button Grid.Row="0" Grid.Column="0" Padding="-30"
+               Content="&#x2190;" 
+               Margin="10,0,0,0" Width="40" 
+               HorizontalAlignment="Left"
+               Height="40"  FontSize="37" FontWeight="Bold"
+               Foreground="#2196F3"
+               BorderBrush="White"
+               Background="White" VerticalAlignment="Top" Click="Button_Click"/>
+
+        <GroupBox Header="CCCD/CMND"
+                BorderBrush="#2196F3"
+                Margin="0,0,0,5"
+                Grid.Row="1" Grid.Column="0"
+                Height="60"  
+                Width="300">
+            <TextBox Name ="cccd"  />
+        </GroupBox>
+
+        <GroupBox Header="Họ tên"
+                BorderBrush="#2196F3"
+                    Margin="0,0,0,5"
+                Grid.Row="2" Grid.Column="0"
+                Height="60"  
+                Width="300">
+            <TextBox Name ="txtHT"  />
+        </GroupBox>
+
+        <GroupBox Header="Ngày cấp lại"
+                BorderBrush="#2196F3"
+                Grid.Row="3" Grid.Column="0"
+                Height="60"  
+                    Margin="0,0,0,5"
+                Width="300">
+            <DatePicker Name="ngay_cap" />
+        </GroupBox>
+
+        <GroupBox Header="Email"
+                BorderBrush="#2196F3"
+                Grid.Row="1" Grid.Column="1"
+                Height="60"  
+                Width="300">
+            <TextBox Name ="txtEmail"/>
+        </GroupBox>
+
+        <GroupBox Header="Mật khẩu"
+    BorderBrush="#2196F3"
+    Grid.Row="2" Grid.Column="1"
+    Height="60"  
+    Width="300">
+            <TextBox Name ="txtMK"/>
+        </GroupBox>
+
+
+        <Button Name="btnthem" Content="Sửa" 
+       Grid.Row="6" Grid.Column="1" Grid.ColumnSpan="2"
+       HorizontalAlignment="Center" 
+       Height="40" Width="100"
+       FontSize="20" 
+       Background="#2196F3"
+       Foreground="White"  
+       Margin="0,12,0,0"
+       Template="{StaticResource buttonTemplate}"/>
+    </Grid>
+</Window>

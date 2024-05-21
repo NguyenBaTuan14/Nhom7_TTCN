@@ -1,0 +1,39 @@
+﻿<Window x:Class="TTCN_Nhom7.SuaPhanAnh_user"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TTCN_Nhom7"
+        mc:Ignorable="d"
+        Title="SuaPhanAnh_user" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="400"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <StackPanel Orientation="Horizontal" >
+            <Button Grid.Row="0" Grid.Column="0" Padding="-30"
+                  Content="&#x2190;" 
+                  Margin="10,0,0,0" Width="40" 
+                  HorizontalAlignment="Left"
+                  Height="40" FontSize="37" FontWeight="Bold"
+                  Foreground="#2196F3"
+                  BorderBrush="White"
+                  Background="White" Click="Button_Click"/>
+        </StackPanel>
+        <GroupBox Header="Nội dung"  FontSize="20" FontWeight="Bold" Grid.Column="0" Grid.Row="4" Grid.ColumnSpan="2">
+            <Border   Background="AliceBlue" BorderBrush="Black" BorderThickness="2">
+                <TextBox x:Name="NDphananh" FontWeight="Bold"/>
+            </Border>
+        </GroupBox>
+        <Label Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Content="Phản Ánh" HorizontalContentAlignment="Center" FontSize="35" Foreground="Green" FontWeight="Bold"/>
+        <Button Grid.Column="1" Grid.Row="2" Grid.ColumnSpan="2" Content="Sửa" Width="150" Height="40"  FontSize="20"  Background="#2196F3" Foreground="White"   BorderBrush="AntiqueWhite"  FontWeight="Bold"/>
+
+    </Grid>
+</Window>

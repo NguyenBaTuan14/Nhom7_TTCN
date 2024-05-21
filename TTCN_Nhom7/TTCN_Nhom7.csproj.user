@@ -13,10 +13,34 @@
     <Compile Update="PhanAnh.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="PhanAnh_user.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="QuanLyTaiKhoan.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="SuaHoKhau.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="suanhankhau.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="SuaPhanAnh_user.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="SuaTK_admin.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="them.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="ThemHoKhau.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="ThemPhanAnh_user.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="ThemTK_admin.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="ThongKe.xaml.cs">
@@ -26,6 +50,18 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="nhankhau.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="TraLoiPhanAnh_admin.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="TrangChu_user.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="XemHoKhau_user.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="XemThongTinCaNhan_user.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
@@ -39,10 +75,34 @@
     <Page Update="PhanAnh.xaml">
       <SubType>Designer</SubType>
     </Page>
+    <Page Update="PhanAnh_user.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="QuanLyTaiKhoan.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="SuaHoKhau.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="suanhankhau.xaml">
       <SubType>Designer</SubType>
     </Page>
+    <Page Update="SuaPhanAnh_user.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="SuaTK_admin.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="them.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="ThemHoKhau.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="ThemPhanAnh_user.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="ThemTK_admin.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="ThongKe.xaml">
@@ -52,6 +112,18 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="nhankhau.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="TraLoiPhanAnh_admin.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="TrangChu_user.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="XemHoKhau_user.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="XemThongTinCaNhan_user.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>

@@ -38,6 +38,7 @@ Create table [TaiKhoan] (
 	[Email] nvarChar(225) NULL,
 	[AnhChanDung] image NULL,
 	[MatKhau] nvarChar(50) NULL,
+	[Role] nvarChar(50) NULL,
 Primary Key  ([MaTaiKhoan])
 ) 
 
@@ -126,10 +127,11 @@ use QLThongTinDanCu
 go
 
 -- Insert data into TaiKhoan
-INSERT INTO [TaiKhoan] ([MaTaiKhoan], [Ho], [Ten], [SoDienThoai], [Email], [AnhChanDung], [MatKhau]) VALUES
-('TK001', 'Nguyen Van', 'An', '0912345678', 'nguyenan@example.com', NULL, 'password123'),
-('TK002', 'Tran Thi', 'Binh', '0987654321', 'tranbinh@example.com', NULL, 'password456'),
-('TK003', 'Le Van', 'Cuong', '0922333444', 'lecuong@example.com', NULL, 'password789');
+INSERT INTO [TaiKhoan] ([MaTaiKhoan], [Ho], [Ten], [SoDienThoai], [Email], [AnhChanDung], [MatKhau],[Role]) VALUES
+('TK001', 'Nguyen Van', 'An', '0912345678', 'nguyenan@example.com', NULL, 'password123','user'),
+('TK002', 'Tran Thi', 'Binh', '0987654321', 'tranbinh@example.com', NULL, 'password456','user'),
+('TK003', 'Le Van', 'Cuong', '0922333444', 'lecuong@example.com', NULL, 'password789','user'),
+('TK004', 'Nguyen Ba', 'Tuan', '0399827984', 'batuan@example.com', NULL, 'password111','admin');
 
 -- Insert data into DiaChi
 INSERT INTO [DiaChi] ([MaVung], [TenTinh_ThanhPho], [TenQuan_Huyen], [TenPhuong_Xa], [SoNha], [TenThon_Xom]) VALUES

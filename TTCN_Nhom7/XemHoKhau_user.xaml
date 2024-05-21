@@ -1,0 +1,44 @@
+﻿<Window x:Class="TTCN_Nhom7.XemHoKhau_user"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TTCN_Nhom7"
+        mc:Ignorable="d"
+        Title="XemHoKhau_user" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="400"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <StackPanel Orientation="Horizontal" >
+            <Button Grid.Row="0" Grid.Column="0" Padding="-30"
+                      Content="&#x2190;" 
+                      Margin="10,0,0,0" Width="40" 
+                      HorizontalAlignment="Left"
+                      Height="40" FontSize="37" FontWeight="Bold"
+                      Foreground="#2196F3"
+                      BorderBrush="White"
+                      Background="White" Click="Button_Click"/>
+        </StackPanel>
+        <Label Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Content="Thông tin hộ khẩu" HorizontalContentAlignment="Center" FontSize="35" Foreground="Green" FontWeight="Bold"/>
+        <DataGrid x:Name="dtgdanhsach" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" AutoGenerateColumns="False" Margin="10" FontWeight="Bold"
+                  ColumnHeaderStyle="{StaticResource dataGridHeader}">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="CCCD/CMND" Binding="{Binding cccd}" Width="120"/>
+                <DataGridTextColumn Header="Họ tên" Binding="{Binding HoTen}" Width="150"/>
+                <DataGridTextColumn Header="Địa chỉ" Binding="{Binding Diachi}" Width="100"/>
+                <DataGridTextColumn Header="GT" Binding="{Binding GioiTinh}" Width="50"/>
+                <DataGridTextColumn Header="Ngày sinh" Binding="{Binding NgaySinh}" Width="100"/>
+                <DataGridTextColumn Header="Hộ Khẩu" Binding="{Binding HoKhau}" Width="100"/>
+                <DataGridTextColumn Header="SDT" Binding="{Binding SDT}" Width="70"/>
+                <DataGridTextColumn Header="Email" Binding="{Binding Email}" Width="100"/>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Window>
