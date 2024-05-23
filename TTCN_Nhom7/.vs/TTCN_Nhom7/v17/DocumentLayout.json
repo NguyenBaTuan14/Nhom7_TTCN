@@ -3,20 +3,24 @@
   "WorkspaceRootPath": "C:\\Users\\Administrator\\Documents\\DAIHOC\\TTCN\\Nhom7_TTCN\\TTCN_Nhom7\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{11501C8B-314E-4B40-875A-BB772FD04C46}|TTCN_Nhom7.csproj|c:\\users\\administrator\\documents\\daihoc\\ttcn\\nhom7_ttcn\\ttcn_nhom7\\them.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{11501C8B-314E-4B40-875A-BB772FD04C46}|TTCN_Nhom7.csproj|solutionrelative:them.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{11501C8B-314E-4B40-875A-BB772FD04C46}|TTCN_Nhom7.csproj|c:\\users\\administrator\\documents\\daihoc\\ttcn\\nhom7_ttcn\\ttcn_nhom7\\nhankhau.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{11501C8B-314E-4B40-875A-BB772FD04C46}|TTCN_Nhom7.csproj|solutionrelative:nhankhau.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{11501C8B-314E-4B40-875A-BB772FD04C46}|TTCN_Nhom7.csproj|c:\\users\\administrator\\documents\\daihoc\\ttcn\\nhom7_ttcn\\ttcn_nhom7\\suanhankhau.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{11501C8B-314E-4B40-875A-BB772FD04C46}|TTCN_Nhom7.csproj|solutionrelative:suanhankhau.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{11501C8B-314E-4B40-875A-BB772FD04C46}|TTCN_Nhom7.csproj|c:\\users\\administrator\\documents\\daihoc\\ttcn\\nhom7_ttcn\\ttcn_nhom7\\suatk_admin.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{11501C8B-314E-4B40-875A-BB772FD04C46}|TTCN_Nhom7.csproj|solutionrelative:suatk_admin.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{11501C8B-314E-4B40-875A-BB772FD04C46}|TTCN_Nhom7.csproj|c:\\users\\administrator\\documents\\daihoc\\ttcn\\nhom7_ttcn\\ttcn_nhom7\\suanhankhau.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{11501C8B-314E-4B40-875A-BB772FD04C46}|TTCN_Nhom7.csproj|solutionrelative:suanhankhau.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{11501C8B-314E-4B40-875A-BB772FD04C46}|TTCN_Nhom7.csproj|c:\\users\\administrator\\documents\\daihoc\\ttcn\\nhom7_ttcn\\ttcn_nhom7\\quanlytaikhoan.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{11501C8B-314E-4B40-875A-BB772FD04C46}|TTCN_Nhom7.csproj|solutionrelative:quanlytaikhoan.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{11501C8B-314E-4B40-875A-BB772FD04C46}|TTCN_Nhom7.csproj|c:\\users\\administrator\\documents\\daihoc\\ttcn\\nhom7_ttcn\\ttcn_nhom7\\quanlytaikhoan.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{11501C8B-314E-4B40-875A-BB772FD04C46}|TTCN_Nhom7.csproj|solutionrelative:quanlytaikhoan.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{11501C8B-314E-4B40-875A-BB772FD04C46}|TTCN_Nhom7.csproj|c:\\users\\administrator\\documents\\daihoc\\ttcn\\nhom7_ttcn\\ttcn_nhom7\\suatk_admin.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{11501C8B-314E-4B40-875A-BB772FD04C46}|TTCN_Nhom7.csproj|solutionrelative:suatk_admin.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,62 +30,73 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 3,
           "Children": [
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
-            },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "suanhankhau.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\Administrator\\Documents\\DAIHOC\\TTCN\\Nhom7_TTCN\\TTCN_Nhom7\\suanhankhau.xaml.cs",
-              "RelativeDocumentMoniker": "suanhankhau.xaml.cs",
-              "ToolTip": "C:\\Users\\Administrator\\Documents\\DAIHOC\\TTCN\\Nhom7_TTCN\\TTCN_Nhom7\\suanhankhau.xaml.cs",
-              "RelativeToolTip": "suanhankhau.xaml.cs",
-              "ViewState": "AQIAACUAAAAAAAAAAAAgwEUAAAAjAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-19T16:06:02.251Z"
+              "Title": "QuanLyTaiKhoan.xaml",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Documents\\DAIHOC\\TTCN\\Nhom7_TTCN\\TTCN_Nhom7\\QuanLyTaiKhoan.xaml",
+              "RelativeDocumentMoniker": "QuanLyTaiKhoan.xaml",
+              "ToolTip": "C:\\Users\\Administrator\\Documents\\DAIHOC\\TTCN\\Nhom7_TTCN\\TTCN_Nhom7\\QuanLyTaiKhoan.xaml",
+              "RelativeToolTip": "QuanLyTaiKhoan.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-05-23T19:02:06.257Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "suanhankhau.xaml",
-              "DocumentMoniker": "C:\\Users\\Administrator\\Documents\\DAIHOC\\TTCN\\Nhom7_TTCN\\TTCN_Nhom7\\suanhankhau.xaml",
-              "RelativeDocumentMoniker": "suanhankhau.xaml",
-              "ToolTip": "C:\\Users\\Administrator\\Documents\\DAIHOC\\TTCN\\Nhom7_TTCN\\TTCN_Nhom7\\suanhankhau.xaml",
-              "RelativeToolTip": "suanhankhau.xaml",
+              "DocumentIndex": 4,
+              "Title": "SuaTK_admin.xaml",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Documents\\DAIHOC\\TTCN\\Nhom7_TTCN\\TTCN_Nhom7\\SuaTK_admin.xaml",
+              "RelativeDocumentMoniker": "SuaTK_admin.xaml",
+              "ToolTip": "C:\\Users\\Administrator\\Documents\\DAIHOC\\TTCN\\Nhom7_TTCN\\TTCN_Nhom7\\SuaTK_admin.xaml",
+              "RelativeToolTip": "SuaTK_admin.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-05-19T16:06:02.8Z",
+              "WhenOpened": "2024-05-23T19:01:42.061Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "nhankhau.xaml",
-              "DocumentMoniker": "C:\\Users\\Administrator\\Documents\\DAIHOC\\TTCN\\Nhom7_TTCN\\TTCN_Nhom7\\nhankhau.xaml",
-              "RelativeDocumentMoniker": "nhankhau.xaml",
-              "ToolTip": "C:\\Users\\Administrator\\Documents\\DAIHOC\\TTCN\\Nhom7_TTCN\\TTCN_Nhom7\\nhankhau.xaml",
-              "RelativeToolTip": "nhankhau.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-05-19T15:21:35.502Z",
+              "Title": "suanhankhau.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Documents\\DAIHOC\\TTCN\\Nhom7_TTCN\\TTCN_Nhom7\\suanhankhau.xaml.cs",
+              "RelativeDocumentMoniker": "suanhankhau.xaml.cs",
+              "ToolTip": "C:\\Users\\Administrator\\Documents\\DAIHOC\\TTCN\\Nhom7_TTCN\\TTCN_Nhom7\\suanhankhau.xaml.cs",
+              "RelativeToolTip": "suanhankhau.xaml.cs",
+              "ViewState": "AQIAADsAAAAAAAAAAAAwwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-23T18:59:40.585Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "them.xaml",
-              "DocumentMoniker": "C:\\Users\\Administrator\\Documents\\DAIHOC\\TTCN\\Nhom7_TTCN\\TTCN_Nhom7\\them.xaml",
-              "RelativeDocumentMoniker": "them.xaml",
-              "ToolTip": "C:\\Users\\Administrator\\Documents\\DAIHOC\\TTCN\\Nhom7_TTCN\\TTCN_Nhom7\\them.xaml",
-              "RelativeToolTip": "them.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-05-19T15:20:40.282Z",
+              "Title": "SuaTK_admin.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Documents\\DAIHOC\\TTCN\\Nhom7_TTCN\\TTCN_Nhom7\\SuaTK_admin.xaml.cs",
+              "RelativeDocumentMoniker": "SuaTK_admin.xaml.cs",
+              "ToolTip": "C:\\Users\\Administrator\\Documents\\DAIHOC\\TTCN\\Nhom7_TTCN\\TTCN_Nhom7\\SuaTK_admin.xaml.cs",
+              "RelativeToolTip": "SuaTK_admin.xaml.cs",
+              "ViewState": "AQIAAFAAAAAAAAAAAAAwwDsAAAAgAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-23T17:58:16.555Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "QuanLyTaiKhoan.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Documents\\DAIHOC\\TTCN\\Nhom7_TTCN\\TTCN_Nhom7\\QuanLyTaiKhoan.xaml.cs",
+              "RelativeDocumentMoniker": "QuanLyTaiKhoan.xaml.cs",
+              "ToolTip": "C:\\Users\\Administrator\\Documents\\DAIHOC\\TTCN\\Nhom7_TTCN\\TTCN_Nhom7\\QuanLyTaiKhoan.xaml.cs",
+              "RelativeToolTip": "QuanLyTaiKhoan.xaml.cs",
+              "ViewState": "AQIAAJUAAAAAAAAAAAAAAJ4AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-23T16:15:38.659Z",
               "EditorCaption": ""
             }
           ]

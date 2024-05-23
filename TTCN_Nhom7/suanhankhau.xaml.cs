@@ -12,7 +12,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
-using TTCN_Nhom7.MoHinhDuLieuDanCu;
+using TTCN_Nhom7.QuanLyDanCu;
 
 namespace TTCN_Nhom7
 {
@@ -96,10 +96,7 @@ namespace TTCN_Nhom7
             nkmoi.NgheNghiep = txtnghe.Text;
             db.SaveChanges();
 
-            var query1 = from hk in db.HoKhaus
-                        join nk in db.NhanKhaus on hk.MaHoKhau equals nk.MaHoKhau
-                        join tk in db.TaiKhoans on hk.MaTaiKhoan equals tk.MaTaiKhoan
-                        where nk.MaHoKhau == txtmahk.Text
+            var query1 = from nk in db.NhanKhaus
                         orderby nk.MaNhanKhau ascending
                         select new
                         {

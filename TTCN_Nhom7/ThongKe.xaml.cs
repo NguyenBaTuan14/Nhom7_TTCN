@@ -11,7 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
-using TTCN_Nhom7.MoHinhDuLieuDanCu;
+using TTCN_Nhom7.QuanLyDanCu;
 
 namespace TTCN_Nhom7
 {
@@ -70,7 +70,7 @@ namespace TTCN_Nhom7
                     }
                     if (tuoi.HasValue)
                     {
-                        query = query.Where(tk => tk.Tuoi == tuoi.Value);
+                 //       query = query.Where(tk => tk.Tuoi == tuoi.Value);
                     }
 
                     var result = query.Select(tk => new
@@ -78,7 +78,7 @@ namespace TTCN_Nhom7
                         tk.MaNhanKhau,
                         tk.HoTen,
                         GioiTinh = (bool)tk.GioiTinh ? "nam" : "nữ",
-                        tk.Tuoi,
+                   //     tk.Tuoi,
                         tk.DiaChiThuongChu,
                     }).ToList();
 

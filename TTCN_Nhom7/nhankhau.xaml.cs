@@ -15,7 +15,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using System.Xml.Linq;
-using TTCN_Nhom7.MoHinhDuLieuDanCu;
+using TTCN_Nhom7.QuanLyDanCu;
 
 namespace TTCN_Nhom7
 {
@@ -116,7 +116,6 @@ namespace TTCN_Nhom7
                 diachi = a[7].GetValue(selectedRow).ToString(); 
             }
         }
-
         private void btnxoa_onclick(object sender, RoutedEventArgs e)
         {
             var query = from nk in db.NhanKhaus

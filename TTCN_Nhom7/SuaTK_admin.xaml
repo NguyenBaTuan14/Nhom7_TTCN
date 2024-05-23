@@ -5,6 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TTCN_Nhom7"
         mc:Ignorable="d"
+        Loaded="window_load"
+        FontSize="15"
         Title="SuaTK_admin" Height="450" Width="800">
     <Grid>
         <Grid.RowDefinitions>
@@ -23,66 +25,90 @@
         </Grid.ColumnDefinitions>
 
         <Button Grid.Row="0" Grid.Column="0" Padding="-30"
-               Content="&#x2190;" 
-               Margin="10,0,0,0" Width="40" 
-               HorizontalAlignment="Left"
-               Height="40"  FontSize="37" FontWeight="Bold"
-               Foreground="#2196F3"
-               BorderBrush="White"
-               Background="White" VerticalAlignment="Top" Click="Button_Click"/>
+             Content="&#x2190;" 
+             Margin="10,0,0,0" Width="40" 
+             HorizontalAlignment="Left"
+             Height="40"  FontSize="37" FontWeight="Bold"
+             Foreground="#2196F3"
+             BorderBrush="White"
+             Background="White" VerticalAlignment="Top" Click="Button_Click"/>
 
-        <GroupBox Header="CCCD/CMND"
-                BorderBrush="#2196F3"
-                Margin="0,0,0,5"
-                Grid.Row="1" Grid.Column="0"
-                Height="60"  
-                Width="300">
-            <TextBox Name ="cccd"  />
+        <GroupBox Header="Mã tài khoản"
+              BorderBrush="#2196F3"
+              Margin="0,0,0,5"
+              Grid.Row="1" Grid.Column="0"
+              Height="60"  
+              Width="300">
+            <TextBox Name ="txtmatk" />
         </GroupBox>
 
-        <GroupBox Header="Họ tên"
-                BorderBrush="#2196F3"
-                    Margin="0,0,0,5"
-                Grid.Row="2" Grid.Column="0"
-                Height="60"  
-                Width="300">
-            <TextBox Name ="txtHT"  />
+        <GroupBox Header="Số CCCD/CMND"
+              BorderBrush="#2196F3"
+              Margin="0,0,0,5"
+              Grid.Row="2" Grid.Column="0"
+              Height="60"  
+              Width="300">
+                    <TextBox Name ="txtcccd" />
         </GroupBox>
 
-        <GroupBox Header="Ngày cấp lại"
+        <GroupBox Header="Họ"
                 BorderBrush="#2196F3"
-                Grid.Row="3" Grid.Column="0"
-                Height="60"  
-                    Margin="0,0,0,5"
-                Width="300">
-            <DatePicker Name="ngay_cap" />
+              Margin="0,0,0,5"
+              Grid.Row="3" Grid.Column="0"
+              Height="60"  
+              Width="300">
+                <TextBox Name ="txtho"  />
+        </GroupBox>
+
+        <GroupBox Header="Tên"
+                BorderBrush="#2196F3"
+              Margin="0,0,0,5"
+              Grid.Row="4" Grid.Column="0"
+              Height="60"  
+              Width="300">
+            <TextBox Name ="txtten"  />
         </GroupBox>
 
         <GroupBox Header="Email"
-                BorderBrush="#2196F3"
-                Grid.Row="1" Grid.Column="1"
-                Height="60"  
-                Width="300">
+                  BorderBrush="#2196F3"
+                  Grid.Row="1" Grid.Column="1"
+                  Height="60"  
+                  Width="300">
             <TextBox Name ="txtEmail"/>
         </GroupBox>
 
         <GroupBox Header="Mật khẩu"
-    BorderBrush="#2196F3"
-    Grid.Row="2" Grid.Column="1"
-    Height="60"  
-    Width="300">
-            <TextBox Name ="txtMK"/>
+                  BorderBrush="#2196F3"
+                  Grid.Row="2" Grid.Column="1"
+                  Height="60"  
+                  Width="300">
+            <TextBox Name ="txtmatkhau"/>
         </GroupBox>
 
+        <GroupBox Header="Số điện thoại"
+                  BorderBrush="#2196F3"
+                  Grid.Row="3" Grid.Column="1"
+                  Height="60"  
+                  Width="300">
+            <TextBox Name ="txtsodt"/>
+        </GroupBox>
 
-        <Button Name="btnthem" Content="Sửa" 
-       Grid.Row="6" Grid.Column="1" Grid.ColumnSpan="2"
-       HorizontalAlignment="Center" 
-       Height="40" Width="100"
-       FontSize="20" 
-       Background="#2196F3"
-       Foreground="White"  
-       Margin="0,12,0,0"
-       Template="{StaticResource buttonTemplate}"/>
+        <GroupBox Header="Vai trò"
+               BorderBrush="#2196F3"
+               Grid.Row="4" Grid.Column="1"
+               Height="60"  
+               Width="300">
+            <TextBox Name ="txtrole"/>
+        </GroupBox>
+
+        <Button Name="btnsua" Content="Sửa" 
+                 Grid.Row="5" Grid.Column="1" 
+                 HorizontalAlignment="Center" 
+                 Height="40" Width="100"
+                 FontSize="20" 
+                 Background="#2196F3"
+                 Foreground="White"  
+                 Margin="0,12,0,0"
+                 Template="{StaticResource buttonTemplate}" Click="btnsua_Click"/>
     </Grid>
 </Window>

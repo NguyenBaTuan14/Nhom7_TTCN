@@ -12,7 +12,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
-using TTCN_Nhom7.MoHinhDuLieuDanCu;
+using TTCN_Nhom7.QuanLyDanCu;
 using static System.Net.Mime.MediaTypeNames;
 
 namespace TTCN_Nhom7
@@ -63,6 +63,7 @@ namespace TTCN_Nhom7
                 nkmoi.DanToc = txtdantoc.Text;
                 nkmoi.NgaySinh = dtpngaysinh.SelectedDate;
                 nkmoi.NgheNghiep = txtnghe.Text;
+
                 db.NhanKhaus.Add(nkmoi);
                 db.SaveChanges();
 
