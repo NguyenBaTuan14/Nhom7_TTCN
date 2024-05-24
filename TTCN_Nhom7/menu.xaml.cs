@@ -26,11 +26,6 @@ namespace TTCN_Nhom7
             this.Top = 100;
         }
 
-        private void InitializeComponent()
-        {
-            throw new NotImplementedException();
-        }
-
         private void Nhan_Khau(object sender, RoutedEventArgs e)
         {
             Window2 wd = new Window2();

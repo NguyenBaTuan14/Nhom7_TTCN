@@ -29,12 +29,6 @@ namespace TTCN_Nhom7
             this.Left = 200;
             this.Top = 100;
         }
-
-        private void InitializeComponent()
-        {
-            throw new NotImplementedException();
-        }
-
         public xemthongtin_user(string tk)
         {
             InitializeComponent();
@@ -42,7 +36,6 @@ namespace TTCN_Nhom7
             this.Top = 100;
             this.taikhoan = tk;
         }
-
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             TrangChu_user trangChuUser = new TrangChu_user();
@@ -68,24 +61,16 @@ namespace TTCN_Nhom7
                             SoDT = tk.SoDienThoai,
                             Email = tk.Email,
                         };
-            txtcccd.Text = from q in query
-                           select q.SoCCCD;
-            txthoten.Text = from q in query
-                            select q.HoTen;
-            txtgioitinh.Text = from q in query
-                               select q.GioiTinh;
-            txtngay.Text = from q in query
-                           select q.NgaySinh;
-            txtquanhe.Text = from q in query
-                             select q.QuanHe;
-            txtmahk.Text = from q in query
-                           select q.MaHK;
-            txtdiachi.Text = from q in query
-                             select q.DiaChi;
-            txtsodt.Text = from q in query
-                           select q.SoDT;
-            txtemail.Text = from q in query
-                            select q.Email;
+            // Gán giá trị từ query vào các textbox
+            txtcccd.Text = query.FirstOrDefault()?.SoCCCD ?? "";
+            txthoten.Text = query.FirstOrDefault()?.HoTen ?? "";
+            txtgioitinh.Text = query.FirstOrDefault()?.GioiTinh ?? "";
+            txtngay.Text = query.FirstOrDefault()?.NgaySinh?.ToString("dd/MM/yyyy") ?? "";
+            txtquanhe.Text = query.FirstOrDefault()?.QuanHe ?? "";
+            txtmahk.Text = query.FirstOrDefault()?.MaHK.ToString() ?? "";
+            txtdiachi.Text = query.FirstOrDefault()?.DiaChi ?? "";
+            txtsodt.Text = query.FirstOrDefault()?.SoDT ?? "";
+            txtemail.Text = query.FirstOrDefault()?.Email ?? "";
         }
     }
 }

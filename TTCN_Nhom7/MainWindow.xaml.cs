@@ -26,11 +26,6 @@ namespace TTCN_Nhom7
             InitializeComponent();
         }
 
-        private void InitializeComponent()
-        {
-            throw new NotImplementedException();
-        }
-
         private String kiemTraDangNhap(String taiKhoan, String matKhau)
         {
             string role = null;

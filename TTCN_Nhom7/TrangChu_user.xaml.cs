@@ -29,12 +29,6 @@ namespace TTCN_Nhom7
             InitializeComponent();
             this.taikhoan = tk;
         }
-
-        private void InitializeComponent()
-        {
-            throw new NotImplementedException();
-        }
-
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             xemthongtin_user xemthongtin_User = new xemthongtin_user(taikhoan);
