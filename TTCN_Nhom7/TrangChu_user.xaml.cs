@@ -19,13 +19,25 @@ namespace TTCN_Nhom7
     /// </summary>
     public partial class TrangChu_user : Window
     {
+        string taikhoan = "";
         public TrangChu_user()
         {
             InitializeComponent();
         }
+        public TrangChu_user(string tk)
+        {
+            InitializeComponent();
+            this.taikhoan = tk;
+        }
+
+        private void InitializeComponent()
+        {
+            throw new NotImplementedException();
+        }
+
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            xemthongtin_user xemthongtin_User = new xemthongtin_user();
+            xemthongtin_user xemthongtin_User = new xemthongtin_user(taikhoan);
             xemthongtin_User.Show();
             Close();
         }
