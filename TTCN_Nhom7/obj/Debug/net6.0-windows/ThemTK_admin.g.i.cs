@@ -117,7 +117,7 @@ namespace TTCN_Nhom7 {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/TTCN_Nhom7;component/themtk_admin.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/TTCN_Nhom7;V1.0.0.0;component/themtk_admin.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\ThemTK_admin.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

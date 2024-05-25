@@ -24,6 +24,8 @@ namespace TTCN_Nhom7
         public MainWindow()
         {
             InitializeComponent();
+            this.Left = 200;
+            this.Top = 100;
         }
 
         private String kiemTraDangNhap(String taiKhoan, String matKhau)

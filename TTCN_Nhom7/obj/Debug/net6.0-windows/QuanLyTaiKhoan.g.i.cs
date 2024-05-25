@@ -101,7 +101,7 @@ namespace TTCN_Nhom7 {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/TTCN_Nhom7;component/quanlytaikhoan.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/TTCN_Nhom7;V1.0.0.0;component/quanlytaikhoan.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\QuanLyTaiKhoan.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

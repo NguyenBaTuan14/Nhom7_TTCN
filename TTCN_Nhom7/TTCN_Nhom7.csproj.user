@@ -10,6 +10,9 @@
     <Compile Update="HoKhau.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="LienHe.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="PhanAnh.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -67,6 +70,9 @@
   </ItemGroup>
   <ItemGroup>
     <Page Update="HoKhau.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="LienHe.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="MainWindow.xaml">

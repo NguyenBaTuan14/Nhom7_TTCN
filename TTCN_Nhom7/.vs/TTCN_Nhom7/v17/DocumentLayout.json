@@ -1,14 +1,102 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Administrator\\Documents\\DAIHOC\\TTCN\\Nhom7_TTCN\\TTCN_Nhom7\\",
+  "WorkspaceRootPath": "D:\\hocky_6\\TTCN\\BTL\\Nhom7_TTCN\\TTCN_Nhom7\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{11501C8B-314E-4B40-875A-BB772FD04C46}|TTCN_Nhom7.csproj|c:\\users\\administrator\\documents\\daihoc\\ttcn\\nhom7_ttcn\\ttcn_nhom7\\xemthongtincanhan_user.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{11501C8B-314E-4B40-875A-BB772FD04C46}|TTCN_Nhom7.csproj|solutionrelative:xemthongtincanhan_user.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{11501C8B-314E-4B40-875A-BB772FD04C46}|TTCN_Nhom7.csproj|d:\\hocky_6\\ttcn\\btl\\nhom7_ttcn\\ttcn_nhom7\\xemthongtincanhan_user.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{11501C8B-314E-4B40-875A-BB772FD04C46}|TTCN_Nhom7.csproj|solutionrelative:xemthongtincanhan_user.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{11501C8B-314E-4B40-875A-BB772FD04C46}|TTCN_Nhom7.csproj|c:\\users\\administrator\\documents\\daihoc\\ttcn\\nhom7_ttcn\\ttcn_nhom7\\xemthongtincanhan_user.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{11501C8B-314E-4B40-875A-BB772FD04C46}|TTCN_Nhom7.csproj|solutionrelative:xemthongtincanhan_user.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{11501C8B-314E-4B40-875A-BB772FD04C46}|TTCN_Nhom7.csproj|d:\\hocky_6\\ttcn\\btl\\nhom7_ttcn\\ttcn_nhom7\\xemhokhau_user.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{11501C8B-314E-4B40-875A-BB772FD04C46}|TTCN_Nhom7.csproj|solutionrelative:xemhokhau_user.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{11501C8B-314E-4B40-875A-BB772FD04C46}|TTCN_Nhom7.csproj|d:\\hocky_6\\ttcn\\btl\\nhom7_ttcn\\ttcn_nhom7\\trangchu_user.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{11501C8B-314E-4B40-875A-BB772FD04C46}|TTCN_Nhom7.csproj|solutionrelative:trangchu_user.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{11501C8B-314E-4B40-875A-BB772FD04C46}|TTCN_Nhom7.csproj|d:\\hocky_6\\ttcn\\btl\\nhom7_ttcn\\ttcn_nhom7\\traloiphananh_admin.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{11501C8B-314E-4B40-875A-BB772FD04C46}|TTCN_Nhom7.csproj|solutionrelative:traloiphananh_admin.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{11501C8B-314E-4B40-875A-BB772FD04C46}|TTCN_Nhom7.csproj|d:\\hocky_6\\ttcn\\btl\\nhom7_ttcn\\ttcn_nhom7\\thongke.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{11501C8B-314E-4B40-875A-BB772FD04C46}|TTCN_Nhom7.csproj|solutionrelative:thongke.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{11501C8B-314E-4B40-875A-BB772FD04C46}|TTCN_Nhom7.csproj|d:\\hocky_6\\ttcn\\btl\\nhom7_ttcn\\ttcn_nhom7\\themtk_admin.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{11501C8B-314E-4B40-875A-BB772FD04C46}|TTCN_Nhom7.csproj|solutionrelative:themtk_admin.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{11501C8B-314E-4B40-875A-BB772FD04C46}|TTCN_Nhom7.csproj|d:\\hocky_6\\ttcn\\btl\\nhom7_ttcn\\ttcn_nhom7\\themphananh_user.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{11501C8B-314E-4B40-875A-BB772FD04C46}|TTCN_Nhom7.csproj|solutionrelative:themphananh_user.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{11501C8B-314E-4B40-875A-BB772FD04C46}|TTCN_Nhom7.csproj|d:\\hocky_6\\ttcn\\btl\\nhom7_ttcn\\ttcn_nhom7\\themhokhau.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{11501C8B-314E-4B40-875A-BB772FD04C46}|TTCN_Nhom7.csproj|solutionrelative:themhokhau.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{11501C8B-314E-4B40-875A-BB772FD04C46}|TTCN_Nhom7.csproj|d:\\hocky_6\\ttcn\\btl\\nhom7_ttcn\\ttcn_nhom7\\them.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{11501C8B-314E-4B40-875A-BB772FD04C46}|TTCN_Nhom7.csproj|solutionrelative:them.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{11501C8B-314E-4B40-875A-BB772FD04C46}|TTCN_Nhom7.csproj|d:\\hocky_6\\ttcn\\btl\\nhom7_ttcn\\ttcn_nhom7\\suatk_admin.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{11501C8B-314E-4B40-875A-BB772FD04C46}|TTCN_Nhom7.csproj|solutionrelative:suatk_admin.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{11501C8B-314E-4B40-875A-BB772FD04C46}|TTCN_Nhom7.csproj|d:\\hocky_6\\ttcn\\btl\\nhom7_ttcn\\ttcn_nhom7\\suaphananh_user.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{11501C8B-314E-4B40-875A-BB772FD04C46}|TTCN_Nhom7.csproj|solutionrelative:suaphananh_user.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{11501C8B-314E-4B40-875A-BB772FD04C46}|TTCN_Nhom7.csproj|d:\\hocky_6\\ttcn\\btl\\nhom7_ttcn\\ttcn_nhom7\\suanhankhau.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{11501C8B-314E-4B40-875A-BB772FD04C46}|TTCN_Nhom7.csproj|solutionrelative:suanhankhau.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{11501C8B-314E-4B40-875A-BB772FD04C46}|TTCN_Nhom7.csproj|d:\\hocky_6\\ttcn\\btl\\nhom7_ttcn\\ttcn_nhom7\\suahokhau.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{11501C8B-314E-4B40-875A-BB772FD04C46}|TTCN_Nhom7.csproj|solutionrelative:suahokhau.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{11501C8B-314E-4B40-875A-BB772FD04C46}|TTCN_Nhom7.csproj|d:\\hocky_6\\ttcn\\btl\\nhom7_ttcn\\ttcn_nhom7\\quanlytaikhoan.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{11501C8B-314E-4B40-875A-BB772FD04C46}|TTCN_Nhom7.csproj|solutionrelative:quanlytaikhoan.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{11501C8B-314E-4B40-875A-BB772FD04C46}|TTCN_Nhom7.csproj|d:\\hocky_6\\ttcn\\btl\\nhom7_ttcn\\ttcn_nhom7\\phananh_user.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{11501C8B-314E-4B40-875A-BB772FD04C46}|TTCN_Nhom7.csproj|solutionrelative:phananh_user.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{11501C8B-314E-4B40-875A-BB772FD04C46}|TTCN_Nhom7.csproj|d:\\hocky_6\\ttcn\\btl\\nhom7_ttcn\\ttcn_nhom7\\phananh.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{11501C8B-314E-4B40-875A-BB772FD04C46}|TTCN_Nhom7.csproj|solutionrelative:phananh.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{11501C8B-314E-4B40-875A-BB772FD04C46}|TTCN_Nhom7.csproj|d:\\hocky_6\\ttcn\\btl\\nhom7_ttcn\\ttcn_nhom7\\nhankhau.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{11501C8B-314E-4B40-875A-BB772FD04C46}|TTCN_Nhom7.csproj|solutionrelative:nhankhau.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{11501C8B-314E-4B40-875A-BB772FD04C46}|TTCN_Nhom7.csproj|d:\\hocky_6\\ttcn\\btl\\nhom7_ttcn\\ttcn_nhom7\\menu.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{11501C8B-314E-4B40-875A-BB772FD04C46}|TTCN_Nhom7.csproj|solutionrelative:menu.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{11501C8B-314E-4B40-875A-BB772FD04C46}|TTCN_Nhom7.csproj|d:\\hocky_6\\ttcn\\btl\\nhom7_ttcn\\ttcn_nhom7\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{11501C8B-314E-4B40-875A-BB772FD04C46}|TTCN_Nhom7.csproj|solutionrelative:mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{11501C8B-314E-4B40-875A-BB772FD04C46}|TTCN_Nhom7.csproj|d:\\hocky_6\\ttcn\\btl\\nhom7_ttcn\\ttcn_nhom7\\hokhau.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{11501C8B-314E-4B40-875A-BB772FD04C46}|TTCN_Nhom7.csproj|solutionrelative:hokhau.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{11501C8B-314E-4B40-875A-BB772FD04C46}|TTCN_Nhom7.csproj|d:\\hocky_6\\ttcn\\btl\\nhom7_ttcn\\ttcn_nhom7\\hokhau.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{11501C8B-314E-4B40-875A-BB772FD04C46}|TTCN_Nhom7.csproj|solutionrelative:hokhau.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{11501C8B-314E-4B40-875A-BB772FD04C46}|TTCN_Nhom7.csproj|d:\\hocky_6\\ttcn\\btl\\nhom7_ttcn\\ttcn_nhom7\\lienhe.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{11501C8B-314E-4B40-875A-BB772FD04C46}|TTCN_Nhom7.csproj|solutionrelative:lienhe.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{11501C8B-314E-4B40-875A-BB772FD04C46}|TTCN_Nhom7.csproj|d:\\hocky_6\\ttcn\\btl\\nhom7_ttcn\\ttcn_nhom7\\lienhe.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{11501C8B-314E-4B40-875A-BB772FD04C46}|TTCN_Nhom7.csproj|solutionrelative:lienhe.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{11501C8B-314E-4B40-875A-BB772FD04C46}|TTCN_Nhom7.csproj|d:\\hocky_6\\ttcn\\btl\\nhom7_ttcn\\ttcn_nhom7\\xemthongtincanhan_user.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{11501C8B-314E-4B40-875A-BB772FD04C46}|TTCN_Nhom7.csproj|solutionrelative:xemthongtincanhan_user.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,40 +106,316 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 22,
           "Children": [
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
-            },
             {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "XemHoKhau_user.xaml.cs",
+              "DocumentMoniker": "D:\\hocky_6\\TTCN\\BTL\\Nhom7_TTCN\\TTCN_Nhom7\\XemHoKhau_user.xaml.cs",
+              "RelativeDocumentMoniker": "XemHoKhau_user.xaml.cs",
+              "ToolTip": "D:\\hocky_6\\TTCN\\BTL\\Nhom7_TTCN\\TTCN_Nhom7\\XemHoKhau_user.xaml.cs",
+              "RelativeToolTip": "XemHoKhau_user.xaml.cs",
+              "ViewState": "AQIAAA8AAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-25T14:45:20.206Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "TrangChu_user.xaml.cs",
+              "DocumentMoniker": "D:\\hocky_6\\TTCN\\BTL\\Nhom7_TTCN\\TTCN_Nhom7\\TrangChu_user.xaml.cs",
+              "RelativeDocumentMoniker": "TrangChu_user.xaml.cs",
+              "ToolTip": "D:\\hocky_6\\TTCN\\BTL\\Nhom7_TTCN\\TTCN_Nhom7\\TrangChu_user.xaml.cs",
+              "RelativeToolTip": "TrangChu_user.xaml.cs",
+              "ViewState": "AQIAABIAAAAAAAAAAAAAABoAAAAbAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-25T14:45:12.815Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "TraLoiPhanAnh_admin.xaml.cs",
+              "DocumentMoniker": "D:\\hocky_6\\TTCN\\BTL\\Nhom7_TTCN\\TTCN_Nhom7\\TraLoiPhanAnh_admin.xaml.cs",
+              "RelativeDocumentMoniker": "TraLoiPhanAnh_admin.xaml.cs",
+              "ToolTip": "D:\\hocky_6\\TTCN\\BTL\\Nhom7_TTCN\\TTCN_Nhom7\\TraLoiPhanAnh_admin.xaml.cs",
+              "RelativeToolTip": "TraLoiPhanAnh_admin.xaml.cs",
+              "ViewState": "AQIAABIAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-25T14:45:08.528Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ThongKe.xaml.cs",
+              "DocumentMoniker": "D:\\hocky_6\\TTCN\\BTL\\Nhom7_TTCN\\TTCN_Nhom7\\ThongKe.xaml.cs",
+              "RelativeDocumentMoniker": "ThongKe.xaml.cs",
+              "ToolTip": "D:\\hocky_6\\TTCN\\BTL\\Nhom7_TTCN\\TTCN_Nhom7\\ThongKe.xaml.cs",
+              "RelativeToolTip": "ThongKe.xaml.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-25T14:45:06.223Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ThemTK_admin.xaml.cs",
+              "DocumentMoniker": "D:\\hocky_6\\TTCN\\BTL\\Nhom7_TTCN\\TTCN_Nhom7\\ThemTK_admin.xaml.cs",
+              "RelativeDocumentMoniker": "ThemTK_admin.xaml.cs",
+              "ToolTip": "D:\\hocky_6\\TTCN\\BTL\\Nhom7_TTCN\\TTCN_Nhom7\\ThemTK_admin.xaml.cs",
+              "RelativeToolTip": "ThemTK_admin.xaml.cs",
+              "ViewState": "AQIAABcAAAAAAAAAAAAAwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-25T14:45:00.3Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ThemPhanAnh_user.xaml.cs",
+              "DocumentMoniker": "D:\\hocky_6\\TTCN\\BTL\\Nhom7_TTCN\\TTCN_Nhom7\\ThemPhanAnh_user.xaml.cs",
+              "RelativeDocumentMoniker": "ThemPhanAnh_user.xaml.cs",
+              "ToolTip": "D:\\hocky_6\\TTCN\\BTL\\Nhom7_TTCN\\TTCN_Nhom7\\ThemPhanAnh_user.xaml.cs",
+              "RelativeToolTip": "ThemPhanAnh_user.xaml.cs",
+              "ViewState": "AQIAABQAAAAAAAAAAAAAwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-25T14:44:56.324Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ThemHoKhau.xaml.cs",
+              "DocumentMoniker": "D:\\hocky_6\\TTCN\\BTL\\Nhom7_TTCN\\TTCN_Nhom7\\ThemHoKhau.xaml.cs",
+              "RelativeDocumentMoniker": "ThemHoKhau.xaml.cs",
+              "ToolTip": "D:\\hocky_6\\TTCN\\BTL\\Nhom7_TTCN\\TTCN_Nhom7\\ThemHoKhau.xaml.cs",
+              "RelativeToolTip": "ThemHoKhau.xaml.cs",
+              "ViewState": "AQIAAA8AAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-25T14:44:52.231Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "them.xaml.cs",
+              "DocumentMoniker": "D:\\hocky_6\\TTCN\\BTL\\Nhom7_TTCN\\TTCN_Nhom7\\them.xaml.cs",
+              "RelativeDocumentMoniker": "them.xaml.cs",
+              "ToolTip": "D:\\hocky_6\\TTCN\\BTL\\Nhom7_TTCN\\TTCN_Nhom7\\them.xaml.cs",
+              "RelativeToolTip": "them.xaml.cs",
+              "ViewState": "AQIAABcAAAAAAAAAAAAAwB0AAAAbAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-25T14:44:43.711Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "SuaTK_admin.xaml.cs",
+              "DocumentMoniker": "D:\\hocky_6\\TTCN\\BTL\\Nhom7_TTCN\\TTCN_Nhom7\\SuaTK_admin.xaml.cs",
+              "RelativeDocumentMoniker": "SuaTK_admin.xaml.cs",
+              "ToolTip": "D:\\hocky_6\\TTCN\\BTL\\Nhom7_TTCN\\TTCN_Nhom7\\SuaTK_admin.xaml.cs",
+              "RelativeToolTip": "SuaTK_admin.xaml.cs",
+              "ViewState": "AQIAABQAAAAAAAAAAAAxwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-25T14:44:39.539Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "SuaPhanAnh_user.xaml.cs",
+              "DocumentMoniker": "D:\\hocky_6\\TTCN\\BTL\\Nhom7_TTCN\\TTCN_Nhom7\\SuaPhanAnh_user.xaml.cs",
+              "RelativeDocumentMoniker": "SuaPhanAnh_user.xaml.cs",
+              "ToolTip": "D:\\hocky_6\\TTCN\\BTL\\Nhom7_TTCN\\TTCN_Nhom7\\SuaPhanAnh_user.xaml.cs",
+              "RelativeToolTip": "SuaPhanAnh_user.xaml.cs",
+              "ViewState": "AQIAABQAAAAAAAAAAAAAwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-25T14:44:35.364Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "suanhankhau.xaml.cs",
+              "DocumentMoniker": "D:\\hocky_6\\TTCN\\BTL\\Nhom7_TTCN\\TTCN_Nhom7\\suanhankhau.xaml.cs",
+              "RelativeDocumentMoniker": "suanhankhau.xaml.cs",
+              "ToolTip": "D:\\hocky_6\\TTCN\\BTL\\Nhom7_TTCN\\TTCN_Nhom7\\suanhankhau.xaml.cs",
+              "RelativeToolTip": "suanhankhau.xaml.cs",
+              "ViewState": "AQIAABUAAAAAAAAAAAAAAB4AAAAbAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-25T14:44:22.472Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "SuaHoKhau.xaml.cs",
+              "DocumentMoniker": "D:\\hocky_6\\TTCN\\BTL\\Nhom7_TTCN\\TTCN_Nhom7\\SuaHoKhau.xaml.cs",
+              "RelativeDocumentMoniker": "SuaHoKhau.xaml.cs",
+              "ToolTip": "D:\\hocky_6\\TTCN\\BTL\\Nhom7_TTCN\\TTCN_Nhom7\\SuaHoKhau.xaml.cs",
+              "RelativeToolTip": "SuaHoKhau.xaml.cs",
+              "ViewState": "AQIAAA8AAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-25T14:44:18.042Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "QuanLyTaiKhoan.xaml.cs",
+              "DocumentMoniker": "D:\\hocky_6\\TTCN\\BTL\\Nhom7_TTCN\\TTCN_Nhom7\\QuanLyTaiKhoan.xaml.cs",
+              "RelativeDocumentMoniker": "QuanLyTaiKhoan.xaml.cs",
+              "ToolTip": "D:\\hocky_6\\TTCN\\BTL\\Nhom7_TTCN\\TTCN_Nhom7\\QuanLyTaiKhoan.xaml.cs",
+              "RelativeToolTip": "QuanLyTaiKhoan.xaml.cs",
+              "ViewState": "AQIAABgAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-25T14:44:13.135Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "PhanAnh_user.xaml.cs",
+              "DocumentMoniker": "D:\\hocky_6\\TTCN\\BTL\\Nhom7_TTCN\\TTCN_Nhom7\\PhanAnh_user.xaml.cs",
+              "RelativeDocumentMoniker": "PhanAnh_user.xaml.cs",
+              "ToolTip": "D:\\hocky_6\\TTCN\\BTL\\Nhom7_TTCN\\TTCN_Nhom7\\PhanAnh_user.xaml.cs",
+              "RelativeToolTip": "PhanAnh_user.xaml.cs",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-25T14:44:08.46Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "PhanAnh.xaml.cs",
+              "DocumentMoniker": "D:\\hocky_6\\TTCN\\BTL\\Nhom7_TTCN\\TTCN_Nhom7\\PhanAnh.xaml.cs",
+              "RelativeDocumentMoniker": "PhanAnh.xaml.cs",
+              "ToolTip": "D:\\hocky_6\\TTCN\\BTL\\Nhom7_TTCN\\TTCN_Nhom7\\PhanAnh.xaml.cs",
+              "RelativeToolTip": "PhanAnh.xaml.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAABkAAAAbAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-25T14:44:01.18Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "nhankhau.xaml.cs",
+              "DocumentMoniker": "D:\\hocky_6\\TTCN\\BTL\\Nhom7_TTCN\\TTCN_Nhom7\\nhankhau.xaml.cs",
+              "RelativeDocumentMoniker": "nhankhau.xaml.cs",
+              "ToolTip": "D:\\hocky_6\\TTCN\\BTL\\Nhom7_TTCN\\TTCN_Nhom7\\nhankhau.xaml.cs",
+              "RelativeToolTip": "nhankhau.xaml.cs",
+              "ViewState": "AQIAABoAAAAAAAAAAAAAwCEAAAAbAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-25T14:43:50.282Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "menu.xaml.cs",
+              "DocumentMoniker": "D:\\hocky_6\\TTCN\\BTL\\Nhom7_TTCN\\TTCN_Nhom7\\menu.xaml.cs",
+              "RelativeDocumentMoniker": "menu.xaml.cs",
+              "ToolTip": "D:\\hocky_6\\TTCN\\BTL\\Nhom7_TTCN\\TTCN_Nhom7\\menu.xaml.cs",
+              "RelativeToolTip": "menu.xaml.cs",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-25T14:43:45.571Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "MainWindow.xaml.cs",
+              "DocumentMoniker": "D:\\hocky_6\\TTCN\\BTL\\Nhom7_TTCN\\TTCN_Nhom7\\MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "MainWindow.xaml.cs",
+              "ToolTip": "D:\\hocky_6\\TTCN\\BTL\\Nhom7_TTCN\\TTCN_Nhom7\\MainWindow.xaml.cs",
+              "RelativeToolTip": "MainWindow.xaml.cs",
+              "ViewState": "AQIAAA8AAAAAAAAAAAAAABsAAAAbAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-25T14:43:37.312Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "HoKhau.xaml.cs",
+              "DocumentMoniker": "D:\\hocky_6\\TTCN\\BTL\\Nhom7_TTCN\\TTCN_Nhom7\\HoKhau.xaml.cs",
+              "RelativeDocumentMoniker": "HoKhau.xaml.cs",
+              "ToolTip": "D:\\hocky_6\\TTCN\\BTL\\Nhom7_TTCN\\TTCN_Nhom7\\HoKhau.xaml.cs",
+              "RelativeToolTip": "HoKhau.xaml.cs",
+              "ViewState": "AQIAAA8AAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-25T14:43:32.329Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "HoKhau.xaml",
+              "DocumentMoniker": "D:\\hocky_6\\TTCN\\BTL\\Nhom7_TTCN\\TTCN_Nhom7\\HoKhau.xaml",
+              "RelativeDocumentMoniker": "HoKhau.xaml",
+              "ToolTip": "D:\\hocky_6\\TTCN\\BTL\\Nhom7_TTCN\\TTCN_Nhom7\\HoKhau.xaml",
+              "RelativeToolTip": "HoKhau.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-05-25T14:43:29.252Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "LienHe.xaml.cs",
+              "DocumentMoniker": "D:\\hocky_6\\TTCN\\BTL\\Nhom7_TTCN\\TTCN_Nhom7\\LienHe.xaml.cs",
+              "RelativeDocumentMoniker": "LienHe.xaml.cs",
+              "ToolTip": "D:\\hocky_6\\TTCN\\BTL\\Nhom7_TTCN\\TTCN_Nhom7\\LienHe.xaml.cs",
+              "RelativeToolTip": "LienHe.xaml.cs",
+              "ViewState": "AQIAABEAAAAAAAAAAAAiwB0AAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-25T14:41:57.426Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "LienHe.xaml",
+              "DocumentMoniker": "D:\\hocky_6\\TTCN\\BTL\\Nhom7_TTCN\\TTCN_Nhom7\\LienHe.xaml",
+              "RelativeDocumentMoniker": "LienHe.xaml",
+              "ToolTip": "D:\\hocky_6\\TTCN\\BTL\\Nhom7_TTCN\\TTCN_Nhom7\\LienHe.xaml",
+              "RelativeToolTip": "LienHe.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-05-25T14:40:59.475Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
               "Title": "XemThongTinCaNhan_user.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\Administrator\\Documents\\DAIHOC\\TTCN\\Nhom7_TTCN\\TTCN_Nhom7\\XemThongTinCaNhan_user.xaml.cs",
+              "DocumentMoniker": "D:\\hocky_6\\TTCN\\BTL\\Nhom7_TTCN\\TTCN_Nhom7\\XemThongTinCaNhan_user.xaml.cs",
               "RelativeDocumentMoniker": "XemThongTinCaNhan_user.xaml.cs",
-              "ToolTip": "C:\\Users\\Administrator\\Documents\\DAIHOC\\TTCN\\Nhom7_TTCN\\TTCN_Nhom7\\XemThongTinCaNhan_user.xaml.cs",
+              "ToolTip": "D:\\hocky_6\\TTCN\\BTL\\Nhom7_TTCN\\TTCN_Nhom7\\XemThongTinCaNhan_user.xaml.cs",
               "RelativeToolTip": "XemThongTinCaNhan_user.xaml.cs",
-              "ViewState": "AQIAABkAAAAAAAAAAAA1wCgAAAAMAAAA",
+              "ViewState": "AQIAADgAAAAAAAAAAAAkwCgAAAAMAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-24T07:36:49.362Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 23,
               "Title": "XemThongTinCaNhan_user.xaml",
-              "DocumentMoniker": "C:\\Users\\Administrator\\Documents\\DAIHOC\\TTCN\\Nhom7_TTCN\\TTCN_Nhom7\\XemThongTinCaNhan_user.xaml",
+              "DocumentMoniker": "D:\\hocky_6\\TTCN\\BTL\\Nhom7_TTCN\\TTCN_Nhom7\\XemThongTinCaNhan_user.xaml",
               "RelativeDocumentMoniker": "XemThongTinCaNhan_user.xaml",
-              "ToolTip": "C:\\Users\\Administrator\\Documents\\DAIHOC\\TTCN\\Nhom7_TTCN\\TTCN_Nhom7\\XemThongTinCaNhan_user.xaml",
+              "ToolTip": "D:\\hocky_6\\TTCN\\BTL\\Nhom7_TTCN\\TTCN_Nhom7\\XemThongTinCaNhan_user.xaml",
               "RelativeToolTip": "XemThongTinCaNhan_user.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2024-05-24T07:36:51.018Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
             }
           ]
         }

@@ -23,6 +23,8 @@ namespace TTCN_Nhom7
         public TrangChu_user()
         {
             InitializeComponent();
+            this.Left = 200;
+            this.Top = 100;
         }
         public TrangChu_user(string tk)
         {

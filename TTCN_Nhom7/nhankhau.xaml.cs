@@ -30,6 +30,8 @@ namespace TTCN_Nhom7
         public Window2()
         {
             InitializeComponent();
+            this.Left = 200;
+            this.Top = 100;
         }
         private void Quay_Ve(object sender, RoutedEventArgs e)
         {

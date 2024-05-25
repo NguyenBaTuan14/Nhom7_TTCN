@@ -27,6 +27,8 @@ namespace TTCN_Nhom7
         public suanhankhau( string ht,string hk, string nk, string cccd, string gt, string dc, string qh, string tg, string dt, string ns, string nghe)
         {
             InitializeComponent();
+            this.Left = 200;
+            this.Top = 100;
             this.hoten = ht;
             this.mahk = hk;
             this.mank = nk;

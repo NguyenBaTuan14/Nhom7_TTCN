@@ -22,6 +22,8 @@ namespace TTCN_Nhom7
         public PhanAnh()
         {
             InitializeComponent();
+            this.Left = 200;
+            this.Top = 100;
         }
         private void Button_Click(object sender, RoutedEventArgs e)
         {
