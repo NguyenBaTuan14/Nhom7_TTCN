@@ -48,7 +48,7 @@ namespace TTCN_Nhom7
 
         private void Phan_Anh(object sender, RoutedEventArgs e)
         {
-            PhanAnh pa = new PhanAnh();
+            PhanAnh_admin pa = new PhanAnh_admin();
             pa.Show();
             Close();
         }

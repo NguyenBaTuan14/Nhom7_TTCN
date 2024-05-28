@@ -7,10 +7,13 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
+    <Compile Update="DocThongBao.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="HoKhau.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="PhanAnh.xaml.cs">
+    <Compile Update="PhanAnh_admin.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="PhanAnh_user.xaml.cs">
@@ -66,13 +69,16 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Page Update="DocThongBao.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="HoKhau.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="MainWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="PhanAnh.xaml">
+    <Page Update="PhanAnh_admin.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="PhanAnh_user.xaml">

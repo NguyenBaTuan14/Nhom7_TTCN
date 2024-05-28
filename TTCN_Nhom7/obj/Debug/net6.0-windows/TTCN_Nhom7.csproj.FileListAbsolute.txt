@@ -212,7 +212,6 @@ C:\TTCN\BTL\TTCN_Nhom7\obj\Debug\net6.0-windows\HoKhau.g.cs
 C:\TTCN\BTL\TTCN_Nhom7\obj\Debug\net6.0-windows\MainWindow.g.cs
 C:\TTCN\BTL\TTCN_Nhom7\obj\Debug\net6.0-windows\menu.g.cs
 C:\TTCN\BTL\TTCN_Nhom7\obj\Debug\net6.0-windows\nhankhau.g.cs
-C:\TTCN\BTL\TTCN_Nhom7\obj\Debug\net6.0-windows\PhanAnh.g.cs
 C:\TTCN\BTL\TTCN_Nhom7\obj\Debug\net6.0-windows\suanhankhau.g.cs
 C:\TTCN\BTL\TTCN_Nhom7\obj\Debug\net6.0-windows\them.g.cs
 C:\TTCN\BTL\TTCN_Nhom7\obj\Debug\net6.0-windows\ThongKe.g.cs
@@ -224,7 +223,6 @@ C:\TTCN\BTL\TTCN_Nhom7\obj\Debug\net6.0-windows\HoKhau.baml
 C:\TTCN\BTL\TTCN_Nhom7\obj\Debug\net6.0-windows\MainWindow.baml
 C:\TTCN\BTL\TTCN_Nhom7\obj\Debug\net6.0-windows\menu.baml
 C:\TTCN\BTL\TTCN_Nhom7\obj\Debug\net6.0-windows\nhankhau.baml
-C:\TTCN\BTL\TTCN_Nhom7\obj\Debug\net6.0-windows\PhanAnh.baml
 C:\TTCN\BTL\TTCN_Nhom7\obj\Debug\net6.0-windows\suanhankhau.baml
 C:\TTCN\BTL\TTCN_Nhom7\obj\Debug\net6.0-windows\them.baml
 C:\TTCN\BTL\TTCN_Nhom7\obj\Debug\net6.0-windows\ThongKe.baml
@@ -263,3 +261,7 @@ C:\TTCN\BTL\TTCN_Nhom7\obj\Debug\net6.0-windows\TraLoiPhanAnh_admin.baml
 C:\TTCN\BTL\TTCN_Nhom7\obj\Debug\net6.0-windows\TrangChu_user.baml
 C:\TTCN\BTL\TTCN_Nhom7\obj\Debug\net6.0-windows\XemHoKhau_user.baml
 C:\TTCN\BTL\TTCN_Nhom7\obj\Debug\net6.0-windows\XemThongTinCaNhan_user.baml
+C:\TTCN\BTL\TTCN_Nhom7\obj\Debug\net6.0-windows\PhanAnh_admin.g.cs
+C:\TTCN\BTL\TTCN_Nhom7\obj\Debug\net6.0-windows\PhanAnh_admin.baml
+C:\TTCN\BTL\TTCN_Nhom7\obj\Debug\net6.0-windows\DocThongBao.g.cs
+C:\TTCN\BTL\TTCN_Nhom7\obj\Debug\net6.0-windows\DocThongBao.baml

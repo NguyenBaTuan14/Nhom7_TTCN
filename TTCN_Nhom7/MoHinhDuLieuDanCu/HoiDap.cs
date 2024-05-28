@@ -5,8 +5,9 @@ namespace TTCN_Nhom7.MoHinhDuLieuDanCu;
 
 public partial class HoiDap
 {
+    
     public string MaCauHoi { get; set; } = null!;
-
+    
     public string? NoiDungCauHoi { get; set; }
 
     public string? NoiDungCauTraLoi { get; set; }

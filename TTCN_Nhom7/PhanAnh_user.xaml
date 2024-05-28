@@ -5,19 +5,23 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TTCN_Nhom7"
         mc:Ignorable="d"
+        Loaded="Window_Loaded"
         Title="PhanAnh_user" Height="450" Width="800">
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="auto"/>
-            <RowDefinition Height="auto"/>
-            <RowDefinition Height="auto"/>
-            <RowDefinition />
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="auto"/>
-            <ColumnDefinition Width="auto"/>
-            <ColumnDefinition />
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
+
+        <!-- Back Button -->
         <Button Grid.Row="0" Grid.Column="0" Padding="-30"
          Content="&#x2190;" 
          Margin="10,0,0,0" Width="40" 
@@ -26,34 +30,34 @@
          Foreground="#2196F3"
          BorderBrush="White"
          Background="White" Click="Button_Click"/>
-        <Border Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3" Grid.RowSpan="3"
-        BorderBrush="Green" BorderThickness="1" Background="AliceBlue"/>
+
+        <!-- Header -->
         <Label Content="PHẢN ÁNH" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="5"
-       FontSize="35" FontWeight="Bold" Foreground="Green"/>
+               FontSize="35" FontWeight="Bold" Foreground="Green"/>
+
+        <!-- Search Panel -->
         <Label Content="Nội dung phản ánh:" Grid.Row="1" Grid.Column="0" Margin="5" Height="50" HorizontalAlignment="Left" VerticalAlignment="Center" VerticalContentAlignment="Center" FontSize="18" />
-        <TextBox x:Name="phananh" Grid.Row="1" Grid.Column="1" Height="50" Width="450" HorizontalContentAlignment="Left" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="5"/>
+        <TextBox x:Name="txtSearch" Grid.Row="1" Grid.Column="1" Height="50" Width="450" HorizontalContentAlignment="Left" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="5"/>
         <Button Grid.Column="2" Grid.Row="1" Content="Tìm kiếm" Width="90" Height="40"
- Background="#2196F3"
- Foreground="White"   BorderBrush="AntiqueWhite" FontSize="18"/>
-        <DataGrid Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="3" Margin="5"
-          AutoGenerateColumns="False" Height="200" 
-          ColumnHeaderStyle="{StaticResource dataGridHeader}">
+                Background="#2196F3" Foreground="White" BorderBrush="AntiqueWhite" FontSize="18" Click="Button_Click_1"/>
+
+        <!-- Data Grid -->
+        <DataGrid x:Name="dataGridPhanAnh" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="3" Margin="5"
+                  AutoGenerateColumns="False" Height="200" SelectionChanged="dataGridPhanAnh_SelectionChanged" ColumnHeaderStyle="{StaticResource dataGridHeader}">
             <DataGrid.Columns>
-                <DataGridTextColumn Header="ID" Width="50"/>
-                <DataGridTextColumn Header="Nội dung phản ánh" Width="*"/>
+                <DataGridTextColumn Header="STT" Binding="{Binding Stt}" Width="50"/>
+                <DataGridTextColumn Header="Nội dung phản ánh" Binding="{Binding NoiDungPhanAnh}" Width="*"/>
+                <DataGridTextColumn Header="Nội dung phản hồi" Binding="{Binding NoiDungPhanHoi}" Width="*"/>
             </DataGrid.Columns>
         </DataGrid>
+
+        <!-- Action Buttons -->
         <StackPanel Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="3" Orientation="Horizontal"
-            HorizontalAlignment="Center" Height="60">
+                    HorizontalAlignment="Center" Height="60">
             <Button x:Name="btnThem" Content="Thêm" Height="40" Width="100" Margin="5"
-            Template="{StaticResource buttontemplate}" Style="{StaticResource buttonStyle}" Click="btnThem_Click" />
+                    Template="{StaticResource buttontemplate}" Style="{StaticResource buttonStyle}" Click="btnThem_Click" />
             <Button x:Name="btnSua" Content="Sửa" Height="40" Width="100" Margin="5"
-            Template="{StaticResource buttontemplate}" Style="{StaticResource buttonStyle}" Click="btnSua_Click" />
-            <Button x:Name="btnXoa" Content="Xóa" Height="40" Width="100" Margin="5"
-            Template="{StaticResource buttontemplate}" Style="{StaticResource buttonStyle}" />
-
-
-
+                    Template="{StaticResource buttontemplate}" Style="{StaticResource buttonStyle}" Click="btnSua_Click" />
         </StackPanel>
     </Grid>
 </Window>

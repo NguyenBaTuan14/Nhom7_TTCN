@@ -5,20 +5,23 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TTCN_Nhom7"
         mc:Ignorable="d"
-        Title="TraLoiPhanAnh_admin" Height="450" Width="800">
+        Loaded="Window_Loaded"
+        Title="TraLoiPhanAnh_admin" Height="550" Width="800">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="400"/>
+            <ColumnDefinition Width="Auto"/>
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
-        <StackPanel Orientation="Horizontal" >
-            <Button Grid.Row="0" Grid.Column="0" Padding="-30"
+
+        <!-- Back Button -->
+        <Button Grid.Row="0" Grid.Column="0" Padding="-30"
                Content="&#x2190;" 
                Margin="10,0,0,0" Width="40" 
                HorizontalAlignment="Left"
@@ -26,15 +29,37 @@
                Foreground="#2196F3"
                BorderBrush="White"
                Background="White" Click="Button_Click"/>
-        </StackPanel>
-        <GroupBox Header="Nội dung"  FontSize="20" FontWeight="Bold" Grid.Column="0" Grid.Row="4" Grid.ColumnSpan="2">
-            <Border   Background="AliceBlue" BorderBrush="Black" BorderThickness="2">
-                <TextBox x:Name="NDphananh" FontWeight="Bold"/>
-            </Border>
-        </GroupBox>
-        <Label Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Content="Phản Ánh" HorizontalContentAlignment="Center" FontSize="35" Foreground="Green" FontWeight="Bold"/>
-        <Button Grid.Column="1" Grid.Row="2" Grid.ColumnSpan="2" Content="Trả lời" Width="150" Height="40" Background="#2196F3" BorderBrush="AntiqueWhite" FontSize="23" FontWeight="Bold"/>
 
+        <!-- Title -->
+        <Label Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" 
+               Content="Phản Ánh" 
+               HorizontalContentAlignment="Center" 
+               FontSize="35" 
+               Foreground="Green" 
+               FontWeight="Bold"/>
+
+        <!-- Feedback Content -->
+        <Label Grid.Row="1" Grid.Column="0" Content="Nội dung phản ánh:" 
+               Margin="10" FontSize="16" VerticalAlignment="Top"/>
+        <TextBox x:Name="NDphananh" Grid.Row="1" Grid.Column="1" 
+                 Margin="10" Height="100" VerticalScrollBarVisibility="Auto"
+                 IsReadOnly="True" TextWrapping="Wrap" AcceptsReturn="True"
+                 Background="AliceBlue" BorderBrush="Black" BorderThickness="1"/>
+
+        <!-- Admin Response -->
+        <Label Grid.Row="2" Grid.Column="0" Content="Nội dung trả lời:" 
+               Margin="10" FontSize="16" VerticalAlignment="Top"/>
+        <TextBox x:Name="NDtraloi" Grid.Row="2" Grid.Column="1" 
+                 Margin="10" Height="150" VerticalScrollBarVisibility="Auto"
+                 TextWrapping="Wrap" AcceptsReturn="True"
+                 Background="White" BorderBrush="Black" BorderThickness="1"/>
+
+        <!-- Submit Button -->
+        <Button Grid.Row="3" Grid.Column="1" 
+                Content="Trả lời" Width="150" Height="40" 
+                Background="#2196F3" BorderBrush="AntiqueWhite" 
+                FontSize="23" FontWeight="Bold" HorizontalAlignment="Right" 
+                Margin="10" Click="Button_Click_1"/>
 
     </Grid>
 </Window>

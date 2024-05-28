@@ -34,7 +34,7 @@
         </GroupBox>
         <Label Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Content="Phản Ánh" HorizontalContentAlignment="Center" FontSize="35" Foreground="Green" FontWeight="Bold"/>
         <Button Grid.Column="1" Grid.Row="2" Grid.ColumnSpan="2" Content="Thêm" Width="150" Height="40" 
- Background="#2196F3" Foreground="White"   BorderBrush="AntiqueWhite" FontSize="23" FontWeight="Bold"/>
+ Background="#2196F3" Foreground="White"   BorderBrush="AntiqueWhite" FontSize="23" FontWeight="Bold" Click="Button_Click"/>
 
 
     </Grid>

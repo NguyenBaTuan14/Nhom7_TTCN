@@ -43,7 +43,7 @@
             </StackPanel>
             <Button Content="Tìm" VerticalAlignment="Top" Margin="210,0,125,0" Background="#2196F3"
                     Foreground="White"          
-                    Template="{StaticResource buttonTemplate}" Height="28"/>
+                    Template="{StaticResource buttonTemplate}" Height="28" Click="Button_Click"/>
         </Grid>
         <StackPanel Orientation="Horizontal" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" Margin="10">
             <TextBlock Text="Độ tuổi" VerticalAlignment="Center" Margin="0,0,5,0"/>
@@ -56,13 +56,13 @@
         <DataGrid x:Name="dataGridThongKe" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" AutoGenerateColumns="False" Margin="10" FontWeight="Bold"
                   >
             <DataGrid.Columns>
-                <DataGridTextColumn Header="CCCD/CMND" Binding="{Binding cccd}" Width="100"/>
+                <DataGridTextColumn Header="CCCD/CMND" Binding="{Binding SoCmndCccd}" Width="100"/>
                 <DataGridTextColumn Header="Họ tên" Binding="{Binding HoTen}" Width="150"/>
-                <DataGridTextColumn Header="Địa chỉ" Binding="{Binding Diachi}" Width="100"/>
+                <DataGridTextColumn Header="Địa chỉ" Binding="{Binding DiaChiThuongChu}" Width="100"/>
                 <DataGridTextColumn Header="GT" Binding="{Binding GioiTinh}" Width="50"/>
-                <DataGridTextColumn Header="Ngày sinh" Binding="{Binding NgaySinh}" Width="80"/>
-                <DataGridTextColumn Header="Hộ Khẩu" Binding="{Binding HoKhau}" Width="60"/>
-                <DataGridTextColumn Header="SDT" Binding="{Binding SDT}" Width="80"/>
+                <DataGridTextColumn Header="Ngày sinh" Binding="{Binding Tuoi}" Width="80"/>
+                <DataGridTextColumn Header="Hộ Khẩu" Binding="{Binding MaHoKhau}" Width="60"/>
+                <DataGridTextColumn Header="SDT" Binding="{Binding SoDienThoai}" Width="80"/>
                 <DataGridTextColumn Header="Email" Binding="{Binding Email}" Width="160"/>
             </DataGrid.Columns>
         </DataGrid>

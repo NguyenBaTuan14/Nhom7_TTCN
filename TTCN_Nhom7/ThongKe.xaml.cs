@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,7 +12,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
-using TTCN_Nhom7.MoHinhDuLieuDanCu;
+using TTCN_Nhom7.DuLieuQuanLyDanCu;
 
 namespace TTCN_Nhom7
 {
@@ -20,6 +21,7 @@ namespace TTCN_Nhom7
     /// </summary>
     public partial class ThongKe : Window
     {
+        public List<NhanKhau> NhanKhauList { get; set; }
         public ThongKe()
         {
             InitializeComponent();
@@ -35,11 +37,7 @@ namespace TTCN_Nhom7
         {
             string hoTen = txtHoTen.Text;
             string diaChi = txtDiaChi.Text;
-            int? tuoi = null;
-            if (int.TryParse(txtTuoi.Text, out int parsedTuoi))
-            {
-                tuoi = parsedTuoi;
-            }
+            
             bool? gioiTinh = null;
             if (rdoNam.IsChecked == true)
             {
@@ -50,38 +48,52 @@ namespace TTCN_Nhom7
                 gioiTinh = false;
             }
 
-            using (QlthongTinDanCuContext db = new QlthongTinDanCuContext())
+            using (QldanCuNguyenXaContext db = new QldanCuNguyenXaContext())
             {
                 try
                 {
-                    var query = db.NhanKhaus.AsQueryable();
+                    var query = db.NhanKhaus
+                    .Include(nk => nk.MaTaiKhoanNavigation)
+                    .Include(nk => nk.MaHoKhauNavigation)
+                    .AsQueryable();
 
-                    if (!string.IsNullOrEmpty(hoTen))
+                    if (!string.IsNullOrEmpty(txtHoTen.Text))
                     {
-                        query = query.Where(tk => tk.HoTen.Contains(hoTen, StringComparison.OrdinalIgnoreCase));
-                    }
-                    if (!string.IsNullOrEmpty(diaChi))
-                    {
-                        query = query.Where(tk => tk.DiaChiThuongChu.Contains(diaChi, StringComparison.OrdinalIgnoreCase));
-                    }
-                    if (gioiTinh.HasValue)
-                    {
-                        query = query.Where(tk => tk.GioiTinh == gioiTinh.Value);
-                    }
-                    if (tuoi.HasValue)
-                    {
-                        query = query.Where(tk => tk.Tuoi == tuoi.Value);
+                        query = query.Where(nk => nk.HoTen.Contains(txtHoTen.Text));
                     }
 
+                    if (rdoNam.IsChecked == true)
+                    {
+                        query = query.Where(nk => nk.GioiTinh == true);
+                    }
+                    else if (rdoNu.IsChecked == true)
+                    {
+                        query = query.Where(nk => nk.GioiTinh == false);
+                    }
+
+                    if (int.TryParse(txtTuoi.Text, out int tuoi))
+                    {
+                        var minBirthDate = DateTime.Now.AddYears(-tuoi - 1).AddDays(1);
+                        var maxBirthDate = DateTime.Now.AddYears(-tuoi);
+                        query = query.Where(nk => nk.NgaySinh >= minBirthDate && nk.NgaySinh <= maxBirthDate);
+                    }
+
+                    if (!string.IsNullOrEmpty(txtDiaChi.Text))
+                    {
+                        query = query.Where(nk => nk.DiaChiThuongChu.Contains(txtDiaChi.Text));
+                    }
                     var result = query.Select(tk => new
                     {
-                        tk.MaNhanKhau,
+                        tk.SoCmndCccd,
                         tk.HoTen,
+                        tk.DiaChiThuongChu,
                         GioiTinh = (bool)tk.GioiTinh ? "nam" : "nữ",
                         tk.Tuoi,
-                        tk.DiaChiThuongChu,
+                        tk.MaHoKhauNavigation.MaHoKhau,
+                        tk.MaTaiKhoanNavigation.SoDienThoai,
+                        tk.MaTaiKhoanNavigation.Email
                     }).ToList();
-
+                    
                     dataGridThongKe.ItemsSource = result;
                 }
                 catch (Exception ex)

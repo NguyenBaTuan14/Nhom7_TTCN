@@ -12,7 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using TTCN_Nhom7.MoHinhDuLieuDanCu;
+using TTCN_Nhom7.DuLieuQuanLyDanCu;
 
 namespace TTCN_Nhom7
 {
@@ -21,6 +21,7 @@ namespace TTCN_Nhom7
     /// </summary>
     public partial class MainWindow : Window
     {
+       
         public MainWindow()
         {
             InitializeComponent();
@@ -30,7 +31,7 @@ namespace TTCN_Nhom7
             string role = null;
             try
             {
-                using (QlthongTinDanCuContext db = new QlthongTinDanCuContext())
+                using (QldanCuNguyenXaContext db = new QldanCuNguyenXaContext())
                 {
                     var query = from tk in db.TaiKhoans
                                 where (tk.Email == taiKhoan || tk.SoDienThoai == taiKhoan) && tk.MatKhau == matKhau
@@ -46,7 +47,8 @@ namespace TTCN_Nhom7
             return role;
         }
         private void Login(object sender, RoutedEventArgs e)
-        {  
+        {
+
             string taiKhoan = txtTaiKhoan.Text;
             string matKhau = txtMatKhau.Password;
 
@@ -64,7 +66,7 @@ namespace TTCN_Nhom7
                 else if (userRole == "user")
                 {
                     MessageBox.Show("Đăng nhập thành công với vai trò User!", "Thông báo", MessageBoxButton.OK, MessageBoxImage.Information);
-                    Window1 userWindow = new Window1();
+                    TrangChu_user userWindow = new TrangChu_user(taiKhoan);
                     userWindow.Show();
                     Close();
                 }
@@ -73,7 +75,7 @@ namespace TTCN_Nhom7
             {
                 MessageBox.Show("Tài khoản hoặc mật khẩu không đúng!", "Lỗi", MessageBoxButton.OK, MessageBoxImage.Error);
             }
-
+            
 
         }
     }

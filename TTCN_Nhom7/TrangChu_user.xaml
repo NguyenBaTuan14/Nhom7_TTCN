@@ -4,7 +4,9 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TTCN_Nhom7"
+        
         mc:Ignorable="d"
+        Loaded="Window_Loaded"
         Title="TrangChuUser" Height="450" Width="800">
     <Grid>
         <Grid.ColumnDefinitions>
@@ -29,7 +31,22 @@
         </StackPanel>
         <GroupBox Header="Thông báo / Tin tức từ xã"  FontSize="20" FontWeight="Bold" Grid.Column="0" Grid.Row="3" Grid.ColumnSpan="2">
             <Border   Background="AliceBlue" BorderBrush="Black" BorderThickness="2">
-                <TextBlock x:Name="NDphananh" FontWeight="Bold"/>
+                <DataGrid x:Name="dataGridThongBao" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" Margin="5"
+                    AutoGenerateColumns="False" Height="220" SelectionChanged="dataGridThongBao_SelectionChanged">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="Stt" Width="50" Binding="{Binding Stt}"/>
+                        <DataGridTextColumn Header="Thông báo" Width="400" Binding="{Binding TieuDeThongBao}"/>
+                        <DataGridTextColumn Header="Ngày thông báo" Width="*" Binding="{Binding NgayThongBao}"/>
+                        
+                        <DataGridTemplateColumn Header="Actions" Width="100">
+                            <DataGridTemplateColumn.CellTemplate>
+                                <DataTemplate>
+                                    <Button Content="Đọc" Click="Button_Click_3"/>
+                                </DataTemplate>
+                            </DataGridTemplateColumn.CellTemplate>
+                        </DataGridTemplateColumn>
+                    </DataGrid.Columns>
+                </DataGrid>
             </Border>
         </GroupBox>
 
