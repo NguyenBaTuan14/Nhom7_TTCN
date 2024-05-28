@@ -42,19 +42,10 @@
             <TextBox Name ="txtmatk" />
         </GroupBox>
 
-        <GroupBox Header="Số CCCD/CMND"
-              BorderBrush="#2196F3"
-              Margin="0,0,0,5"
-              Grid.Row="2" Grid.Column="0"
-              Height="60"  
-              Width="300">
-                    <TextBox Name ="txtcccd" />
-        </GroupBox>
-
         <GroupBox Header="Họ"
                 BorderBrush="#2196F3"
               Margin="0,0,0,5"
-              Grid.Row="3" Grid.Column="0"
+              Grid.Row="2" Grid.Column="0"
               Height="60"  
               Width="300">
                 <TextBox Name ="txtho"  />
@@ -63,7 +54,7 @@
         <GroupBox Header="Tên"
                 BorderBrush="#2196F3"
               Margin="0,0,0,5"
-              Grid.Row="4" Grid.Column="0"
+              Grid.Row="3" Grid.Column="0"
               Height="60"  
               Width="300">
             <TextBox Name ="txtten"  />
@@ -95,14 +86,14 @@
 
         <GroupBox Header="Vai trò"
                BorderBrush="#2196F3"
-               Grid.Row="4" Grid.Column="1"
+               Grid.Row="4" Grid.Column="0"
                Height="60"  
                Width="300">
             <TextBox Name ="txtrole"/>
         </GroupBox>
 
         <Button Name="btnsua" Content="Sửa" 
-                 Grid.Row="5" Grid.Column="1" 
+                 Grid.Row="4" Grid.Column="1" 
                  HorizontalAlignment="Center" 
                  Height="40" Width="100"
                  FontSize="20" 

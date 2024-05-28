@@ -51,5 +51,12 @@ namespace TTCN_Nhom7
             phanAnh_User.Show();
             Close();
         }
+
+        private void Button_Click_3(object sender, RoutedEventArgs e)
+        {
+            LienHe lh = new LienHe();
+            lh.Show();
+            lh.Close();
+        }
     }
 }

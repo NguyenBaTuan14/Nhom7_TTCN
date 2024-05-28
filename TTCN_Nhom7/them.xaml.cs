@@ -12,7 +12,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
-using TTCN_Nhom7.QuanLyDanCu;
+using TTCN_Nhom7.MoHinhDuLieu;
 using static System.Net.Mime.MediaTypeNames;
 
 namespace TTCN_Nhom7
@@ -22,7 +22,7 @@ namespace TTCN_Nhom7
     /// </summary>
     public partial class them : Window
     {
-        QlthongTinDanCuContext db = new QlthongTinDanCuContext();
+        QldanCuNguyenXaContext db = new QldanCuNguyenXaContext();
         public them()
         {
             InitializeComponent();
@@ -49,7 +49,7 @@ namespace TTCN_Nhom7
                                   select nk;
                 int count = query_count.Count();
                 string nextIndex = (count + 1).ToString().PadLeft(2, '0');
-                nkmoi.MaNhanKhau = "NK0" + nextIndex;
+                nkmoi.MaNhanKhau = "NK" + nextIndex;
 
                 if (radnam.IsChecked == true)
                 {

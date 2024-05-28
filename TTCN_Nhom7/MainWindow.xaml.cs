@@ -12,7 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using TTCN_Nhom7.QuanLyDanCu;
+using TTCN_Nhom7.MoHinhDuLieu;
 
 namespace TTCN_Nhom7
 {
@@ -33,7 +33,7 @@ namespace TTCN_Nhom7
             string role = null;
             try
             {
-                using (QlthongTinDanCuContext db = new QlthongTinDanCuContext())
+                using (QldanCuNguyenXaContext db = new QldanCuNguyenXaContext())
                 {
                     var query = from tk in db.TaiKhoans
                                 where (tk.Email == taiKhoan || tk.SoDienThoai == taiKhoan) && tk.MatKhau == matKhau

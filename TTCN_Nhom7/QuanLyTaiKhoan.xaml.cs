@@ -15,7 +15,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
-using TTCN_Nhom7.QuanLyDanCu;
+using TTCN_Nhom7.MoHinhDuLieu;
 
 namespace TTCN_Nhom7
 {
@@ -24,9 +24,9 @@ namespace TTCN_Nhom7
     /// </summary>
     public partial class QuanLyTaiKhoan_admin : Window
     {
-        QlthongTinDanCuContext db = new QlthongTinDanCuContext();
+        QldanCuNguyenXaContext db = new QldanCuNguyenXaContext();
         private object selectedRow;
-        string matk, socccd, ho, ten, sodt, email, matkhau, vaitro = "";
+        string matk, ho, ten, sodt, email, matkhau, vaitro = "";
         public QuanLyTaiKhoan_admin()
         {
             InitializeComponent();
@@ -143,26 +143,18 @@ namespace TTCN_Nhom7
         private void btnSua_Click(object sender, RoutedEventArgs e)
         {
             var query = from tk in db.TaiKhoans
-                        join hk in db.HoKhaus on tk.MaTaiKhoan equals hk.MaTaiKhoan
-                        join nk in db.NhanKhaus on hk.MaHoKhau equals nk.MaHoKhau
                         select new
                         {
                             MaTK = tk.MaTaiKhoan,
                             HoTen = tk.Ho + " " + tk.Ten
                         };
-            var query_cccd = from q in query
-                             join hk in db.HoKhaus on q.MaTK equals hk.MaTaiKhoan
-                             join nk in db.NhanKhaus on hk.MaHoKhau equals nk.MaHoKhau
-                             where nk.HoTen.Contains(q.HoTen)
-                             select nk.SoCmndCccd;
-            socccd = query_cccd.First();
 
             var query_role = from tk in db.TaiKhoans
                              where tk.MaTaiKhoan == matk
                              select tk.Role;
             vaitro = query_role.First();
 
-            SuaTK_admin themSK_Admin = new SuaTK_admin(matk, socccd, ho, ten, sodt, email, matkhau, vaitro);
+            SuaTK_admin themSK_Admin = new SuaTK_admin(matk, ho, ten, sodt, email, matkhau, vaitro);
             themSK_Admin.Show();
             Close();
         }

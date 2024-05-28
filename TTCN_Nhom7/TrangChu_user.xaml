@@ -24,7 +24,7 @@
         <StackPanel Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Orientation="Horizontal"  Height="100" HorizontalAlignment="Center">
             <Button Content="Thông tin cá nhân" Width="200" Height="50" Background="#2196F3" BorderBrush="AntiqueWhite" FontSize="18" Click="Button_Click" FontWeight="Bold" Foreground="White" />
             <Button Content="Thông tin hộ khẩu" Width="200" Height="50" Background="#2196F3" BorderBrush="AntiqueWhite" FontSize="18" Click="Button_Click_1" FontWeight="Bold" Foreground="White" />
-            <Button Content="Hỏi đáp" Width="200" Height="50" Background="#2196F3" BorderBrush="AntiqueWhite" FontSize="18" FontWeight="Bold" Foreground="White" />
+            <Button Content="Liên hệ" Width="200" Height="50" Background="#2196F3" BorderBrush="AntiqueWhite" FontSize="18" FontWeight="Bold" Foreground="White" Click="Button_Click_3" />
             <Button Content="Phản ánh" Width="200" Height="50" Background="#2196F3" BorderBrush="AntiqueWhite" FontSize="18" Click="Button_Click_2" FontWeight="Bold" Foreground="White"/>
         </StackPanel>
         <GroupBox Header="Thông báo / Tin tức từ xã"  FontSize="20" FontWeight="Bold" Grid.Column="0" Grid.Row="3" Grid.ColumnSpan="2">

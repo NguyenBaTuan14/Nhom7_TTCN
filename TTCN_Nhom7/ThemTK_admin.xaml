@@ -5,99 +5,72 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TTCN_Nhom7"
         mc:Ignorable="d"
-        Title="ThemTK_admin" Height="450" Width="800">
+        Title="ThemTK_admin" Height="450" Width="750">
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="auto"/>
-            <RowDefinition Height="auto"/>
-            <RowDefinition Height="auto"/>
-            <RowDefinition Height="auto"/>
             <RowDefinition Height="auto"/>
             <RowDefinition Height="auto"/>
             <RowDefinition Height="auto"/>
             <RowDefinition />
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="400"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="auto"/>
             <ColumnDefinition />
         </Grid.ColumnDefinitions>
-
         <Button Grid.Row="0" Grid.Column="0" Padding="-30"
-         Content="&#x2190;" 
-         Margin="10,0,0,0" Width="40" 
-         HorizontalAlignment="Left"
-         Height="40"  FontSize="37" FontWeight="Bold"
-         Foreground="#2196F3"
-         BorderBrush="White"
-         Background="White" VerticalAlignment="Top" Click="Button_Click"/>
-
-        <GroupBox Header="Số CCCD/CMND"
-          BorderBrush="#2196F3"
-          Margin="0,0,0,5"
-          Grid.Row="1" Grid.Column="0"
-          Height="60"  
-          Width="300">
-            <TextBox Name ="txtcccd" />
-        </GroupBox>
-
-        <GroupBox Header="Họ"
-              BorderBrush="#2196F3"
-              Margin="0,0,0,5"
-              Grid.Row="2" Grid.Column="0"
-              Height="60"  
-              Width="300">
-            <TextBox Name ="txtho"  />
-        </GroupBox>
-
-        <GroupBox Header="Tên"
-              BorderBrush="#2196F3"
-              Margin="0,0,0,5"
-              Grid.Row="3" Grid.Column="0"
-              Height="60"  
-              Width="300">
-            <TextBox Name ="txtten"  />
-        </GroupBox>
-
-        <GroupBox Header="Email"
-              BorderBrush="#2196F3"
-              Grid.Row="1" Grid.Column="1"
-              Height="60"  
-              Width="300">
-            <TextBox Name ="txtEmail"/>
-        </GroupBox>
-
-        <GroupBox Header="Mật khẩu"
-              BorderBrush="#2196F3"
-              Grid.Row="2" Grid.Column="1"
-              Height="60"  
-              Width="300">
-            <TextBox Name ="txtmatkhau"/>
-        </GroupBox>
-
-        <GroupBox Header="Số điện thoại"
-              BorderBrush="#2196F3"
-              Grid.Row="4" Grid.Column="0"
-              Height="60"  
-              Width="300">
-            <TextBox Name ="txtsodt"/>
-        </GroupBox>
-
-        <GroupBox Header="Vai trò"
-           BorderBrush="#2196F3"
-           Grid.Row="3" Grid.Column="1"
-           Height="60"  
-           Width="300">
-            <TextBox Name ="txtrole"/>
-        </GroupBox>
-
-        <Button Name="btnthem" Content="Thêm" 
-             Grid.Row="4" Grid.Column="1" 
-             HorizontalAlignment="Center" 
-             Height="40" Width="100"
-             FontSize="20" 
-             Background="#2196F3"
-             Foreground="White"  
-             Margin="0,12,0,0"
-             Template="{StaticResource buttonTemplate}" Click="btnthem_Click"/>
+                Content="&#x2190;" 
+                Margin="10,13,0,14" Width="40" 
+                HorizontalAlignment="Left" FontSize="37" FontWeight="Bold"
+                Foreground="#2196F3"
+                BorderBrush="White"
+                Background="White" Click="Button_Click"/>   
+        <Border Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3" Grid.RowSpan="3"
+            BorderBrush="#2196F3" BorderThickness="1" Background="AliceBlue"/>
+        <Label Content="THỰC HIỆN CẤP QUYỀN" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="5"
+            FontSize="35" FontWeight="Bold" Foreground="#2196F3"/>
+        <Label Content="Số CCCD/CMND" Grid.Row="1" Grid.Column="0" Margin="5" Height="50" 
+               HorizontalAlignment="Left" VerticalAlignment="Center" VerticalContentAlignment="Center" 
+               FontSize="15" />
+        <TextBox Name="txtcccd" Grid.Row="1" Grid.Column="1" Height="40" Width="450" HorizontalContentAlignment="Left" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="5"/>
+        <Button Name ="btntim" Grid.Column ="2" Grid.Row="1" Content="Tìm kiếm" Width="90" Height="40"
+            Background="#2196F3" Foreground="White"   BorderBrush="AntiqueWhite"
+                            Click="btntim_onclick" 
+                Template="{StaticResource buttonTemplate}" />
+        <DataGrid Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="3" Margin="5"
+                  AutoGenerateColumns="False" Height="200" 
+                  Name ="dtgdanhsach"
+                  BorderBrush="#2196F3"
+                  Background="White"
+                  SelectionChanged="dtgdanhsach_SelectionChanged"
+                  ColumnHeaderStyle="{StaticResource columnheaderStyle}">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Mã" 
+                                    Binding="{Binding Ma}" Width="100"
+                                    ElementStyle="{StaticResource cellStyle}"/>
+                <DataGridTextColumn Header="Họ Tên" Width="120"
+                                    ElementStyle="{StaticResource cellStyle}"
+                                    Binding="{Binding HoTen}"/>
+                <DataGridTextColumn Header="Mã hộ khẩu" Width="80"
+                                    ElementStyle="{StaticResource cellStyle}"
+                                    Binding="{Binding MaHoKhau}"/>
+                <DataGridTextColumn Header="Giới tính" Width="150"
+                                    ElementStyle="{StaticResource cellStyle}"
+                                    Binding="{Binding GioiTinh}"/>
+                <DataGridTextColumn Header="Ngày sinh" Width="100"
+                                    ElementStyle="{StaticResource cellStyle}"
+                                    Binding="{Binding NgaySinh}"/>
+                <DataGridTextColumn Header="Địa chỉ"
+                                    Binding="{Binding DiaChiThuongChu}" Width="*"
+                                    ElementStyle="{StaticResource cellStyle}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <StackPanel Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="3" Orientation="Horizontal"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Top">
+            <Button Name="btncap" Content="Cấp quyền" Height="40" Width="100" Margin="10"
+                    Template="{StaticResource buttonTemplate}" Click="btnadd_Click" 
+                    Foreground="White"/>
+        </StackPanel>
     </Grid>
 </Window>

@@ -2891,19 +2891,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\HP\\.nuget\\packages\\": {}
+    "C:\\Users\\Admin\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\hocky_6\\TTCN\\BTL\\Nhom7_TTCN\\TTCN_Nhom7\\TTCN_Nhom7.csproj",
+      "projectUniqueName": "D:\\DAIHOC\\TTCN\\Nhom7_TTCN\\TTCN_Nhom7\\TTCN_Nhom7.csproj",
       "projectName": "TTCN_Nhom7",
-      "projectPath": "D:\\hocky_6\\TTCN\\BTL\\Nhom7_TTCN\\TTCN_Nhom7\\TTCN_Nhom7.csproj",
-      "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
-      "outputPath": "D:\\hocky_6\\TTCN\\BTL\\Nhom7_TTCN\\TTCN_Nhom7\\obj\\",
+      "projectPath": "D:\\DAIHOC\\TTCN\\Nhom7_TTCN\\TTCN_Nhom7\\TTCN_Nhom7.csproj",
+      "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
+      "outputPath": "D:\\DAIHOC\\TTCN\\Nhom7_TTCN\\TTCN_Nhom7\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\HP\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -2964,7 +2964,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.205\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300\\RuntimeIdentifierGraph.json"
       }
     }
   }

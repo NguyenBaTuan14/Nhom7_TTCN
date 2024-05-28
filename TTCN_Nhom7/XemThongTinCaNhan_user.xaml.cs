@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore.Storage.ValueConversion.Internal;
+﻿using Microsoft.EntityFrameworkCore.Query.SqlExpressions;
+using Microsoft.EntityFrameworkCore.Storage.ValueConversion.Internal;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,7 +13,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
-using TTCN_Nhom7.QuanLyDanCu;
+using TTCN_Nhom7.MoHinhDuLieu;
 
 namespace TTCN_Nhom7
 {
@@ -21,7 +22,7 @@ namespace TTCN_Nhom7
     /// </summary>
     public partial class xemthongtin_user : Window
     {
-        QlthongTinDanCuContext db = new QlthongTinDanCuContext();
+        QldanCuNguyenXaContext db = new QldanCuNguyenXaContext();
         string taikhoan = "";
         public xemthongtin_user()
         {
@@ -44,10 +45,8 @@ namespace TTCN_Nhom7
         }
         private void window_load(object sender, RoutedEventArgs e)
         {
-            var query = from tk in db.TaiKhoans
-                        join hk in db.HoKhaus on tk.MaTaiKhoan equals hk.MaTaiKhoan
-                        join nk in db.NhanKhaus on hk.MaHoKhau equals nk.MaHoKhau
-                        where tk.Email == taikhoan || tk.SoDienThoai == taikhoan
+            var query = from nk in db.NhanKhaus
+                        where nk.MaTaiKhoanNavigation.Email == taikhoan || nk.MaTaiKhoanNavigation.SoDienThoai == taikhoan
                         select new
                         {   
                             MaHK = nk.MaHoKhau,
@@ -58,8 +57,8 @@ namespace TTCN_Nhom7
                             QuanHe = nk.QuanHeVoiChuHo,
                             HoKhau = nk.MaHoKhau,
                             DiaChi = nk.DiaChiThuongChu,
-                            SoDT = tk.SoDienThoai,
-                            Email = tk.Email,
+                            SoDT = nk.MaTaiKhoanNavigation.SoDienThoai,
+                            Email = nk.MaTaiKhoanNavigation.Email,
                         };
             // Gán giá trị từ query vào các textbox
             txtcccd.Text = query.FirstOrDefault()?.SoCCCD ?? "";

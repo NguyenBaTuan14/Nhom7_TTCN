@@ -12,7 +12,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
-using TTCN_Nhom7.QuanLyDanCu;
+using TTCN_Nhom7.MoHinhDuLieu;
 
 namespace TTCN_Nhom7
 {
@@ -21,7 +21,8 @@ namespace TTCN_Nhom7
     /// </summary>
     public partial class ThemTK_admin : Window
     {
-        QlthongTinDanCuContext db = new QlthongTinDanCuContext();
+        QldanCuNguyenXaContext db = new QldanCuNguyenXaContext();
+        string hoten;
         public ThemTK_admin()
         {
             InitializeComponent();
@@ -34,49 +35,53 @@ namespace TTCN_Nhom7
             ql.Show();
             Close();
         }
-        private void btnthem_Click(object sender, RoutedEventArgs e)
+        private bool check()
         {
-            var query_check = from tk in db.TaiKhoans
-                        join hk in db.HoKhaus on tk.MaTaiKhoan equals hk.MaTaiKhoan
-                        join nk in db.NhanKhaus on hk.MaHoKhau equals nk.MaHoKhau
-                        where nk.SoCmndCccd == txtcccd.Text
-                        select tk;
-            if (check())
+            if (txtcccd.Text.IsNullOrEmpty())
             {
-                if (query_check.Count() > 0)
-                {
-                    TaiKhoan tkmoi = new TaiKhoan();
-                    var query_count = from tk in db.TaiKhoans
-                                      select tk;
-                    int count = query_count.Count();
-                    string nextIndex = (count + 1).ToString().PadLeft(2, '0');
-                    tkmoi.MaTaiKhoan = "TK0" + nextIndex;
+                MessageBoxResult result = MessageBox.Show("Yêu cầu nhập thông tin!!s", "THÔNG BÁO",
+                                            MessageBoxButton.OKCancel, MessageBoxImage.Error);
+                return false;
+            }
+            return true;
+        }
 
-                    tkmoi.Ho = txtho.Text;
-                    tkmoi.Ten = txtten.Text;
-                    tkmoi.SoDienThoai = txtsodt.Text;
-                    tkmoi.Email = txtEmail.Text;
-                    tkmoi.MatKhau = txtmatkhau.Text;
-                    tkmoi.Role = txtrole.Text;
-
-                    db.TaiKhoans.Add(tkmoi);
-                    db.SaveChanges();
-
-                    var query = from tk in db.TaiKhoans
-                                orderby tk.MaTaiKhoan ascending
+        private void btntim_onclick(object sender, RoutedEventArgs e)
+        {
+            var query_cccd_nk  = from tk in db.TaiKhoans
+                             join nk in db.NhanKhaus on tk.MaTaiKhoan equals nk.MaTaiKhoan
+                             select new
+                             {
+                                 SoCMND = nk.SoCmndCccd,
+                             };
+            var query_cccd_ch = from ch in db.ChuHos
                                 select new
                                 {
-                                    tk.MaTaiKhoan,
-                                    tk.Ho,
-                                    tk.Ten,
-                                    tk.SoDienThoai,
-                                    tk.Email,
-                                    tk.MatKhau,
+                                    SoCMND = ch.SoCmndCccd,
                                 };
+            var query_find = from nk2 in db.NhanKhaus
+                                 where nk2.SoCmndCccd == txtcccd.Text &&
+                                    !query_cccd_nk.Any(q_nk => q_nk.SoCMND == nk2.SoCmndCccd) &&
+                                    !query_cccd_ch.Any(q_ch => q_ch.SoCMND == nk2.SoCmndCccd)
+                                 select nk2;
+            if (check())
+            {
+                if (query_find.Count() > 0)
+                {             
+                    var query = from nk in db.NhanKhaus
+                                select new
+                                {
+                                    Ma = nk.MaNhanKhau,
+                                    HoTen = nk.HoTen,
+                                    nk.MaHoKhau,
+                                    nk.GioiTinh,
+                                    nk.NgaySinh,
+                                    nk.DiaChiThuongChu,
+                                };
+                    var firstResult = query.FirstOrDefault();
+                    string hoten = firstResult?.HoTen;
 
-                    QuanLyTaiKhoan_admin ql = new QuanLyTaiKhoan_admin();
-                    ql.dtgdanhsach.ItemsSource = query.ToList();
-                    ql.Show();
+                    dtgdanhsach.ItemsSource = query.ToList();
                     Close();
                 }
                 else
@@ -86,18 +91,19 @@ namespace TTCN_Nhom7
                 }
             }
         }
-        private bool check()
+        private void btnadd_Click(object sender, RoutedEventArgs e)
         {
-            if (txtcccd.Text.IsNullOrEmpty() || txtEmail.Text.IsNullOrEmpty() ||
-                txtho.Text.IsNullOrEmpty() || txtten.Text.IsNullOrEmpty() ||
-                txtmatkhau.Text.IsNullOrEmpty() || txtsodt.Text.IsNullOrEmpty() || 
-                txtrole.Text.IsNullOrEmpty())
-            {
-                MessageBoxResult result = MessageBox.Show("Yêu cầu nhập đầy đủ thông tin", "THÔNG BÁO",
+            if(dtgdanhsach.Items.Count == 0)
+{
+                MessageBoxResult result = MessageBox.Show("Yêu cầu chọn nhập số CMND để cấp quyền", "THÔNG BÁO",
                                             MessageBoxButton.OKCancel, MessageBoxImage.Error);
-                return false;
             }
-            return true;
+            else
+            {
+                email_password ep = new email_password(hoten);
+                ep.Show();
+                Close();
+            }
         }
     }
 }
