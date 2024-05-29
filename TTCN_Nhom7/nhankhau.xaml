@@ -28,7 +28,7 @@
                   ScrollViewer.CanContentScroll="True"
                   ColumnHeaderStyle="{StaticResource columnheaderStyle}">
             <DataGrid.Columns>
-                <DataGridTextColumn Header="ID" Binding="{Binding MaNhanKhau}" Width="100"
+                <DataGridTextColumn Header="Mã nhân khẩu" Binding="{Binding MaNhanKhau}" Width="100"
                                     ElementStyle="{StaticResource cellStyle}"/>
 
                 <DataGridTextColumn Header="Họ tên" Binding="{Binding HoTen}" Width="150"

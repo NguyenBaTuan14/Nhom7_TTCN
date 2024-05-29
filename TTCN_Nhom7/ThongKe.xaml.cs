@@ -14,6 +14,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using TTCN_Nhom7.DuLieuQuanLyDanCu;
 
+
 namespace TTCN_Nhom7
 {
     /// <summary>
@@ -59,7 +60,9 @@ namespace TTCN_Nhom7
 
                     if (!string.IsNullOrEmpty(txtHoTen.Text))
                     {
+
                         query = query.Where(nk => nk.HoTen.Contains(txtHoTen.Text));
+
                     }
 
                     if (rdoNam.IsChecked == true)
@@ -88,10 +91,12 @@ namespace TTCN_Nhom7
                         tk.HoTen,
                         tk.DiaChiThuongChu,
                         GioiTinh = (bool)tk.GioiTinh ? "nam" : "nữ",
+
                         tk.Tuoi,
                         tk.MaHoKhauNavigation.MaHoKhau,
                         tk.MaTaiKhoanNavigation.SoDienThoai,
                         tk.MaTaiKhoanNavigation.Email
+
                     }).ToList();
                     
                     dataGridThongKe.ItemsSource = result;

@@ -15,7 +15,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using System.Xml.Linq;
-using TTCN_Nhom7.MoHinhDuLieuDanCu;
+using TTCN_Nhom7.DuLieuQuanLyDanCu;
 
 namespace TTCN_Nhom7
 {
@@ -24,12 +24,14 @@ namespace TTCN_Nhom7
     /// </summary>
     public partial class Window2 : Window
     {
-        QlthongTinDanCuContext db = new QlthongTinDanCuContext();
+        QldanCuNguyenXaContext db = new QldanCuNguyenXaContext();
         private object selectedRow;
         string hoten, mahk, mank, socccd, gt, diachi, quanhe, tongiao, dantoc, ngaysinh, nghe = "";
         public Window2()
         {
             InitializeComponent();
+            this.Left = 200;
+            this.Top = 100;
         }
         private void Quay_Ve(object sender, RoutedEventArgs e)
         {
@@ -41,7 +43,6 @@ namespace TTCN_Nhom7
         {
             HienThiDuLieu();
         }
-
         private void HienThiDuLieu()
         {
             try
@@ -68,7 +69,6 @@ namespace TTCN_Nhom7
             }
             
         }
-
         private void btntim_onclick(object sender, RoutedEventArgs e)
         {
             var query = from nk in db.NhanKhaus
@@ -116,7 +116,6 @@ namespace TTCN_Nhom7
                 diachi = a[7].GetValue(selectedRow).ToString(); 
             }
         }
-
         private void btnxoa_onclick(object sender, RoutedEventArgs e)
         {
             var query = from nk in db.NhanKhaus

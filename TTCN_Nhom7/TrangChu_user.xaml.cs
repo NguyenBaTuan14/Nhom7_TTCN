@@ -22,6 +22,7 @@ namespace TTCN_Nhom7
     /// </summary>
     public partial class TrangChu_user : Window
     {
+
         private String taiKhoan, tieuDeTB;
         private object selectedRow;
         public TrangChu_user(string taiKhoan)
@@ -30,6 +31,7 @@ namespace TTCN_Nhom7
             this.taiKhoan = taiKhoan;
            
         }
+
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             xemthongtin_user xemthongtin_User = new xemthongtin_user(taiKhoan);
@@ -53,6 +55,7 @@ namespace TTCN_Nhom7
 
         private void Button_Click_3(object sender, RoutedEventArgs e)
         {
+
 
             DocThongBao Doc = new DocThongBao(taiKhoan,tieuDeTB);
             Doc.Show();
@@ -102,9 +105,21 @@ namespace TTCN_Nhom7
             }
         }
 
+        private void Button_Click_4(object sender, RoutedEventArgs e)
+        {
+            LienHe lh = new LienHe(taiKhoan);
+            lh.Show();
+            lh.Close();
+        }
+
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
             loadData();
+
+            LienHe lh = new LienHe(taiKhoan);
+            lh.Show();
+            lh.Close();
+
         }
     }
 }

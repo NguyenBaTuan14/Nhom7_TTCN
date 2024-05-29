@@ -25,7 +25,10 @@ namespace TTCN_Nhom7
         public MainWindow()
         {
             InitializeComponent();
+            this.Left = 200;
+            this.Top = 100;
         }
+
         private String kiemTraDangNhap(String taiKhoan, String matKhau)
         {
             string role = null;
@@ -65,7 +68,9 @@ namespace TTCN_Nhom7
                 }
                 else if (userRole == "user")
                 {
+
                     MessageBox.Show("Đăng nhập thành công với vai trò User!", "Thông báo", MessageBoxButton.OK, MessageBoxImage.Information);
+
                     TrangChu_user userWindow = new TrangChu_user(taiKhoan);
                     userWindow.Show();
                     Close();

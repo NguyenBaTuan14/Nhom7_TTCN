@@ -1,9 +1,13 @@
 ﻿
 FC:\TTCN\BTL\TTCN_Nhom7\App.xaml;;
+FC:\TTCN\BTL\TTCN_Nhom7\DocThongBao.xaml;;
+FC:\TTCN\BTL\TTCN_Nhom7\email_password.xaml;;
 FC:\TTCN\BTL\TTCN_Nhom7\HoKhau.xaml;;
+FC:\TTCN\BTL\TTCN_Nhom7\LienHe.xaml;;
 FC:\TTCN\BTL\TTCN_Nhom7\MainWindow.xaml;;
 FC:\TTCN\BTL\TTCN_Nhom7\menu.xaml;;
 FC:\TTCN\BTL\TTCN_Nhom7\nhankhau.xaml;;
+FC:\TTCN\BTL\TTCN_Nhom7\PhanAnh_admin.xaml;;
 FC:\TTCN\BTL\TTCN_Nhom7\PhanAnh_user.xaml;;
 FC:\TTCN\BTL\TTCN_Nhom7\QuanLyTaiKhoan.xaml;;
 FC:\TTCN\BTL\TTCN_Nhom7\SuaHoKhau.xaml;;
@@ -19,6 +23,4 @@ FC:\TTCN\BTL\TTCN_Nhom7\TraLoiPhanAnh_admin.xaml;;
 FC:\TTCN\BTL\TTCN_Nhom7\TrangChu_user.xaml;;
 FC:\TTCN\BTL\TTCN_Nhom7\XemHoKhau_user.xaml;;
 FC:\TTCN\BTL\TTCN_Nhom7\XemThongTinCaNhan_user.xaml;;
-FC:\TTCN\BTL\TTCN_Nhom7\PhanAnh_admin.xaml;;
-FC:\TTCN\BTL\TTCN_Nhom7\DocThongBao.xaml;;
 

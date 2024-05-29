@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET6_0;NETCOREAPP
 C:\TTCN\BTL\TTCN_Nhom7\App.xaml
-21-134005125
+231516649881
 
-41-1978061972
+351246672882
 222-1242350883
-DocThongBao.xaml;HoKhau.xaml;MainWindow.xaml;menu.xaml;nhankhau.xaml;PhanAnh_admin.xaml;PhanAnh_user.xaml;QuanLyTaiKhoan.xaml;SuaHoKhau.xaml;suanhankhau.xaml;SuaPhanAnh_user.xaml;SuaTK_admin.xaml;them.xaml;ThemHoKhau.xaml;ThemPhanAnh_user.xaml;ThemTK_admin.xaml;ThongKe.xaml;TraLoiPhanAnh_admin.xaml;TrangChu_user.xaml;XemHoKhau_user.xaml;XemThongTinCaNhan_user.xaml;
+DocThongBao.xaml;email_password.xaml;HoKhau.xaml;LienHe.xaml;MainWindow.xaml;menu.xaml;nhankhau.xaml;PhanAnh_admin.xaml;PhanAnh_user.xaml;QuanLyTaiKhoan.xaml;SuaHoKhau.xaml;suanhankhau.xaml;SuaPhanAnh_user.xaml;SuaTK_admin.xaml;them.xaml;ThemHoKhau.xaml;ThemPhanAnh_user.xaml;ThemTK_admin.xaml;ThongKe.xaml;TraLoiPhanAnh_admin.xaml;TrangChu_user.xaml;XemHoKhau_user.xaml;XemThongTinCaNhan_user.xaml;
 
-True
+False
 

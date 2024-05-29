@@ -25,6 +25,7 @@ namespace TTCN_Nhom7
             this.Left = 200;
             this.Top = 100;
         }
+
         private void Nhan_Khau(object sender, RoutedEventArgs e)
         {
             Window2 wd = new Window2();

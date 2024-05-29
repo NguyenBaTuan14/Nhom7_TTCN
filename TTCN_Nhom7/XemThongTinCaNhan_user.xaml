@@ -5,6 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TTCN_Nhom7"
         mc:Ignorable="d"
+        FontSize="16"
+        Loaded="window_load"
         Title="xemthongtin_user" Height="450" Width="800">
     <Grid>
         <Grid.ColumnDefinitions>
@@ -24,40 +26,39 @@
             <RowDefinition />
 
         </Grid.RowDefinitions>
-        <StackPanel Orientation="Horizontal" >
+        
             <Button Grid.Row="0" Grid.Column="0" Padding="-30"
-         Content="&#x2190;" 
-         Margin="10,0,0,0" Width="40" 
-         HorizontalAlignment="Left"
-         Height="40" FontSize="37" FontWeight="Bold"
-         Foreground="#2196F3"
-         BorderBrush="White"
-         Background="White" Click="Button_Click"/>
-        </StackPanel>
+                 Content="&#x2190;" 
+                 Margin="10,0,0,0" Width="40" 
+                 HorizontalAlignment="Left"
+                 Height="40" FontSize="37" FontWeight="Bold"
+                 Foreground="#2196F3"
+                 BorderBrush="White"
+                 Background="White" Click="Button_Click"/>
 
-        <Label Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="4" Content="Thông tin cá nhân" HorizontalContentAlignment="Center" FontSize="35" Foreground="Green" FontWeight="Bold"/>
+
+        <Label Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="4" Content="Thông tin cá nhân" HorizontalContentAlignment="Center" FontSize="35" Foreground="#2196F3" FontWeight="Bold"/>
         <Label Grid.Row="2" Grid.Column="0" Content="CCCD: " FontWeight="Bold" HorizontalAlignment="Left" Margin="5" Width="60" Height="40" FontSize="16" VerticalAlignment="Center" HorizontalContentAlignment="Center"/>
-        <TextBox Grid.Row="2" Grid.Column="1"  Height="40" Width="200" HorizontalContentAlignment="Left" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="5" />
+        <TextBox Name="txtcccd" 
+            Grid.Row="2" Grid.Column="1"  Height="40" Width="200"  Margin="5" />
         <Label Grid.Row="2" Grid.Column="3" Content="Hộ khẩu: " FontWeight="Bold" HorizontalAlignment="Left" Margin="5, 5, 5, 5" Width="80" Height="40" FontSize="16" VerticalAlignment="Center" HorizontalContentAlignment="Center"/>
-        <TextBox Grid.Row="2" Grid.Column="4"  Height="40" Width="200" HorizontalContentAlignment="Left" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="5" />
+        <TextBox Name="txtmahk" Grid.Row="2" Grid.Column="4"  Height="40" Width="200" HorizontalContentAlignment="Left" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="5" />
         <Label Grid.Row="3" Grid.Column="0" Content="Họ tên: " FontWeight="Bold" HorizontalAlignment="Left" Margin="5" Width="60" Height="40" FontSize="16" VerticalAlignment="Center" HorizontalContentAlignment="Center"/>
-        <TextBox Grid.Row="3" Grid.Column="1"  Height="40" Width="200" HorizontalContentAlignment="Left" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="5" />
+        <TextBox Name="txthoten" Grid.Row="3" Grid.Column="1"  Height="40" Width="200" HorizontalContentAlignment="Left" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="5" />
         <Label Grid.Row="3" Grid.Column="3" Content="Địa chỉ: " FontWeight="Bold" HorizontalAlignment="Left" Margin="5" Width="60" Height="40" FontSize="16" VerticalAlignment="Center" HorizontalContentAlignment="Center"/>
-        <TextBox Grid.Row="3" Grid.Column="4"  Height="40" Width="200" HorizontalContentAlignment="Left" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="5" />
+        <TextBox Name="txtdiachi" Grid.Row="3" Grid.Column="4"  Height="40" Width="200" HorizontalContentAlignment="Left" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="5" />
         <Label Grid.Row="4" Grid.Column="0" Content="Giới tính: " FontWeight="Bold" HorizontalAlignment="Left" Margin="5" Width="85" Height="40" FontSize="16" VerticalAlignment="Center" HorizontalContentAlignment="Center"/>
-        <TextBox Grid.Row="4" Grid.Column="1"  Height="40" Width="200" HorizontalContentAlignment="Left" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="5" />
+        <TextBox Name="txtgioitinh" Grid.Row="4" Grid.Column="1"  Height="40" Width="200" HorizontalContentAlignment="Left" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="5" />
         <Label Grid.Row="4" Grid.Column="3" Content="SDT: " FontWeight="Bold" HorizontalAlignment="Left" Margin="5" Width="60" Height="40" FontSize="16" VerticalAlignment="Center" HorizontalContentAlignment="Center"/>
-        <TextBox Grid.Row="4" Grid.Column="4"  Height="40" Width="200" HorizontalContentAlignment="Left" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="5" />
+        <TextBox Name="txtsodt" Grid.Row="4" Grid.Column="4"  Height="40" Width="200" HorizontalContentAlignment="Left" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="5" />
         <Label Grid.Row="5" Grid.Column="0" Content="Ngày sinh: " FontWeight="Bold" HorizontalAlignment="Left" Margin="5" Width="85" Height="40" FontSize="16" VerticalAlignment="Center" HorizontalContentAlignment="Center"/>
-        <TextBox Grid.Row="5" Grid.Column="1"  Height="40" Width="200" HorizontalContentAlignment="Left" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="5" />
+        <TextBox Name="txtngay" Grid.Row="5" Grid.Column="1"  Height="40" Width="200" HorizontalContentAlignment="Left" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="5" />
         <Label Grid.Row="5" Grid.Column="3" Content="Email: " FontWeight="Bold" HorizontalAlignment="Left" Margin="5" Width="60" Height="40" FontSize="16" VerticalAlignment="Center" HorizontalContentAlignment="Center"/>
-        <TextBox Grid.Row="5" Grid.Column="4"  Height="40" Width="200" HorizontalContentAlignment="Left" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="5" />
+        <TextBox Name="txtemail" Grid.Row="5" Grid.Column="4"  Height="40" Width="200" HorizontalContentAlignment="Left" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="5" />
         <TextBlock TextWrapping="Wrap" Grid.Row="6" Grid.Column="0" FontWeight="Bold"  HorizontalAlignment="Left" Margin="5" Width="85" Height="40" FontSize="16" VerticalAlignment="Center" >
-     Quan hệ 
-     với
-     chủ hộ
+             Quan hệ với chủ hộ
         </TextBlock>
-        <TextBox Grid.Row="6" Grid.Column="1"  Height="40" Width="200" HorizontalContentAlignment="Left" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="5" />
+        <TextBox Name="txtquanhe" Grid.Row="6" Grid.Column="1"  Height="40" Width="200" HorizontalContentAlignment="Left" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="5" />
 
     </Grid>
 </Window>
