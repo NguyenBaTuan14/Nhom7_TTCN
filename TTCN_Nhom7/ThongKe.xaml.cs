@@ -12,7 +12,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
-using TTCN_Nhom7.DuLieuQuanLyDanCu;
+using TTCN_Nhom7.MoHinhDuLieu;
 
 
 namespace TTCN_Nhom7
@@ -54,7 +54,7 @@ namespace TTCN_Nhom7
                 try
                 {
                     var query = db.NhanKhaus
-                    .Include(nk => nk.MaTaiKhoanNavigation)
+               //     .Include(nk => nk.MaTaiKhoanNavigation)
                     .Include(nk => nk.MaHoKhauNavigation)
                     .AsQueryable();
 

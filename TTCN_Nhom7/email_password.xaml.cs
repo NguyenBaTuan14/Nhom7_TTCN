@@ -12,7 +12,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
-using TTCN_Nhom7.DuLieuQuanLyDanCu;
+using TTCN_Nhom7.MoHinhDuLieu;
 
 namespace TTCN_Nhom7
 {
@@ -60,7 +60,7 @@ namespace TTCN_Nhom7
                 tkmoi.Email = txtemail.Text;
                 tkmoi.SoDienThoai = txtsodt.Text;
                 tkmoi.MatKhau = txtmatkhau.Password;
-                tkmoi.Role = txtrule.Password;
+                tkmoi.Role = txtrule.Text;
                 db.TaiKhoans.Add(tkmoi);
                 db.SaveChanges();
 
@@ -71,7 +71,7 @@ namespace TTCN_Nhom7
         }
         private bool check()
         {
-            if (txtmatkhau.Password.IsNullOrEmpty() || txtrule.Password.IsNullOrEmpty())
+            if (txtmatkhau.Password.IsNullOrEmpty() || txtrule.Text.IsNullOrEmpty())
             {
                 MessageBoxResult result = MessageBox.Show("Yêu cầu nhập thông tin!!s", "THÔNG BÁO",
                                             MessageBoxButton.OKCancel, MessageBoxImage.Error);

@@ -12,7 +12,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
-using TTCN_Nhom7.DuLieuQuanLyDanCu;
+using TTCN_Nhom7.MoHinhDuLieu;
 
 namespace TTCN_Nhom7
 {
@@ -48,22 +48,16 @@ namespace TTCN_Nhom7
 
         private void btntim_onclick(object sender, RoutedEventArgs e)
         {
-            var query_cccd_nk  = from tk in db.TaiKhoans
-                             join nk in db.NhanKhaus on tk.MaTaiKhoan equals nk.MaTaiKhoan
-                             select new
-                             {
-                                 SoCMND = nk.SoCmndCccd,
-                             };
-            var query_cccd_ch = from ch in db.ChuHos
+            var query_cccd_ch = from tk in db.TaiKhoans
+                                join ch in db.ChuHos on tk.MaTaiKhoan equals ch.MaTaiKhoan
                                 select new
                                 {
                                     SoCMND = ch.SoCmndCccd,
                                 };
-            var query_find = from nk2 in db.NhanKhaus
-                                 where nk2.SoCmndCccd == txtcccd.Text &&
-                                    !query_cccd_nk.Any(q_nk => q_nk.SoCMND == nk2.SoCmndCccd) &&
-                                    !query_cccd_ch.Any(q_ch => q_ch.SoCMND == nk2.SoCmndCccd)
-                                 select nk2;
+            var query_find = from ch in db.ChuHos
+                                 where ch.SoCmndCccd == txtcccd.Text 
+                                  //  !query_cccd_ch.Any(q_ch => q_ch.SoCMND == nk2.SoCmndCccd)
+                                 select ch;
             if (check())
             {
                 if (query_find.Count() > 0)
