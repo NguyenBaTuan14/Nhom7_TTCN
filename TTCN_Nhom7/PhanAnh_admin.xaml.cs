@@ -13,7 +13,7 @@ using System.Windows.Markup;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
-using TTCN_Nhom7.MoHinhDuLieu;
+using TTCN_Nhom7.QuanLyDanCu;
 
 namespace TTCN_Nhom7
 {

@@ -127,7 +127,7 @@ INSERT INTO TaiKhoan (MaTaiKhoan, Ho, Ten, SoDienThoai, Email, AnhChanDung, MatK
 ('TK03', 'Le', 'Van C', '0912345672', 'c@gmail.com', NULL, 'password3', 'user'),
 ('TK04', 'Pham', 'Van D', '0912345673', 'd@gmail.com', NULL, 'password4', 'user'),
 ('TK05', 'Hoang', 'Van E', '0912345674', 'e@gmail.com', NULL, 'password5', 'user'),
-('TK11', 'Admin', 'User', '0912345680', 'admin@gmail.com', NULL, 'adminpass', 'admin');
+('TK06', 'Admin', 'User', '0912345680', 'admin@gmail.com', NULL, 'adminpass', 'admin');
 
 -- Insert data into ChuHo
 INSERT INTO ChuHo (MaChuHo, HoTen, NgaySinh, GioiTinh, QueQuan, DanToc, TonGiao, SoCMND_CCCD, NgheNghiep, NoiLamViec, NgayChuyenDen, DiaChiThuongChu, TinhTrangHonNhan, MaHoKhau, MaTaiKhoan) VALUES

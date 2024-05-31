@@ -12,7 +12,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
-using TTCN_Nhom7.MoHinhDuLieu;
+using TTCN_Nhom7.QuanLyDanCu;
 
 namespace TTCN_Nhom7
 {
@@ -54,6 +54,7 @@ namespace TTCN_Nhom7
                              select new
                              {
                                  Ma = ch.MaChuHo,
+                                 MaTaiKhoan = ch.MaTaiKhoan,
                                  HoTen = ch.HoTen,
                                  ch.MaHoKhau,
                                  GioiTinh = (bool)ch.GioiTinh ? "Nữ" : "Nam",
@@ -85,9 +86,22 @@ namespace TTCN_Nhom7
             }
             else
             {
-                email_password ep = new email_password(hoten);
-                ep.Show();
-                Close();
+                var query_mtk = from ch in db.ChuHos
+                                where ch.SoCmndCccd == txtcccd.Text &&
+                                    ch.MaTaiKhoan == null
+                                select ch;
+                
+                if(query_mtk.Count() > 0)
+                {
+                    email_password ep = new email_password(hoten);
+                    ep.Show();
+                    Close();
+                }
+                else
+                {
+                    MessageBoxResult result = MessageBox.Show("Chủ hộ này được cấp quyền rồi", "THÔNG BÁO",
+                                                                MessageBoxButton.OKCancel, MessageBoxImage.Error);
+                }
             }
         }
     }

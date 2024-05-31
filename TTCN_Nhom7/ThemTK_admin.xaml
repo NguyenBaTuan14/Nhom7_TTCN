@@ -48,6 +48,9 @@
                 <DataGridTextColumn Header="Mã" 
                                     Binding="{Binding Ma}" Width="100"
                                     ElementStyle="{StaticResource cellStyle}"/>
+                <DataGridTextColumn Header="Mã tài khoản" Width="100"
+                                    ElementStyle="{StaticResource cellStyle}"
+                                    Binding="{Binding MaTaiKhoan}"/>
                 <DataGridTextColumn Header="Họ Tên" Width="120"
                                     ElementStyle="{StaticResource cellStyle}"
                                     Binding="{Binding HoTen}"/>
