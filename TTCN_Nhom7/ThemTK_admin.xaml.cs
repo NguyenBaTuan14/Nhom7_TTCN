@@ -12,7 +12,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
-using TTCN_Nhom7.DuLieuQuanLyDanCu;
+using TTCN_Nhom7.MoHinhDuLieu;
 
 namespace TTCN_Nhom7
 {
@@ -22,7 +22,7 @@ namespace TTCN_Nhom7
     public partial class ThemTK_admin : Window
     {
         QldanCuNguyenXaContext db = new QldanCuNguyenXaContext();
-        string hoten;
+        string hoten = "";
         public ThemTK_admin()
         {
             InitializeComponent();
@@ -39,7 +39,7 @@ namespace TTCN_Nhom7
         {
             if (txtcccd.Text.IsNullOrEmpty())
             {
-                MessageBoxResult result = MessageBox.Show("Yêu cầu nhập thông tin!!s", "THÔNG BÁO",
+                MessageBoxResult result = MessageBox.Show("Yêu cầu nhập thông tin!!", "THÔNG BÁO",
                                             MessageBoxButton.OKCancel, MessageBoxImage.Error);
                 return false;
             }
@@ -48,35 +48,26 @@ namespace TTCN_Nhom7
 
         private void btntim_onclick(object sender, RoutedEventArgs e)
         {
-            var query_cccd_ch = from tk in db.TaiKhoans
-                                join ch in db.ChuHos on tk.MaTaiKhoan equals ch.MaTaiKhoan
-                                select new
-                                {
-                                    SoCMND = ch.SoCmndCccd,
-                                };
             var query_find = from ch in db.ChuHos
-                                 where ch.SoCmndCccd == txtcccd.Text 
-                                  //  !query_cccd_ch.Any(q_ch => q_ch.SoCMND == nk2.SoCmndCccd)
-                                 select ch;
+                             where ch.SoCmndCccd == txtcccd.Text
+                             //  !query_cccd_ch.Any(q_ch => q_ch.SoCMND == nk2.SoCmndCccd)
+                             select new
+                             {
+                                 Ma = ch.MaChuHo,
+                                 HoTen = ch.HoTen,
+                                 ch.MaHoKhau,
+                                 GioiTinh = (bool)ch.GioiTinh ? "Nữ" : "Nam",
+                                 ch.NgaySinh,
+                                 ch.DiaChiThuongChu,
+                             };
             if (check())
             {
                 if (query_find.Count() > 0)
                 {             
-                    var query = from nk in db.NhanKhaus
-                                select new
-                                {
-                                    Ma = nk.MaNhanKhau,
-                                    HoTen = nk.HoTen,
-                                    nk.MaHoKhau,
-                                    nk.GioiTinh,
-                                    nk.NgaySinh,
-                                    nk.DiaChiThuongChu,
-                                };
-                    var firstResult = query.FirstOrDefault();
-                    string hoten = firstResult?.HoTen;
+                    var firstResult = query_find.FirstOrDefault();
+                    hoten = firstResult?.HoTen;
 
-                    dtgdanhsach.ItemsSource = query.ToList();
-                    Close();
+                    dtgdanhsach.ItemsSource = query_find.ToList();
                 }
                 else
                 {

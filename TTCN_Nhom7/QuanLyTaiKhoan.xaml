@@ -66,14 +66,13 @@ Background="#2196F3" Foreground="White"   BorderBrush="AntiqueWhite"
                                     Binding="{Binding MatKhau}"/>
             </DataGrid.Columns>
         </DataGrid>
-        <StackPanel Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="3" Orientation="Horizontal"
-           HorizontalAlignment="Center" Height="60">
-            <Button Name="btnThem" Content="Thêm" Height="40" Width="100" Margin="5"
-           Template="{StaticResource buttontemplate}" Style="{StaticResource buttonStyle}" Click="btnThem_Click" />
-            <Button Name="btnSua" Content="Sửa" Height="40" Width="100" Margin="5"
-           Template="{StaticResource buttontemplate}" Style="{StaticResource buttonStyle}" Click="btnSua_Click" />
-            <Button Name="btnXoa" Content="Xóa" Height="40" Width="100" Margin="5"
-           Template="{StaticResource buttontemplate}" Style="{StaticResource buttonStyle}" Click="btnXoa_Click" />
+        <StackPanel Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="3" Orientation="Horizontal" Height="60" HorizontalAlignment="Center">
+            <Button Name="btnThem" Content="Thêm" Height="40" Width="100" Margin="5,0,200,0" Foreground="White"
+           Template="{StaticResource buttonTemplate}" Style="{StaticResource buttonStyle}" Click="btnThem_Click" />
+            <Button Name="btnSua" Content="Sửa" Height="40" Width="100" Margin="5,0,200,0" Foreground="White"
+           Template="{StaticResource buttonTemplate}" Style="{StaticResource buttonStyle}" Click="btnSua_Click" />
+            <Button Name="btnXoa" Content="Xóa" Height="40" Width="100" Margin="5" Foreground="White"
+           Template="{StaticResource buttonTemplate}" Style="{StaticResource buttonStyle}" Click="btnXoa_Click" />
         </StackPanel>
     </Grid>
 </Window>

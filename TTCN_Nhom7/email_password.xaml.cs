@@ -12,7 +12,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
-using TTCN_Nhom7.DuLieuQuanLyDanCu;
+using TTCN_Nhom7.MoHinhDuLieu;
 
 namespace TTCN_Nhom7
 {
@@ -22,7 +22,7 @@ namespace TTCN_Nhom7
     public partial class email_password : Window
     {
         QldanCuNguyenXaContext db = new QldanCuNguyenXaContext();
-        string hoten;
+        string hoten = "";
         public email_password(string hoten)
         {
             InitializeComponent();
@@ -79,6 +79,5 @@ namespace TTCN_Nhom7
             }
             return true;
         }
-
     }
 }

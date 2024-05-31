@@ -15,7 +15,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
-using TTCN_Nhom7.DuLieuQuanLyDanCu;
+using TTCN_Nhom7.MoHinhDuLieu;
 
 namespace TTCN_Nhom7
 {
@@ -41,7 +41,7 @@ namespace TTCN_Nhom7
         private void HienThiDuLieu()
         {
             try
-            {
+            {              
                 var query = from tk in db.TaiKhoans
                             orderby tk.MaTaiKhoan ascending
                             select new
@@ -115,16 +115,29 @@ namespace TTCN_Nhom7
                         where tk.MaTaiKhoan == txttim.Text
                         select tk;
 
+            var query_admin = from tk in db.TaiKhoans
+                              where tk.MaTaiKhoan == txttim.Text &&
+                                    tk.Role == "admin"
+                              select tk;
+
             MessageBoxResult result = MessageBox.Show("Có xác nhận xóa không", "XÁC NHẬN XÓA",
                                             MessageBoxButton.YesNo, MessageBoxImage.Question);
             if (result == MessageBoxResult.Yes)
             {
                 if (query.Count() > 0)
                 {
-                    TaiKhoan tkxoa = query.SingleOrDefault();
-                    db.TaiKhoans.Remove(tkxoa);
-                    db.SaveChanges();
-                    HienThiDuLieu();
+                    if(query_admin.Count() > 0)
+                    {
+                        MessageBoxResult result1 = MessageBox.Show("Không được xóa tài khoản admin", "THÔNG BÁO",
+                                            MessageBoxButton.OKCancel, MessageBoxImage.Error);
+                    }
+                    else
+                    {
+                        TaiKhoan tkxoa = query.SingleOrDefault();
+                        db.TaiKhoans.Remove(tkxoa);
+                        db.SaveChanges();
+                        HienThiDuLieu();
+                    }
                 }
             }
             else

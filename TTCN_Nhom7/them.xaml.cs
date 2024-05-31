@@ -12,7 +12,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
-using TTCN_Nhom7.DuLieuQuanLyDanCu;
+using TTCN_Nhom7.MoHinhDuLieu;
 using static System.Net.Mime.MediaTypeNames;
 
 namespace TTCN_Nhom7
@@ -65,6 +65,20 @@ namespace TTCN_Nhom7
                 nkmoi.DanToc = txtdantoc.Text;
                 nkmoi.NgaySinh = dtpngaysinh.SelectedDate;
                 nkmoi.NgheNghiep = txtnghe.Text;
+
+              /*  var query_matk = from ch in db.ChuHos
+                             where ch.MaHoKhau == txtmahk.Text
+                             select ch.MaTaiKhoan;
+                if(query_matk.Count() < 0)
+                {
+                    MessageBoxResult result = MessageBox.Show("Chủ hộ này chưa được cấp tài khoản", "THÔNG BÁO",
+                                            MessageBoxButton.OKCancel, MessageBoxImage.Error);
+                    nkmoi.MaTaiKhoan = "TKNull";
+                }
+                else
+                {
+                    nkmoi.MaTaiKhoan = query_matk.First();
+                }  */  
 
                 db.NhanKhaus.Add(nkmoi);
                 db.SaveChanges();

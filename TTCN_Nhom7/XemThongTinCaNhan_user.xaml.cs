@@ -13,7 +13,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
-using TTCN_Nhom7.DuLieuQuanLyDanCu;
+using TTCN_Nhom7.MoHinhDuLieu;
 
 namespace TTCN_Nhom7
 {
@@ -23,14 +23,14 @@ namespace TTCN_Nhom7
     public partial class xemthongtin_user : Window
     {
 
-        private String taiKhoan;
+        private string taiKhoan = "";
         QldanCuNguyenXaContext db = new QldanCuNguyenXaContext();
-        public xemthongtin_user(String taikhoan)
+        public xemthongtin_user(string tk)
         {
             InitializeComponent();
+            this.taiKhoan = tk;
             this.Left = 200;
             this.Top = 100;
-            this.taiKhoan = taiKhoan;
         }
         
         private void Button_Click(object sender, RoutedEventArgs e)
