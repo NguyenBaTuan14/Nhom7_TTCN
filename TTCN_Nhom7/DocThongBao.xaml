@@ -28,7 +28,7 @@
                 <TextBox x:Name="NDThongbao" FontWeight="Bold"/>
             </Border>
         </GroupBox>
-        <Label Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Content="Thông Báo" HorizontalContentAlignment="Center" FontSize="35" Foreground="Green" FontWeight="Bold"/>
+        <Label Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="2" Content="Thông Báo" HorizontalContentAlignment="Center" FontSize="35" Foreground="Green" FontWeight="Bold"/>
         
 
     </Grid>

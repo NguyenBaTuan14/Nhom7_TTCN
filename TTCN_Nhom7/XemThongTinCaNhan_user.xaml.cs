@@ -13,7 +13,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
-using TTCN_Nhom7.DuLieuQuanLyDanCu;
+using TTCN_Nhom7.DuLieuDanCu;
 
 namespace TTCN_Nhom7
 {
@@ -23,14 +23,14 @@ namespace TTCN_Nhom7
     public partial class xemthongtin_user : Window
     {
 
-        private String taiKhoan;
-        QldanCuNguyenXaContext db = new QldanCuNguyenXaContext();
-        public xemthongtin_user(String taikhoan)
+        private string taiKhoan = "";
+        QldanCuNguyenXa1Context db = new QldanCuNguyenXa1Context();
+        public xemthongtin_user(string tk)
         {
             InitializeComponent();
+            this.taiKhoan = tk;
             this.Left = 200;
             this.Top = 100;
-            this.taiKhoan = taiKhoan;
         }
         
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -41,7 +41,7 @@ namespace TTCN_Nhom7
         }
         private void window_load(object sender, RoutedEventArgs e)
         {
-            var query = from nk in db.NhanKhaus
+            var query = from nk in db.ChuHos
                         where nk.MaTaiKhoanNavigation.Email == taiKhoan || nk.MaTaiKhoanNavigation.SoDienThoai == taiKhoan
                         select new
                         {   
@@ -50,7 +50,6 @@ namespace TTCN_Nhom7
                             HoTen = nk.HoTen,
                             GioiTinh = (bool)nk.GioiTinh ? "Nữ" : "Nam",
                             NgaySinh = nk.NgaySinh,
-                            QuanHe = nk.QuanHeVoiChuHo,
                             HoKhau = nk.MaHoKhau,
                             DiaChi = nk.DiaChiThuongChu,
                             SoDT = nk.MaTaiKhoanNavigation.SoDienThoai,
@@ -61,7 +60,6 @@ namespace TTCN_Nhom7
             txthoten.Text = query.FirstOrDefault()?.HoTen ?? "";
             txtgioitinh.Text = query.FirstOrDefault()?.GioiTinh ?? "";
             txtngay.Text = query.FirstOrDefault()?.NgaySinh?.ToString("dd/MM/yyyy") ?? "";
-            txtquanhe.Text = query.FirstOrDefault()?.QuanHe ?? "";
             txtmahk.Text = query.FirstOrDefault()?.MaHK.ToString() ?? "";
             txtdiachi.Text = query.FirstOrDefault()?.DiaChi ?? "";
             txtsodt.Text = query.FirstOrDefault()?.SoDT ?? "";

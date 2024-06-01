@@ -23,7 +23,7 @@ namespace TTCN_Nhom7
     public partial class TrangChu_user : Window
     {
 
-        private String taiKhoan, tieuDeTB;
+        private string taiKhoan, tieuDeTB = "";
         private object selectedRow;
         public TrangChu_user(string taiKhoan)
         {

@@ -14,6 +14,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using TTCN_Nhom7.DuLieuDanCu;
 
+
 namespace TTCN_Nhom7
 {
     /// <summary>
@@ -34,14 +35,14 @@ namespace TTCN_Nhom7
             string role = null;
             try
             {
-                using (QldanCuNguyenXa1Context db = new QldanCuNguyenXa1Context())
-                {
+                QldanCuNguyenXa1Context db = new QldanCuNguyenXa1Context();
+                
                     var query = from tk in db.TaiKhoans
                                 where (tk.Email == taiKhoan || tk.SoDienThoai == taiKhoan) && tk.MatKhau == matKhau
                                 select tk.Role;
 
                     role = query.FirstOrDefault();  // Retrieve the first matching role
-                }
+                
             }
             catch (Exception ex)
             {

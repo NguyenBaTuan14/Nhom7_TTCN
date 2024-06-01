@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:TTCN_Nhom7"
         mc:Ignorable="d"
         Loaded="Window_Loaded"
-        Title="SuaPhanAnh_user" Height="450" Width="800">
+        Title="SuaPhanAnh_user" Height="550" Width="800">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
@@ -32,7 +32,7 @@
        Background="White" Click="Button_Click"/>
 
         <!-- Title -->
-        <Label Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3" 
+        <Label Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="3" 
        Content="Phản Ánh" 
        HorizontalContentAlignment="Center" 
        FontSize="35" 

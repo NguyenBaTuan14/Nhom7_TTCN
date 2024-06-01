@@ -12,7 +12,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
-using TTCN_Nhom7.DuLieuQuanLyDanCu;
+using TTCN_Nhom7.DuLieuDanCu;
 
 namespace TTCN_Nhom7
 {
@@ -21,7 +21,7 @@ namespace TTCN_Nhom7
     /// </summary>
     public partial class suanhankhau : Window
     {
-        QldanCuNguyenXaContext db = new QldanCuNguyenXaContext();
+        QldanCuNguyenXa1Context db = new QldanCuNguyenXa1Context();
         string hoten, mahk, mank, socccd, gt, diachi, quanhe, tongiao, dantoc, ngaysinh, nghe = "";
 
         public suanhankhau( string ht,string hk, string nk, string cccd, string gt, string dc, string qh, string tg, string dt, string ns, string nghe)

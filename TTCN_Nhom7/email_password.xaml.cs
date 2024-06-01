@@ -12,7 +12,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
-using TTCN_Nhom7.DuLieuQuanLyDanCu;
+using TTCN_Nhom7.DuLieuDanCu;
 
 namespace TTCN_Nhom7
 {
@@ -21,8 +21,8 @@ namespace TTCN_Nhom7
     /// </summary>
     public partial class email_password : Window
     {
-        QldanCuNguyenXaContext db = new QldanCuNguyenXaContext();
-        string hoten;
+        QldanCuNguyenXa1Context db = new QldanCuNguyenXa1Context();
+        string hoten = "";
         public email_password(string hoten)
         {
             InitializeComponent();
@@ -60,7 +60,7 @@ namespace TTCN_Nhom7
                 tkmoi.Email = txtemail.Text;
                 tkmoi.SoDienThoai = txtsodt.Text;
                 tkmoi.MatKhau = txtmatkhau.Password;
-                tkmoi.Role = txtrule.Password;
+                tkmoi.Role = txtrule.Text;
                 db.TaiKhoans.Add(tkmoi);
                 db.SaveChanges();
 
@@ -71,7 +71,7 @@ namespace TTCN_Nhom7
         }
         private bool check()
         {
-            if (txtmatkhau.Password.IsNullOrEmpty() || txtrule.Password.IsNullOrEmpty())
+            if (txtmatkhau.Password.IsNullOrEmpty() || txtrule.Text.IsNullOrEmpty())
             {
                 MessageBoxResult result = MessageBox.Show("Yêu cầu nhập thông tin!!s", "THÔNG BÁO",
                                             MessageBoxButton.OKCancel, MessageBoxImage.Error);
@@ -79,6 +79,5 @@ namespace TTCN_Nhom7
             }
             return true;
         }
-
     }
 }

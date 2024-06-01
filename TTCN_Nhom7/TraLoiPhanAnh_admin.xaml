@@ -31,7 +31,7 @@
                Background="White" Click="Button_Click"/>
 
         <!-- Title -->
-        <Label Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" 
+        <Label Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="2" 
                Content="Phản Ánh" 
                HorizontalContentAlignment="Center" 
                FontSize="35" 

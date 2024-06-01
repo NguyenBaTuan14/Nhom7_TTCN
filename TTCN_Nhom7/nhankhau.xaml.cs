@@ -15,7 +15,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using System.Xml.Linq;
-using TTCN_Nhom7.DuLieuQuanLyDanCu;
+using TTCN_Nhom7.DuLieuDanCu;
 
 namespace TTCN_Nhom7
 {
@@ -24,7 +24,7 @@ namespace TTCN_Nhom7
     /// </summary>
     public partial class Window2 : Window
     {
-        QldanCuNguyenXaContext db = new QldanCuNguyenXaContext();
+        QldanCuNguyenXa1Context db = new QldanCuNguyenXa1Context();
         private object selectedRow;
         string hoten, mahk, mank, socccd, gt, diachi, quanhe, tongiao, dantoc, ngaysinh, nghe = "";
         public Window2()
@@ -168,10 +168,18 @@ namespace TTCN_Nhom7
                            where nk.SoCmndCccd == socccd
                            select nk.NgheNghiep;
             nghe = findnghe.First();
-            suanhankhau tnk = new suanhankhau( hoten, mahk, mank, socccd, gt, diachi, quanhe, tongiao, dantoc, ngaysinh, nghe);
+            if (!string.IsNullOrEmpty(mank))
+            {
+                suanhankhau tnk = new suanhankhau(hoten, mahk, mank, socccd, gt, diachi, quanhe, tongiao, dantoc, ngaysinh, nghe);
+
+                tnk.Show();
+                Close();
+            }
+            else
+            {
+                MessageBox.Show("Vui lòng chọn một nhân khẩu để sửa.", "Thông báo", MessageBoxButton.OK, MessageBoxImage.Warning);
+            }
             
-            tnk.Show();
-            Close();
         }
     }
 }

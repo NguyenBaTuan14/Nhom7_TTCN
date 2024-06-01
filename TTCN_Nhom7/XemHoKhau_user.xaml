@@ -13,7 +13,7 @@
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="400"/>
+            <ColumnDefinition Width="auto"/>
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
         <StackPanel Orientation="Horizontal" >
@@ -26,7 +26,7 @@
                       BorderBrush="White"
                       Background="White" Click="Button_Click"/>
         </StackPanel>
-        <Label Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Content="Thông tin hộ khẩu" HorizontalContentAlignment="Center" FontSize="35" Foreground="Green" FontWeight="Bold"/>
+        <Label Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="2" Content="Thông tin hộ khẩu" HorizontalContentAlignment="Center" FontSize="35" Foreground="Green" FontWeight="Bold"/>
         <DataGrid x:Name="dtgdanhsach" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" AutoGenerateColumns="False" Margin="10" FontWeight="Bold"
                   ColumnHeaderStyle="{StaticResource dataGridHeader}">
             <DataGrid.Columns>

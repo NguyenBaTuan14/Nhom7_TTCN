@@ -15,6 +15,7 @@ using System.Windows.Shapes;
 using TTCN_Nhom7.DuLieuDanCu;
 
 
+
 namespace TTCN_Nhom7
 {
     /// <summary>
@@ -95,8 +96,10 @@ namespace TTCN_Nhom7
 
                         tk.Tuoi,
                         tk.MaHoKhauNavigation.MaHoKhau,
+
                         SoDienThoai = tk.MaHoKhauNavigation.ChuHos.FirstOrDefault().MaTaiKhoanNavigation.SoDienThoai,
                         Email = tk.MaHoKhauNavigation.ChuHos.FirstOrDefault().MaTaiKhoanNavigation.Email
+
 
                     }).ToList();
                     

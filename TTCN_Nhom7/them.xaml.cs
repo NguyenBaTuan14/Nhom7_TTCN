@@ -12,7 +12,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
-using TTCN_Nhom7.DuLieuQuanLyDanCu;
+using TTCN_Nhom7.DuLieuDanCu;
 using static System.Net.Mime.MediaTypeNames;
 
 namespace TTCN_Nhom7
@@ -22,7 +22,7 @@ namespace TTCN_Nhom7
     /// </summary>
     public partial class them : Window
     {
-        QldanCuNguyenXaContext db = new QldanCuNguyenXaContext();
+        QldanCuNguyenXa1Context db = new QldanCuNguyenXa1Context();
         public them()
         {
             InitializeComponent();
@@ -48,7 +48,7 @@ namespace TTCN_Nhom7
                 var query_count = from nk in db.NhanKhaus
                                   select nk;
                 int count = query_count.Count();
-                string nextIndex = (count + 1).ToString().PadLeft(2, '0');
+                string nextIndex = (count + 2).ToString("0");
                 nkmoi.MaNhanKhau = "NK" + nextIndex;
 
                 if (radnam.IsChecked == true)
@@ -69,21 +69,7 @@ namespace TTCN_Nhom7
                 db.NhanKhaus.Add(nkmoi);
                 db.SaveChanges();
 
-                var query = from nk in db.NhanKhaus
-                            orderby nk.MaNhanKhau ascending
-                            select new
-                            {
-                                nk.MaNhanKhau,
-                                nk.HoTen,
-                                nk.QuanHeVoiChuHo,
-                                nk.MaHoKhau,
-                                nk.SoCmndCccd,
-                                GioiTinh = (bool)nk.GioiTinh ? "Nữ" : "Nam",
-                                nk.NgaySinh,
-                                nk.DiaChiThuongChu,
-                            };
                 Window2 wd = new Window2();
-                wd.dtgdanhsach.ItemsSource = query.ToList();
                 wd.Show();
                 Close();
             }

@@ -47,7 +47,7 @@ CREATE TABLE ChuHo (
     DiaChiThuongChu NVARCHAR(225),
     TinhTrangHonNhan NVARCHAR(50),
     MaHoKhau NVARCHAR(50) NOT NULL,
-    MaTaiKhoan NVARCHAR(50) NOT NULL,
+    MaTaiKhoan NVARCHAR(50),
     FOREIGN KEY (MaHoKhau) REFERENCES HoKhau(MaHoKhau),
     FOREIGN KEY (MaTaiKhoan) REFERENCES TaiKhoan(MaTaiKhoan)
 );
@@ -66,9 +66,7 @@ CREATE TABLE NhanKhau (
     DanToc NVARCHAR(50),
     TonGiao NVARCHAR(50),
     MaHoKhau NVARCHAR(50) NOT NULL,
-    MaTaiKhoan NVARCHAR(50) NOT NULL,
     FOREIGN KEY (MaHoKhau) REFERENCES HoKhau(MaHoKhau),
-    FOREIGN KEY (MaTaiKhoan) REFERENCES TaiKhoan(MaTaiKhoan)
 );
 
 CREATE TABLE ThongBao (
@@ -129,12 +127,7 @@ INSERT INTO TaiKhoan (MaTaiKhoan, Ho, Ten, SoDienThoai, Email, AnhChanDung, MatK
 ('TK03', 'Le', 'Van C', '0912345672', 'c@gmail.com', NULL, 'password3', 'user'),
 ('TK04', 'Pham', 'Van D', '0912345673', 'd@gmail.com', NULL, 'password4', 'user'),
 ('TK05', 'Hoang', 'Van E', '0912345674', 'e@gmail.com', NULL, 'password5', 'user'),
-('TK06', 'Vu', 'Van F', '0912345675', 'f@gmail.com', NULL, 'password6', 'user'),
-('TK07', 'Dang', 'Van G', '0912345676', 'g@gmail.com', NULL, 'password7', 'user'),
-('TK08', 'Do', 'Van H', '0912345677', 'h@gmail.com', NULL, 'password8', 'user'),
-('TK09', 'Ngo', 'Van I', '0912345678', 'i@gmail.com', NULL, 'password9', 'user'),
-('TK10', 'Dinh', 'Van J', '0912345679', 'j@gmail.com', NULL, 'password10', 'user'),
-('TK11', 'Admin', 'User', '0912345680', 'admin@gmail.com', NULL, 'adminpass', 'admin');
+('TK06', 'Admin', 'User', '0912345680', 'admin@gmail.com', NULL, 'adminpass', 'admin');
 
 -- Insert data into ChuHo
 INSERT INTO ChuHo (MaChuHo, HoTen, NgaySinh, GioiTinh, QueQuan, DanToc, TonGiao, SoCMND_CCCD, NgheNghiep, NoiLamViec, NgayChuyenDen, DiaChiThuongChu, TinhTrangHonNhan, MaHoKhau, MaTaiKhoan) VALUES
@@ -143,44 +136,43 @@ INSERT INTO ChuHo (MaChuHo, HoTen, NgaySinh, GioiTinh, QueQuan, DanToc, TonGiao,
 ('CH03', 'Le Van C', '1982-01-01', 1, 'Ha Noi', 'Kinh', 'None', '003198201', 'Bac si', 'Benh vien 123', '2012-01-01', 'Ha Noi', 'Da ket hon', 'HK03', 'TK03'),
 ('CH04', 'Pham Van D', '1983-01-01', 1, 'Ha Noi', 'Kinh', 'None', '004198301', 'Lu su', 'Cong ty Luat 456', '2013-01-01', 'Ha Noi', 'Da ket hon', 'HK04', 'TK04'),
 ('CH05', 'Hoang Van E', '1984-01-01', 1, 'Ha Noi', 'Kinh', 'None', '005198401', 'Kinh doanh', 'Cua hang E', '2014-01-01', 'Ha Noi', 'Da ket hon', 'HK05', 'TK05'),
-('CH06', 'Vu Van F', '1985-01-01', 1, 'Ha Noi', 'Kinh', 'None', '006198501', 'Giam doc', 'Cong ty F', '2015-01-01', 'Ha Noi', 'Da ket hon', 'HK06', 'TK06'),
-('CH07', 'Dang Van G', '1986-01-01', 1, 'Ha Noi', 'Kinh', 'None', '007198601', 'Nhan vien', 'Cong ty G', '2016-01-01', 'Ha Noi', 'Da ket hon', 'HK07', 'TK07'),
-('CH08', 'Do Van H', '1987-01-01', 1, 'Ha Noi', 'Kinh', 'None', '008198701', 'Cong nhan', 'Nha may H', '2017-01-01', 'Ha Noi', 'Da ket hon', 'HK08', 'TK08'),
-('CH09', 'Ngo Van I', '1988-01-01', 1, 'Ha Noi', 'Kinh', 'None', '009198801', 'Thu ky', 'Cong ty I', '2018-01-01', 'Ha Noi', 'Da ket hon', 'HK09', 'TK09'),
-('CH10', 'Dinh Van J', '1989-01-01', 1, 'Ha Noi', 'Kinh', 'None', '010198901', 'Bao ve', 'Cong ty J', '2019-01-01', 'Ha Noi', 'Da ket hon', 'HK10', 'TK10');
+('CH06', 'Vu Van F', '1985-01-01', 1, 'Ha Noi', 'Kinh', 'None', '006198501', 'Giam doc', 'Cong ty F', '2015-01-01', 'Ha Noi', 'Da ket hon', 'HK06', NULL),
+('CH07', 'Dang Van G', '1986-01-01', 1, 'Ha Noi', 'Kinh', 'None', '007198601', 'Nhan vien', 'Cong ty G', '2016-01-01', 'Ha Noi', 'Da ket hon', 'HK07', NULL),
+('CH08', 'Do Van H', '1987-01-01', 1, 'Ha Noi', 'Kinh', 'None', '008198701', 'Cong nhan', 'Nha may H', '2017-01-01', 'Ha Noi', 'Da ket hon', 'HK08', NULL),
+('CH09', 'Ngo Van I', '1988-01-01', 1, 'Ha Noi', 'Kinh', 'None', '009198801', 'Thu ky', 'Cong ty I', '2018-01-01', 'Ha Noi', 'Da ket hon', 'HK09', NULL),
+('CH10', 'Dinh Van J', '1989-01-01', 1, 'Ha Noi', 'Kinh', 'None', '010198901', 'Bao ve', 'Cong ty J', '2019-01-01', 'Ha Noi', 'Da ket hon', 'HK10', NULL);
 
 -- Insert data into NhanKhau (each household will have 4 members)
-INSERT INTO NhanKhau (MaNhanKhau, HoTen, QuanHeVoiChuHo, SoCMND_CCCD, GioiTinh, NgaySinh, TrinhDoHocVan, NgheNghiep, DiaChiThuongChu, TinhTrangHonNhan, DanToc, TonGiao, MaHoKhau, MaTaiKhoan) VALUES
-('NK01', 'Nguyen Thi A', 'Vo', '001198011', 0, '1982-01-01', 'Dai hoc', 'Giao vien', 'Ha Noi', 'Da ket hon', 'Kinh', 'None', 'HK01', 'TK01'),
-('NK02', 'Nguyen Van B', 'Con', '001199501', 1, '2005-01-01', 'THPT', 'Hoc sinh', 'Ha Noi', 'Chua ket hon', 'Kinh', 'None', 'HK01', 'TK01'),
-('NK03', 'Nguyen Thi C', 'Con', '001199601', 0, '2007-01-01', 'THCS', 'Hoc sinh', 'Ha Noi', 'Chua ket hon', 'Kinh', 'None', 'HK01', 'TK01'),
-('NK04', 'Tran Thi B', 'Vo', '002198111', 0, '1983-01-01', 'Dai hoc', 'Ky su', 'Ha Noi', 'Da ket hon', 'Kinh', 'None', 'HK02', 'TK02'),
-('NK05', 'Tran Van C', 'Con', '002199511', 1, '2006-01-01', 'THPT', 'Hoc sinh', 'Ha Noi', 'Chua ket hon', 'Kinh', 'None', 'HK02', 'TK02'),
-('NK06', 'Tran Thi D', 'Con', '002199611', 0, '2008-01-01', 'THCS', 'Hoc sinh', 'Ha Noi', 'Chua ket hon', 'Kinh', 'None', 'HK02', 'TK02'),
-('NK07', 'Le Thi C', 'Vo', '003198211', 0, '1984-01-01', 'Dai hoc', 'Bac si', 'Ha Noi', 'Da ket hon', 'Kinh', 'None', 'HK03', 'TK03'),
-('NK08', 'Le Van D', 'Con', '003199511', 1, '2007-01-01', 'THPT', 'Hoc sinh', 'Ha Noi', 'Chua ket hon', 'Kinh', 'None', 'HK03', 'TK03'),
-('NK09', 'Le Thi E', 'Con', '003199611', 0, '2009-01-01', 'THCS', 'Hoc sinh', 'Ha Noi', 'Chua ket hon', 'Kinh', 'None', 'HK03', 'TK03'),
-('NK10', 'Pham Thi D', 'Vo', '004198311', 0, '1985-01-01', 'Dai hoc', 'Lu su', 'Ha Noi', 'Da ket hon', 'Kinh', 'None', 'HK04', 'TK04'),
-('NK11', 'Pham Van E', 'Con', '004199511', 1, '2008-01-01', 'THPT', 'Hoc sinh', 'Ha Noi', 'Chua ket hon', 'Kinh', 'None', 'HK04', 'TK04'),
-('NK12', 'Pham Thi F', 'Con', '004199611', 0, '2010-01-01', 'THCS', 'Hoc sinh', 'Ha Noi', 'Chua ket hon', 'Kinh', 'None', 'HK04', 'TK04'),
-('NK13', 'Hoang Thi E', 'Vo', '005198411', 0, '1986-01-01', 'Dai hoc', 'Kinh doanh', 'Ha Noi', 'Da ket hon', 'Kinh', 'None', 'HK05', 'TK05'),
-('NK14', 'Hoang Van F', 'Con', '005199511', 1, '2009-01-01', 'THPT', 'Hoc sinh', 'Ha Noi', 'Chua ket hon', 'Kinh', 'None', 'HK05', 'TK05'),
-('NK15', 'Hoang Thi G', 'Con', '005199611', 0, '2011-01-01', 'THCS', 'Hoc sinh', 'Ha Noi', 'Chua ket hon', 'Kinh', 'None', 'HK05', 'TK05'),
-('NK16', 'Vu Thi F', 'Vo', '006198511', 0, '1987-01-01', 'Dai hoc', 'Giam doc', 'Ha Noi', 'Da ket hon', 'Kinh', 'None', 'HK06', 'TK06'),
-('NK17', 'Vu Van G', 'Con', '006199511', 1, '2010-01-01', 'THPT', 'Hoc sinh', 'Ha Noi', 'Chua ket hon', 'Kinh', 'None', 'HK06', 'TK06'),
-('NK18', 'Vu Thi H', 'Con', '006199611', 0, '2012-01-01', 'THCS', 'Hoc sinh', 'Ha Noi', 'Chua ket hon', 'Kinh', 'None', 'HK06', 'TK06'),
-('NK19', 'Dang Thi G', 'Vo', '007198611', 0, '1988-01-01', 'Dai hoc', 'Nhan vien', 'Ha Noi', 'Da ket hon', 'Kinh', 'None', 'HK07', 'TK07'),
-('NK20', 'Dang Van H', 'Con', '007199511', 1, '2011-01-01', 'THPT', 'Hoc sinh', 'Ha Noi', 'Chua ket hon', 'Kinh', 'None', 'HK07', 'TK07'),
-('NK21', 'Dang Thi I', 'Con', '007199611', 0, '2013-01-01', 'THCS', 'Hoc sinh', 'Ha Noi', 'Chua ket hon', 'Kinh', 'None', 'HK07', 'TK07'),
-('NK22', 'Do Thi H', 'Vo', '008198711', 0, '1989-01-01', 'Dai hoc', 'Cong nhan', 'Ha Noi', 'Da ket hon', 'Kinh', 'None', 'HK08', 'TK08'),
-('NK23', 'Do Van I', 'Con', '008199511', 1, '2012-01-01', 'THPT', 'Hoc sinh', 'Ha Noi', 'Chua ket hon', 'Kinh', 'None', 'HK08', 'TK08'),
-('NK24', 'Do Thi J', 'Con', '008199611', 0, '2014-01-01', 'THCS', 'Hoc sinh', 'Ha Noi', 'Chua ket hon', 'Kinh', 'None', 'HK08', 'TK08'),
-('NK25', 'Ngo Thi I', 'Vo', '009198811', 0, '1990-01-01', 'Dai hoc', 'Thu ky', 'Ha Noi', 'Da ket hon', 'Kinh', 'None', 'HK09', 'TK09'),
-('NK26', 'Ngo Van J', 'Con', '009199511', 1, '2013-01-01', 'THPT', 'Hoc sinh', 'Ha Noi', 'Chua ket hon', 'Kinh', 'None', 'HK09', 'TK09'),
-('NK27', 'Ngo Thi K', 'Con', '009199611', 0, '2015-01-01', 'THCS', 'Hoc sinh', 'Ha Noi', 'Chua ket hon', 'Kinh', 'None', 'HK09', 'TK09'),
-('NK28', 'Dinh Thi J', 'Vo', '010198911', 0, '1991-01-01', 'Dai hoc', 'Bao ve', 'Ha Noi', 'Da ket hon', 'Kinh', 'None', 'HK10', 'TK10'),
-('NK29', 'Dinh Van K', 'Con', '010199511', 1, '2014-01-01', 'THPT', 'Hoc sinh', 'Ha Noi', 'Chua ket hon', 'Kinh', 'None', 'HK10', 'TK10'),
-('NK30', 'Dinh Thi L', 'Con', '010199611', 0, '2016-01-01', 'THCS', 'Hoc sinh', 'Ha Noi', 'Chua ket hon', 'Kinh', 'None', 'HK10', 'TK10');
+INSERT INTO NhanKhau (MaNhanKhau, HoTen, QuanHeVoiChuHo, SoCMND_CCCD, GioiTinh, NgaySinh, TrinhDoHocVan, NgheNghiep, DiaChiThuongChu, TinhTrangHonNhan, DanToc, TonGiao, MaHoKhau) VALUES
+('NK01', 'Nguyen Thi A', 'Vo', '001198011', 0, '1982-01-01', 'Dai hoc', 'Giao vien', 'Ha Noi', 'Da ket hon', 'Kinh', 'None', 'HK01'),
+('NK02', 'Nguyen Van B', 'Con', '001199501', 1, '2005-01-01', 'THPT', 'Hoc sinh', 'Ha Noi', 'Chua ket hon', 'Kinh', 'None', 'HK01'),
+('NK03', 'Nguyen Thi C', 'Con', '001199601', 0, '2007-01-01', 'THCS', 'Hoc sinh', 'Ha Noi', 'Chua ket hon', 'Kinh', 'None', 'HK01'),
+('NK04', 'Tran Thi B', 'Vo', '002198111', 0, '1983-01-01', 'Dai hoc', 'Ky su', 'Ha Noi', 'Da ket hon', 'Kinh', 'None', 'HK02'),
+('NK05', 'Tran Van C', 'Con', '002199511', 1, '2006-01-01', 'THPT', 'Hoc sinh', 'Ha Noi', 'Chua ket hon', 'Kinh', 'None', 'HK02'),
+('NK06', 'Tran Thi D', 'Con', '002199611', 0, '2008-01-01', 'THCS', 'Hoc sinh', 'Ha Noi', 'Chua ket hon', 'Kinh', 'None', 'HK02'),
+('NK07', 'Le Thi C', 'Vo', '003198211', 0, '1984-01-01', 'Dai hoc', 'Bac si', 'Ha Noi', 'Da ket hon', 'Kinh', 'None', 'HK03'),
+('NK08', 'Le Van D', 'Con', '003199511', 1, '2007-01-01', 'THPT', 'Hoc sinh', 'Ha Noi', 'Chua ket hon', 'Kinh', 'None', 'HK03'),
+('NK09', 'Le Thi E', 'Con', '003199611', 0, '2009-01-01', 'THCS', 'Hoc sinh', 'Ha Noi', 'Chua ket hon', 'Kinh', 'None', 'HK03'),
+('NK10', 'Pham Thi D', 'Vo', '004198311', 0, '1985-01-01', 'Dai hoc', 'Lu su', 'Ha Noi', 'Da ket hon', 'Kinh', 'None', 'HK04'),
+('NK11', 'Pham Van E', 'Con', '004199511', 1, '2008-01-01', 'THPT', 'Hoc sinh', 'Ha Noi', 'Chua ket hon', 'Kinh', 'None', 'HK04'),
+('NK12', 'Pham Thi F', 'Con', '004199611', 0, '2010-01-01', 'THCS', 'Hoc sinh', 'Ha Noi', 'Chua ket hon', 'Kinh', 'None', 'HK04'),
+('NK13', 'Hoang Thi E', 'Vo', '005198411', 0, '1986-01-01', 'Dai hoc', 'Kinh doanh', 'Ha Noi', 'Da ket hon', 'Kinh', 'None', 'HK05'),
+('NK14', 'Hoang Van F', 'Con', '005199511', 1, '2009-01-01', 'THPT', 'Hoc sinh', 'Ha Noi', 'Chua ket hon', 'Kinh', 'None', 'HK05'),
+('NK15', 'Hoang Thi G', 'Con', '005199611', 0, '2011-01-01', 'THCS', 'Hoc sinh', 'Ha Noi', 'Chua ket hon', 'Kinh', 'None', 'HK05'),
+('NK16', 'Vu Thi F', 'Vo', '006198511', 0, '1987-01-01', 'Dai hoc', 'Giam doc', 'Ha Noi', 'Da ket hon', 'Kinh', 'None', 'HK06'),
+('NK17', 'Vu Van G', 'Con', '006199511', 1, '2010-01-01', 'THPT', 'Hoc sinh', 'Ha Noi', 'Chua ket hon', 'Kinh', 'None', 'HK06'),
+('NK18', 'Vu Thi H', 'Con', '006199611', 0, '2012-01-01', 'THCS', 'Hoc sinh', 'Ha Noi', 'Chua ket hon', 'Kinh', 'None', 'HK06'),
+('NK21', 'Dang Thi I', 'Con', '007199611', 0, '2013-01-01', 'THCS', 'Hoc sinh', 'Ha Noi', 'Chua ket hon', 'Kinh', 'None', 'HK07'),
+('NK19', 'Dang Thi G', 'Vo', '007198611', 0, '1988-01-01', 'Dai hoc', 'Nhan vien', 'Ha Noi', 'Da ket hon', 'Kinh', 'None', 'HK07'),
+('NK20', 'Dang Van H', 'Con', '007199511', 1, '2011-01-01', 'THPT', 'Hoc sinh', 'Ha Noi', 'Chua ket hon', 'Kinh', 'None', 'HK07'),
+('NK23', 'Do Van I', 'Con', '008199511', 1, '2012-01-01', 'THPT', 'Hoc sinh', 'Ha Noi', 'Chua ket hon', 'Kinh', 'None', 'HK08'),
+('NK24', 'Do Thi J', 'Con', '008199611', 0, '2014-01-01', 'THCS', 'Hoc sinh', 'Ha Noi', 'Chua ket hon', 'Kinh', 'None', 'HK08'),
+('NK25', 'Ngo Thi I', 'Vo', '009198811', 0, '1990-01-01', 'Dai hoc', 'Thu ky', 'Ha Noi', 'Da ket hon', 'Kinh', 'None', 'HK09'),
+('NK26', 'Ngo Van J', 'Con', '009199511', 1, '2013-01-01', 'THPT', 'Hoc sinh', 'Ha Noi', 'Chua ket hon', 'Kinh', 'None', 'HK09'),
+('NK27', 'Ngo Thi K', 'Con', '009199611', 0, '2015-01-01', 'THCS', 'Hoc sinh', 'Ha Noi', 'Chua ket hon', 'Kinh', 'None', 'HK09'),
+('NK28', 'Dinh Thi J', 'Vo', '010198911', 0, '1991-01-01', 'Dai hoc', 'Bao ve', 'Ha Noi', 'Da ket hon', 'Kinh', 'None', 'HK10'),
+('NK29', 'Dinh Van K', 'Con', '010199511', 1, '2014-01-01', 'THPT', 'Hoc sinh', 'Ha Noi', 'Chua ket hon', 'Kinh', 'None', 'HK10'),
+('NK30', 'Dinh Thi L', 'Con', '010199611', 0, '2016-01-01', 'THCS', 'Hoc sinh', 'Ha Noi', 'Chua ket hon', 'Kinh', 'None', 'HK10');
 
 -- Insert data into ThongBao
 INSERT INTO ThongBao (MaThongBao, NoiDungChiTiet, NgayThongBao, TieuDeThongBao) VALUES
@@ -201,12 +193,7 @@ INSERT INTO ThongBao_TaiKhoan (MaThongBao, MaTaiKhoan) VALUES
 ('TB01', 'TK02'), ('TB02', 'TK02'), ('TB03', 'TK02'), ('TB04', 'TK02'), ('TB05', 'TK02'), ('TB06', 'TK02'), ('TB07', 'TK02'), ('TB08', 'TK02'), ('TB09', 'TK02'), ('TB10', 'TK02'),
 ('TB01', 'TK03'), ('TB02', 'TK03'), ('TB03', 'TK03'), ('TB04', 'TK03'), ('TB05', 'TK03'), ('TB06', 'TK03'), ('TB07', 'TK03'), ('TB08', 'TK03'), ('TB09', 'TK03'), ('TB10', 'TK03'),
 ('TB01', 'TK04'), ('TB02', 'TK04'), ('TB03', 'TK04'), ('TB04', 'TK04'), ('TB05', 'TK04'), ('TB06', 'TK04'), ('TB07', 'TK04'), ('TB08', 'TK04'), ('TB09', 'TK04'), ('TB10', 'TK04'),
-('TB01', 'TK05'), ('TB02', 'TK05'), ('TB03', 'TK05'), ('TB04', 'TK05'), ('TB05', 'TK05'), ('TB06', 'TK05'), ('TB07', 'TK05'), ('TB08', 'TK05'), ('TB09', 'TK05'), ('TB10', 'TK05'),
-('TB01', 'TK06'), ('TB02', 'TK06'), ('TB03', 'TK06'), ('TB04', 'TK06'), ('TB05', 'TK06'), ('TB06', 'TK06'), ('TB07', 'TK06'), ('TB08', 'TK06'), ('TB09', 'TK06'), ('TB10', 'TK06'),
-('TB01', 'TK07'), ('TB02', 'TK07'), ('TB03', 'TK07'), ('TB04', 'TK07'), ('TB05', 'TK07'), ('TB06', 'TK07'), ('TB07', 'TK07'), ('TB08', 'TK07'), ('TB09', 'TK07'), ('TB10', 'TK07'),
-('TB01', 'TK08'), ('TB02', 'TK08'), ('TB03', 'TK08'), ('TB04', 'TK08'), ('TB05', 'TK08'), ('TB06', 'TK08'), ('TB07', 'TK08'), ('TB08', 'TK08'), ('TB09', 'TK08'), ('TB10', 'TK08'),
-('TB01', 'TK09'), ('TB02', 'TK09'), ('TB03', 'TK09'), ('TB04', 'TK09'), ('TB05', 'TK09'), ('TB06', 'TK09'), ('TB07', 'TK09'), ('TB08', 'TK09'), ('TB09', 'TK09'), ('TB10', 'TK09'),
-('TB01', 'TK10'), ('TB02', 'TK10'), ('TB03', 'TK10'), ('TB04', 'TK10'), ('TB05', 'TK10'), ('TB06', 'TK10'), ('TB07', 'TK10'), ('TB08', 'TK10'), ('TB09', 'TK10'), ('TB10', 'TK10');
+('TB01', 'TK05'), ('TB02', 'TK05'), ('TB03', 'TK05'), ('TB04', 'TK05'), ('TB05', 'TK05'), ('TB06', 'TK05'), ('TB07', 'TK05'), ('TB08', 'TK05'), ('TB09', 'TK05'), ('TB10', 'TK05');
 
 -- Insert data into PhanAnh
 INSERT INTO PhanAnh (MaPhanAnh, NoiDungPhanAnh, NoiDungPhanHoi, MaTaiKhoan) VALUES
@@ -214,13 +201,7 @@ INSERT INTO PhanAnh (MaPhanAnh, NoiDungPhanAnh, NoiDungPhanHoi, MaTaiKhoan) VALU
 ('PA02', 'Phan anh 2', 'Phan hoi 2', 'TK02'),
 ('PA03', 'Phan anh 3', 'Phan hoi 3', 'TK03'),
 ('PA04', 'Phan anh 4', 'Phan hoi 4', 'TK04'),
-('PA05', 'Phan anh 5', 'Phan hoi 5', 'TK05'),
-('PA06', 'Phan anh 6', 'Phan hoi 6', 'TK06'),
-('PA07', 'Phan anh 7', 'Phan hoi 7', 'TK07'),
-('PA08', 'Phan anh 8', 'Phan hoi 8', 'TK08'),
-('PA09', 'Phan anh 9', 'Phan hoi 9', 'TK09'),
-('PA10', 'Phan anh 10', 'Phan hoi 10', 'TK10');
-
+('PA05', 'Phan anh 5', 'Phan hoi 5', 'TK05');
 
 
 
