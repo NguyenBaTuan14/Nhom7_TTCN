@@ -28,6 +28,8 @@ namespace TTCN_Nhom7
         public DocThongBao(string taiKhoan, string tieuDeTB)
         {
             InitializeComponent();
+            this.Left = 200;
+            this.Top = 100;
             this.taiKhoan = taiKhoan;
             this.tieuDeTB = tieuDeTB;
         }

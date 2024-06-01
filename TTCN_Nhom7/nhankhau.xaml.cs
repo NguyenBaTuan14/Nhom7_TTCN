@@ -15,7 +15,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using System.Xml.Linq;
-using TTCN_Nhom7.DuLieuDanCu;
+using TTCN_Nhom7.MoHinhQuanLy;
 
 namespace TTCN_Nhom7
 {
@@ -24,7 +24,7 @@ namespace TTCN_Nhom7
     /// </summary>
     public partial class Window2 : Window
     {
-        QldanCuNguyenXa1Context db = new QldanCuNguyenXa1Context();
+        QldanCuNguyenXaContext db = new QldanCuNguyenXaContext();
         private object selectedRow;
         string hoten, mahk, mank, socccd, gt, diachi, quanhe, tongiao, dantoc, ngaysinh, nghe = "";
         public Window2()

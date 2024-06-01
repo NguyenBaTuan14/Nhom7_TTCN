@@ -12,7 +12,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
-using TTCN_Nhom7.DuLieuDanCu;
+using TTCN_Nhom7.MoHinhQuanLy;
 using static System.Net.Mime.MediaTypeNames;
 
 namespace TTCN_Nhom7
@@ -22,7 +22,7 @@ namespace TTCN_Nhom7
     /// </summary>
     public partial class them : Window
     {
-        QldanCuNguyenXa1Context db = new QldanCuNguyenXa1Context();
+        QldanCuNguyenXaContext db = new QldanCuNguyenXaContext();
         public them()
         {
             InitializeComponent();

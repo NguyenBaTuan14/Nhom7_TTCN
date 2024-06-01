@@ -15,7 +15,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
-using TTCN_Nhom7.DuLieuDanCu;
+using TTCN_Nhom7.MoHinhQuanLy;
 
 namespace TTCN_Nhom7
 {
@@ -24,7 +24,7 @@ namespace TTCN_Nhom7
     /// </summary>
     public partial class QuanLyTaiKhoan_admin : Window
     {
-        QldanCuNguyenXa1Context db = new QldanCuNguyenXa1Context();
+        QldanCuNguyenXaContext db = new QldanCuNguyenXaContext();
         private object selectedRow;
         string matk, ho, ten, sodt, email, matkhau, vaitro = "";
         public QuanLyTaiKhoan_admin()

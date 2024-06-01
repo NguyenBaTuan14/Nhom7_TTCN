@@ -13,7 +13,7 @@ using System.Windows.Markup;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
-using TTCN_Nhom7.DuLieuDanCu;
+using TTCN_Nhom7.MoHinhQuanLy;
 
 namespace TTCN_Nhom7
 {
@@ -22,13 +22,15 @@ namespace TTCN_Nhom7
     /// </summary>
     public partial class PhanAnh_admin : Window
     {
-        QldanCuNguyenXa1Context db = new QldanCuNguyenXa1Context();
+        QldanCuNguyenXaContext db = new QldanCuNguyenXaContext();
         String noiDungCauHoi, nguoiPhanAnh;
         private object selectedRow;
         public PhanAnh_admin()
         {
             InitializeComponent();
-            
+            this.Left = 200;
+            this.Top = 100;
+
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
