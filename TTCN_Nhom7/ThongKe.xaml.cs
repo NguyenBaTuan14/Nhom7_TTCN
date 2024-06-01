@@ -12,7 +12,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
-using TTCN_Nhom7.DuLieuQuanLyDanCu;
+using TTCN_Nhom7.DuLieuDanCu;
 
 
 namespace TTCN_Nhom7
@@ -49,13 +49,14 @@ namespace TTCN_Nhom7
                 gioiTinh = false;
             }
 
-            using (QldanCuNguyenXaContext db = new QldanCuNguyenXaContext())
+            using (QldanCuNguyenXa1Context db = new QldanCuNguyenXa1Context())
             {
                 try
                 {
                     var query = db.NhanKhaus
-                    .Include(nk => nk.MaTaiKhoanNavigation)
+
                     .Include(nk => nk.MaHoKhauNavigation)
+                    .ThenInclude(hk => hk.ChuHos)
                     .AsQueryable();
 
                     if (!string.IsNullOrEmpty(txtHoTen.Text))
@@ -94,8 +95,8 @@ namespace TTCN_Nhom7
 
                         tk.Tuoi,
                         tk.MaHoKhauNavigation.MaHoKhau,
-                        tk.MaTaiKhoanNavigation.SoDienThoai,
-                        tk.MaTaiKhoanNavigation.Email
+                        SoDienThoai = tk.MaHoKhauNavigation.ChuHos.FirstOrDefault().MaTaiKhoanNavigation.SoDienThoai,
+                        Email = tk.MaHoKhauNavigation.ChuHos.FirstOrDefault().MaTaiKhoanNavigation.Email
 
                     }).ToList();
                     

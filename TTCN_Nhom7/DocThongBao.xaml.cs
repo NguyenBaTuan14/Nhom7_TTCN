@@ -11,7 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
-using TTCN_Nhom7.DuLieuQuanLyDanCu;
+using TTCN_Nhom7.DuLieuDanCu;
 
 namespace TTCN_Nhom7
 {
@@ -21,7 +21,7 @@ namespace TTCN_Nhom7
     public partial class DocThongBao : Window
     {
         String taiKhoan;
-        QldanCuNguyenXaContext db = new QldanCuNguyenXaContext();
+        QldanCuNguyenXa1Context db = new QldanCuNguyenXa1Context();
         String tieuDeTB;
         public DocThongBao(string taiKhoan, string tieuDeTB)
         {
