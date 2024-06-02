@@ -35,7 +35,7 @@ namespace TTCN_Nhom7
 
         private void Ho_Khau(object sender, RoutedEventArgs e)
         {
-            HoKhau hk = new HoKhau();
+            HoKhau_admin hk = new HoKhau_admin();
             hk.Show();
             Close();
         }

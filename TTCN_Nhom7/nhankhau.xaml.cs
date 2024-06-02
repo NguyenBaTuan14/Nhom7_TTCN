@@ -15,7 +15,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using System.Xml.Linq;
-using TTCN_Nhom7.MoHinhQuanLy;
+using TTCN_Nhom7.Models;
 
 namespace TTCN_Nhom7
 {

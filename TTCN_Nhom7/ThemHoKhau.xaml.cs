@@ -11,6 +11,8 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using Microsoft.IdentityModel.Tokens;
+using TTCN_Nhom7.Models;
 
 namespace TTCN_Nhom7
 {
@@ -19,6 +21,7 @@ namespace TTCN_Nhom7
     /// </summary>
     public partial class ThemHoKhau : Window
     {
+        QldanCuNguyenXaContext db = new QldanCuNguyenXaContext();
         public ThemHoKhau()
         {
             InitializeComponent();
@@ -28,9 +31,45 @@ namespace TTCN_Nhom7
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            HoKhau HK = new HoKhau();
+            HoKhau_admin HK = new HoKhau_admin();
             HK.Show();
             Close();
         }
+
+        private void btnthem_Click(object sender, RoutedEventArgs e)
+        {
+            if (check())
+            {
+                NhanKhau nkmoi = new NhanKhau();
+                HoKhau hkmoi= new HoKhau();
+                ChuHo chmoi= new ChuHo();   
+                hkmoi.MaHoKhau=txtmahk.Text;
+                chmoi.MaChuHo= txtmach.Text;
+                chmoi.SoCmndCccd= txtcccd.Text;
+                chmoi.HoTen=txttench.Text;
+                hkmoi.NgayDangKy = dpNgayDK.SelectedDate;
+
+                db.ChuHos.Add(chmoi);
+                db.SaveChanges();
+                db.HoKhaus.Add(hkmoi);
+                db.SaveChanges();
+
+                HoKhau_admin wd = new HoKhau_admin();
+                wd.Show();
+                Close();
+            }
+        }
+        private bool check()
+        {
+            if (txtmahk.Text.IsNullOrEmpty()|| txtcccd.Text.IsNullOrEmpty()|| txttench.Text.IsNullOrEmpty()||
+                txtmach.Text.IsNullOrEmpty()|| txtdc.Text.IsNullOrEmpty()||dpNgayDK.Text.IsNullOrEmpty())
+            {
+                MessageBoxResult result = MessageBox.Show("Yêu cầu nhập đầy đủ thông tin", "THÔNG BÁO",
+                                            MessageBoxButton.OKCancel, MessageBoxImage.Error);
+                return false;
+            }
+            return true;
+        }
+
     }
 }

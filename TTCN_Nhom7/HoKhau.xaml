@@ -1,11 +1,11 @@
-﻿<Window x:Class="TTCN_Nhom7.HoKhau"
+﻿<Window x:Class="TTCN_Nhom7.HoKhau_admin"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TTCN_Nhom7"
         mc:Ignorable="d"
-        Title="HoKhau" Height="450" Width="800">
+        Title="HoKhau" Height="450" Width="800" Loaded="Window_Loaded">
     <Grid>
         <Button Name="quayve" Content="&#x2190;" HorizontalAlignment="Left" Padding="-20" 
             VerticalAlignment="Top" Width="40" 
@@ -20,6 +20,7 @@
           x:Name="dtgdanhsach1"
           BorderBrush="#2196F3"
           Background="White"
+          SelectionChanged="dtgdanhsach1_SelectionChanged"
           AutoGenerateColumns="False"
           ScrollViewer.CanContentScroll="True"
           ColumnHeaderStyle="{StaticResource columnheaderStyle}">
@@ -54,7 +55,7 @@
             Background="#2196F3"
             Foreground="White"
             Margin="635,332,50,50"
-            Template="{StaticResource buttonTemplate}" RenderTransformOrigin="1.846,0.288"/>
+            Template="{StaticResource buttonTemplate}" RenderTransformOrigin="1.846,0.288" Click="btnxoa_Click"/>
         <GroupBox Header="Nhâp thông tin cần tìm "
           BorderBrush="#2196F3"
           HorizontalAlignment="Left" 
@@ -69,6 +70,6 @@
             VerticalAlignment="Top" Width="100" Height="40"  FontSize="20" 
             Background="#2196F3"
             Foreground="White"
-            Template="{StaticResource buttonTemplate}" RenderTransformOrigin="1.56,0.501" />
+            Template="{StaticResource buttonTemplate}" RenderTransformOrigin="1.56,0.501" Click="Button_Click" />
     </Grid>
 </Window>

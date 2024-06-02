@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TTCN_Nhom7"
         mc:Ignorable="d"
-        Title="SuaHoKhau" Height="450" Width="800">
+        Title="SuaHoKhau" Height="450" Width="800" Loaded="Window_Loaded">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="auto"/>
@@ -30,69 +30,58 @@
         Foreground="#2196F3"
         BorderBrush="White"
         Background="White" Click="Button_Click"/>
-
         <GroupBox Header="Họ tên chủ hộ"
-         BorderBrush="#2196F3"
-         Margin="0,0,0,5"
-         Grid.Row="1" Grid.Column="0"
-         Height="60"  
-         Width="300">
-            <TextBox Name ="txthoten"  />
-        </GroupBox>
-
+            BorderBrush="#2196F3"
+            Margin="12,154,88,180"
+            Grid.Row="2" Grid.Column="1"
+            Height="60"  
+            Width="300" Grid.RowSpan="6"/>
         <GroupBox Header="Mã hộ khẩu"
-                 BorderBrush="#2196F3"
-                     Margin="0,0,0,5"
-                 Grid.Row="2" Grid.Column="0"
-                 Height="60"  
-                 Width="300">
-            <TextBox Name ="txtmahk"  />
+            BorderBrush="#2196F3"
+            Margin="56,37,44,114" Grid.Column="0"
+            Height="60"  
+            Width="300" Grid.RowSpan="3">
+            <TextBox x:Name ="txtmahk"  />
         </GroupBox>
-
         <GroupBox Header="Số CMND/CCCD chủ hộ"
-                 BorderBrush="#2196F3"
-                 Grid.Row="3" Grid.Column="0"
-                 Height="60"  
-                     Margin="0,0,0,5"
-                 Width="300">
-            <TextBox Name ="txtcccd"  />
+            BorderBrush="#2196F3" Grid.Column="1"
+            Height="60"  
+            Margin="12,39,88,112"
+            Width="300" Grid.RowSpan="3">
+            <TextBox x:Name ="txtcccd"  />
         </GroupBox>
-
         <GroupBox Header="Địa chỉ thường trú"
-                 BorderBrush="#2196F3"
-                     Margin="0,0,0,5"
-                 Grid.Row="3" Grid.Column="1"
-                 Height="60"  
-                 Width="300">
-            <TextBox Name ="txtdiachi"  />
+            BorderBrush="#2196F3"
+            Margin="55,151,45,183"
+            Grid.Row="2"
+            Height="60"  
+            Width="300" Grid.RowSpan="6">
+            <TextBox Name="txtdctc" HorizontalAlignment="Left" Height="30" Margin="10,0,0,0" TextWrapping="Wrap" Width="270"/>
         </GroupBox>
-
-        <GroupBox Header="Tổng TV"
-                 BorderBrush="#2196F3"
-                 Grid.Row="1" Grid.Column="1"
-                 Height="60"  
-                 Width="300">
-            <TextBox Name ="txtTV"/>
-        </GroupBox>
-
         <GroupBox Header="Ngày đăng ký"
-                 BorderBrush="#2196F3"
-                 Grid.Row="2" Grid.Column="1"
-                 Height="60"  
-                 Width="300">
-            <TextBox Name ="txtngaydk"/>
+            BorderBrush="#2196F3"
+            Grid.Row="2"
+            Height="60"  
+            Width="300" Margin="55,78,45,33">
+            <DatePicker x:Name="dpNgayDK" />
         </GroupBox>
-
-
-        <Button Name="btnSua" Content="Sửa" 
-            Grid.Row="6" Grid.Column="1" Grid.ColumnSpan="2"
+        <GroupBox Header="Mã chủ hộ"
+            BorderBrush="#2196F3"
+            Margin="12,72,88,39"
+            Grid.Row="2"
+            Height="60"  
+            Width="300" Grid.Column="1"/>
+        <TextBox x:Name="txtmach" Grid.Column="1" HorizontalAlignment="Left" Height="37" Margin="23,88,0,0" Grid.Row="2" TextWrapping="Wrap" VerticalAlignment="Top" Width="278"/>
+        <TextBox x:Name="txttench" Grid.Column="1" HorizontalAlignment="Left" Height="37" Margin="23,169,0,0" Grid.Row="2" TextWrapping="Wrap" VerticalAlignment="Top" Width="278" Grid.RowSpan="6"/>
+        <Button x:Name="btnsua" Content="Sửa" 
+            Grid.Row="7" Grid.Column="1"
             HorizontalAlignment="Center" 
             Height="40" Width="100"
             FontSize="20" 
             Background="#2196F3"
             Foreground="White"  
-            Margin="0,12,0,0"
-            Template="{StaticResource buttonTemplate}"/>
+            Margin="0,83,0,100"
+            Template="{StaticResource buttonTemplate}" Click="btnsua_Click"/>
 
     </Grid>
 </Window>
