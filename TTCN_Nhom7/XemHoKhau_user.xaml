@@ -5,40 +5,49 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TTCN_Nhom7"
         mc:Ignorable="d"
-        Title="XemHoKhau_user" Height="450" Width="800">
+        Title="XemHoKhau_user" Height="450" Width="800" Loaded="window_load">
     <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="*"/>
-        </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="150"/>
             <ColumnDefinition Width="auto"/>
-            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="auto" MinWidth="36"/>
+            <ColumnDefinition />
         </Grid.ColumnDefinitions>
-        <StackPanel Orientation="Horizontal" >
-            <Button Grid.Row="0" Grid.Column="0" Padding="-30"
-                      Content="&#x2190;" 
-                      Margin="10,0,0,0" Width="40" 
-                      HorizontalAlignment="Left"
-                      Height="40" FontSize="37" FontWeight="Bold"
-                      Foreground="#2196F3"
-                      BorderBrush="White"
-                      Background="White" Click="Button_Click"/>
-        </StackPanel>
-        <Label Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="2" Content="Thông tin hộ khẩu" HorizontalContentAlignment="Center" FontSize="35" Foreground="Green" FontWeight="Bold"/>
-        <DataGrid x:Name="dtgdanhsach" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" AutoGenerateColumns="False" Margin="10" FontWeight="Bold"
-                  ColumnHeaderStyle="{StaticResource dataGridHeader}">
-            <DataGrid.Columns>
-                <DataGridTextColumn Header="CCCD/CMND" Binding="{Binding cccd}" Width="120"/>
-                <DataGridTextColumn Header="Họ tên" Binding="{Binding HoTen}" Width="150"/>
-                <DataGridTextColumn Header="Địa chỉ" Binding="{Binding Diachi}" Width="100"/>
-                <DataGridTextColumn Header="GT" Binding="{Binding GioiTinh}" Width="50"/>
-                <DataGridTextColumn Header="Ngày sinh" Binding="{Binding NgaySinh}" Width="100"/>
-                <DataGridTextColumn Header="Hộ Khẩu" Binding="{Binding HoKhau}" Width="100"/>
-                <DataGridTextColumn Header="SDT" Binding="{Binding SDT}" Width="70"/>
-                <DataGridTextColumn Header="Email" Binding="{Binding Email}" Width="100"/>
-            </DataGrid.Columns>
-        </DataGrid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto" MinHeight="52"/>
+            <RowDefinition Height="auto" MinHeight="81"/>
+            <RowDefinition Height="auto" MinHeight="45"/>
+            <RowDefinition Height="auto" MinHeight="50.553"/>
+            <RowDefinition Height="auto" MinHeight="4"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto" MinHeight="3"/>
+            <RowDefinition />
+
+        </Grid.RowDefinitions>
+
+        <Button Grid.Row="0" Grid.Column="0" Padding="-30"
+             Content="&#x2190;" 
+             Margin="10,0,0,0" Width="40" 
+             HorizontalAlignment="Left" FontSize="37" FontWeight="Bold"
+             Foreground="#2196F3"
+             BorderBrush="White"
+             Background="White" Click="Button_Click"/>
+
+
+        <Label Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="4" Content="Thông tin hộ khẩu" HorizontalContentAlignment="Center" FontSize="35" Foreground="#2196F3" FontWeight="Bold" Margin="-7,0,7,42" Grid.RowSpan="2"/>
+        <Label Grid.Row="2" Grid.Column="3" Content="CCCD: " FontWeight="Bold" HorizontalAlignment="Left" Margin="65,0,0,0" Width="60" Height="40" FontSize="16" VerticalAlignment="Center" HorizontalContentAlignment="Center"/>
+        <TextBox Name="txtcccd" 
+        Grid.Row="2" Grid.Column="3"  Margin="188,5,54,2" />
+        <Label Grid.Row="2" Content="Hộ khẩu: " FontWeight="Bold" HorizontalAlignment="Left" Width="80" Height="40" FontSize="16" VerticalAlignment="Center" HorizontalContentAlignment="Center" Margin="40,0,0,0"/>
+        <TextBox Name="txtmahk" Grid.Row="2" Grid.Column="1"  Height="40" Width="200" HorizontalContentAlignment="Left" HorizontalAlignment="Center" VerticalAlignment="Center" />
+        <Label Grid.Row="3" Grid.Column="3" Content="Họ tên chủ hộ: " FontWeight="Bold" HorizontalAlignment="Left" Margin="28,4,0,0" Width="134" Height="40" FontSize="16" VerticalAlignment="Top" HorizontalContentAlignment="Center"/>
+        <TextBox Name="txttench" Grid.Row="3" Grid.Column="3"  Height="40" Width="200" HorizontalContentAlignment="Left" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="188,8,0,0" />
+        <Label Grid.Row="3" Content="Địa chỉ: " FontWeight="Bold" HorizontalAlignment="Left" Margin="40,0,0,0" Width="80" Height="40" FontSize="16" VerticalAlignment="Center" HorizontalContentAlignment="Center"/>
+        <TextBox Name="txtdctc" Grid.Row="3" Grid.Column="1"  Height="40" Width="200" HorizontalContentAlignment="Left" HorizontalAlignment="Center" VerticalAlignment="Center" />
+        <Label Grid.Row="7" Grid.Column="3" Content="Chủ hộ: " FontWeight="Bold" HorizontalAlignment="Left" Margin="62,10,0,0" Width="66" Height="40" FontSize="16" VerticalAlignment="Top" HorizontalContentAlignment="Center" RenderTransformOrigin="0.853,0.557"/>
+        <TextBox Name="txtmach" Grid.Row="7" Grid.Column="3"  Height="40" Width="200" HorizontalContentAlignment="Left" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="188,10,0,0" />
+        <Label Grid.Row="7" Content="Ngày đăng ký: " FontWeight="Bold" HorizontalAlignment="Center" Width="140" Height="40" FontSize="16" VerticalAlignment="Top" HorizontalContentAlignment="Center" Margin="0,8,0,0"/>
+        <TextBox Name="txtNgayDK" Grid.Row="7" Grid.Column="1"  Height="40" Width="200" HorizontalContentAlignment="Left" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,8,0,0" />
+
     </Grid>
 </Window>

@@ -12,7 +12,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
-using TTCN_Nhom7.DuLieuDanCu;
+using TTCN_Nhom7.DuLieuQuanLyDanCu;
 
 
 
@@ -27,6 +27,8 @@ namespace TTCN_Nhom7
         public ThongKe()
         {
             InitializeComponent();
+            this.Left = 200;
+            this.Top = 100;
         }
         private void QuayVe(object sender, RoutedEventArgs e)
         {
@@ -50,7 +52,7 @@ namespace TTCN_Nhom7
                 gioiTinh = false;
             }
 
-            using (QldanCuNguyenXa1Context db = new QldanCuNguyenXa1Context())
+            using (QldanCuNguyenXaContext db = new QldanCuNguyenXaContext())
             {
                 try
                 {

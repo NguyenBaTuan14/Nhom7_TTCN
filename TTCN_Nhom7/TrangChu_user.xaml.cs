@@ -13,7 +13,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
-using TTCN_Nhom7.DuLieuDanCu;
+using TTCN_Nhom7.DuLieuQuanLyDanCu;
 
 namespace TTCN_Nhom7
 {
@@ -28,6 +28,8 @@ namespace TTCN_Nhom7
         public TrangChu_user(string taiKhoan)
         {
             InitializeComponent();
+            this.Left = 200;
+            this.Top = 100;
             this.taiKhoan = taiKhoan;
            
         }
@@ -63,7 +65,7 @@ namespace TTCN_Nhom7
         }
         private void loadData()
         {
-            QldanCuNguyenXa1Context db = new QldanCuNguyenXa1Context();
+            QldanCuNguyenXaContext db = new QldanCuNguyenXaContext();
             var query = from tk in db.TaiKhoans
                         from tb in tk.MaThongBaos
                         where tk.Email == taiKhoan ||tk.SoDienThoai==taiKhoan
